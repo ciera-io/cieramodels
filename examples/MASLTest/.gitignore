@@ -1,0 +1,5 @@
+/cpp-gen/src/
+/masl/
+/models/**/*.int
+/models/**/*.mod
+/target/
