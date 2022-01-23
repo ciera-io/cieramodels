@@ -1,0 +1,6 @@
+public service TestDomain::init() is
+begin
+  console <<< "Checking that 2 * 3 = 6...";
+  A::assertTrue(2 * 3 = 6);
+  console <<< "Passed.";
+end service;

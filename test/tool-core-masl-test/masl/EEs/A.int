@@ -1,0 +1,6 @@
+domain A is
+  
+  public service assertTrue(truth: in boolean);
+
+end domain;
+pragma utility("io.ciera.runtime.util");
