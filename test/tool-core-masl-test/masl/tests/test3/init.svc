@@ -1,0 +1,8 @@
+public service TestDomain::init() is
+foo: instance of Foo;
+t: timer;
+begin
+  TRACE::info() <<< "Transition test";
+  foo := create Foo();
+  schedule t generate Foo.bar() to foo delay @PT5S@;
+end service;

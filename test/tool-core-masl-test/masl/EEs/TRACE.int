@@ -1,0 +1,9 @@
+domain TRACE is
+  
+  public service debug() return device;
+  public service info() return device;
+  public service warn() return device;
+  public service error() return device;
+
+end domain;
+pragma utility();

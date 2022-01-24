@@ -1,6 +1,6 @@
 public service TestDomain::init() is
 begin
-  console <<< "Checking that 1 + 1 = 2...";
+  TRACE::info() <<< "Checking that 1 + 1 = 2...";
   A::assertTrue(1 + 1 = 2);
-  console <<< "Passed.";
+  TRACE::info() <<< "Passed.";
 end service;
