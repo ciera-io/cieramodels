@@ -1,4 +1,5 @@
 *,RootPackage,*,MicrowaveOven::components
 *,IncludeStatementComments,*,true
+*,EnableSimulatedTime,*,true
 components::MicrowaveOven,InitFunction,Component,init
 components::MicrowaveOven,EnableSimulatedTime,Component,true
