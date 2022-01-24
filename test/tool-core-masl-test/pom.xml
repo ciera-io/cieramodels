@@ -56,7 +56,7 @@
                   <systemMarks>
                     <ApplicationName>CoreMaslTest</ApplicationName>
                     <ApplicationPackage>io.ciera.tool.coremasl.test</ApplicationPackage>
-                    <IdleHalt>true</IdleHalt>
+                    <EnableSimulatedTime>false</EnableSimulatedTime>
                   </systemMarks>
                 </configuration>
               </execution>
