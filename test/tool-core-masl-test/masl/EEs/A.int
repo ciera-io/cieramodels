@@ -1,6 +1,11 @@
 domain A is
   
+  //! Throws a runtime error if the value of "truth" is false
   public service assertTrue(truth: in boolean);
+
+  //! Throws a runtime error if the value of "truth" is false
+  //! The given message is attached to the error
+  public service assertTrueWithMessage(truth: in boolean, message: in string);
 
 end domain;
 pragma utility("io.ciera.runtime.util");

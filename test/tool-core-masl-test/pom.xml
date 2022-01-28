@@ -36,7 +36,7 @@
     <profile>
       <activation>
         <property>
-          <name>buildDomain</name>
+          <name>domain</name>
         </property>
       </activation>
       <build>
@@ -52,7 +52,7 @@
                   <goal>core-masl</goal>
                 </goals>
                 <configuration>
-                  <input>${project.basedir}/${buildDomain}</input>
+                  <input>${project.basedir}/masl/tests/${domain}</input>
                   <systemMarks>
                     <ApplicationName>CoreMaslTest</ApplicationName>
                     <ApplicationPackage>io.ciera.tool.coremasl.test</ApplicationPackage>
