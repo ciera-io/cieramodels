@@ -1,7 +1,7 @@
 public instance service ALU::Operation.evaluate () is
 mem_val : real;
 disp_val : real;
-result_val : real;
+result_val : real := 0.0;
 begin
   // get memory value
   mem_val := (this->R3.Memory).value;

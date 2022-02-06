@@ -9,11 +9,11 @@ domain ALU is
 
   public service key ( code: in integer );
   public service clear ();
-  private service testcase1 (); pragma scenario( 1 ); pragma test_only( true );
+  private service testcase1 (); pragma scenario( 1 ); pragma test_only( true ); pragma startup();
   private service testcase2 (); pragma scenario( 2 ); pragma test_only( true );
   private service testcase3 (); pragma scenario( 3 ); pragma test_only( true );
   private service testcase4 (); pragma scenario( 4 ); pragma test_only( true );
-  private service testcase5 (); pragma scenario( 5 ); pragma test_only( true ); pragma startup();
+  private service testcase5 (); pragma scenario( 5 ); pragma test_only( true );
 
 
   terminator disp is
@@ -56,12 +56,12 @@ domain ALU is
 
     public instance service clearDisplay ();
 
-    state displaying_memory_value ();
     state toggling_sign ( key: in integer );
     state receiving_whole_part ( key: in integer );
     state receiving_fractional_part ( key: in integer );
     state evaluating ( key: in integer );
-    state z_displaying_error ( message: in string );
+    state displaying_error ( message: in string );
+    state displaying_memory_value ();
 
     event keypress ( key: in integer );
     event point ( key: in integer );
@@ -87,27 +87,27 @@ domain ALU is
                       point => receiving_fractional_part,
                       operator => Cannot_Happen,
                       digit => receiving_whole_part,
-                      error => z_displaying_error,
+                      error => displaying_error,
                       reset => displaying_memory_value );
       receiving_whole_part ( keypress => receiving_whole_part,
                              point => receiving_fractional_part,
                              operator => evaluating,
                              digit => Cannot_Happen,
-                             error => z_displaying_error,
+                             error => displaying_error,
                              reset => displaying_memory_value );
       receiving_fractional_part ( keypress => receiving_fractional_part,
                                   point => Cannot_Happen,
                                   operator => evaluating,
                                   digit => Cannot_Happen,
-                                  error => z_displaying_error,
+                                  error => displaying_error,
                                   reset => displaying_memory_value );
       evaluating ( keypress => Cannot_Happen,
                    point => Cannot_Happen,
                    operator => Cannot_Happen,
                    digit => Cannot_Happen,
-                   error => z_displaying_error,
+                   error => displaying_error,
                    reset => displaying_memory_value );
-      z_displaying_error ( keypress => Cannot_Happen,
+      displaying_error ( keypress => Cannot_Happen,
                          point => Cannot_Happen,
                          operator => Cannot_Happen,
                          digit => Cannot_Happen,
