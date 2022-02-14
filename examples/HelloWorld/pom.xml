@@ -35,7 +35,29 @@
               <goal>core-masl</goal>
             </goals>
             <configuration>
-              <input>${project.basedir}/masl/HelloWorld</input>
+              <input>${project.basedir}/masl/HelloWorld_OOA</input>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <configuration>
+              <archive>
+                <manifest>
+                  <mainClass>helloworldapplication.HelloWorldApplication</mainClass>
+                </manifest>
+              </archive>
+              <descriptorRefs>
+                <descriptorRef>jar-with-dependencies</descriptorRef>
+              </descriptorRefs>
             </configuration>
           </execution>
         </executions>
