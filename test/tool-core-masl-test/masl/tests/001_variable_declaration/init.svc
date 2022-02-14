@@ -1,0 +1,20 @@
+public service TestDomain::init() is
+i: integer;
+s: string := "hello";
+begin
+  TRACE::info() <<< "Testing variable declarations...";
+
+  // - Confirm variable is initialized with default value for type
+  A::assertTrue(i = 0);
+
+  // - Confirm can assign value
+  i := 7;
+
+  // - Confirm can read value"
+  A::assertTrue(i = 7);
+
+  // - Confirm variable contains correct initial value
+  A::assertTrue(s = "hello");
+
+  TRACE::info() <<< "Passed.";
+end service;
