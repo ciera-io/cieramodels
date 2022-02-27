@@ -6,14 +6,15 @@ import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.net.URL;
+
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
+import io.ciera.runtime.api.domain.Message;
 import io.ciera.runtime.application.DefaultLogger;
-import io.ciera.runtime.domain.JSONMessage;
 import tracking.shared.Indicator;
 import tracking.shared.Unit;
 import ui.shared.IUI;
@@ -123,7 +124,7 @@ public class SwingWatchGui extends JFrame implements WatchGui {
 		lightLabel.addMouseListener(new ButtonListener(lightHover, powerPressed) {
 			@Override
 			public void buttonPressed() {
-				SwingWatchGui.this.sendSignal(new JSONMessage(new IUI.SetTargetPressed()));
+				SwingWatchGui.this.sendSignal(new IUI.SetTargetPressed());
 			}
 		});
 
@@ -131,7 +132,7 @@ public class SwingWatchGui extends JFrame implements WatchGui {
 		startStopLabel.addMouseListener(new ButtonListener(startStopHover, startStopPressed) {
 			@Override
 			public void buttonPressed() {
-				SwingWatchGui.this.sendSignal(new JSONMessage(new IUI.StartStopPressed()));
+				SwingWatchGui.this.sendSignal(new IUI.StartStopPressed());
 			}
 		});
 
@@ -139,7 +140,7 @@ public class SwingWatchGui extends JFrame implements WatchGui {
 		lapResetLabel.addMouseListener(new ButtonListener(lapResetHover, lapResetPressed) {
 			@Override
 			public void buttonPressed() {
-				SwingWatchGui.this.sendSignal(new JSONMessage(new IUI.LapResetPressed()));
+				SwingWatchGui.this.sendSignal(new IUI.LapResetPressed());
 			}
 		});
 
@@ -147,7 +148,7 @@ public class SwingWatchGui extends JFrame implements WatchGui {
 		displayLabel.addMouseListener(new ButtonListener(displayHover, displayPressed) {
 			@Override
 			public void buttonPressed() {
-				SwingWatchGui.this.sendSignal(new JSONMessage(new IUI.LightPressed()));
+				SwingWatchGui.this.sendSignal(new IUI.LightPressed());
 			}
 		});
 
@@ -155,7 +156,7 @@ public class SwingWatchGui extends JFrame implements WatchGui {
 		modeLabel.addMouseListener(new ButtonListener(modeHover, modePressed) {
 			@Override
 			public void buttonPressed() {
-				SwingWatchGui.this.sendSignal(new JSONMessage(new IUI.ModePressed()));
+				SwingWatchGui.this.sendSignal(new IUI.ModePressed());
 			}
 		});
 
@@ -366,7 +367,7 @@ public class SwingWatchGui extends JFrame implements WatchGui {
 		public abstract void buttonPressed();
 	}
 
-	private void sendSignal(JSONMessage message) {
+	private void sendSignal(Message message) {
 		app.sendSignal(message);
 	}
 

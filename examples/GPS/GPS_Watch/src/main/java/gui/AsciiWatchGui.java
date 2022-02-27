@@ -1,16 +1,5 @@
 package gui;
 
-import com.googlecode.lanterna.TerminalPosition;
-import com.googlecode.lanterna.TextCharacter;
-import com.googlecode.lanterna.graphics.BasicTextImage;
-import com.googlecode.lanterna.graphics.TextGraphics;
-import com.googlecode.lanterna.graphics.TextImage;
-import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
-import com.googlecode.lanterna.terminal.Terminal;
-
-import io.ciera.runtime.application.DefaultLogger;
-import io.ciera.runtime.domain.JSONMessage;
-
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -20,6 +9,15 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Level;
 
+import com.googlecode.lanterna.TerminalPosition;
+import com.googlecode.lanterna.TextCharacter;
+import com.googlecode.lanterna.graphics.BasicTextImage;
+import com.googlecode.lanterna.graphics.TextGraphics;
+import com.googlecode.lanterna.graphics.TextImage;
+import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
+import com.googlecode.lanterna.terminal.Terminal;
+
+import io.ciera.runtime.application.DefaultLogger;
 import tracking.shared.Indicator;
 import tracking.shared.Unit;
 import ui.shared.IUI;
@@ -84,15 +82,15 @@ public class AsciiWatchGui implements WatchGui {
 				command = terminal.readInput().getCharacter();
 				switch (command) {
 				case 's':
-					app.sendSignal(new JSONMessage(new IUI.StartStopPressed()));
+					app.sendSignal(new IUI.StartStopPressed());
 					app.getLogger().trace("Sending start/stop");
 					break;
 				case 'r':
-					app.sendSignal(new JSONMessage(new IUI.LapResetPressed()));
+					app.sendSignal(new IUI.LapResetPressed());
 					app.getLogger().trace("Sending reset/lap");
 					break;
 				case 'm':
-					app.sendSignal(new JSONMessage(new IUI.ModePressed()));
+					app.sendSignal(new IUI.ModePressed());
 					app.getLogger().trace("Sending mode");
 					break;
 				}
