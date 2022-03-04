@@ -216,7 +216,7 @@ INSERT INTO S_DT_PROXY
 	'GoalSpan',
 	'',
 	'',
-	'../../Shared/Shared.xtuml');
+	'../../../../../../UI/models/UI/UI/Shared/Shared.xtuml');
 INSERT INTO S_SPARM
 	VALUES ("4e364445-ab06-4423-8402-5ca3464ff23d",
 	"2b5b7939-af5c-46dc-abff-7c64296919a1",
@@ -232,7 +232,7 @@ INSERT INTO S_DT_PROXY
 	'GoalCriteria',
 	'The criteria type for a particular workout goal.  ',
 	'',
-	'../../Shared/Shared.xtuml');
+	'../../../../../../UI/models/UI/UI/Shared/Shared.xtuml');
 INSERT INTO S_SPARM
 	VALUES ("99478b16-a37c-4bb2-926e-04410b028401",
 	"2b5b7939-af5c-46dc-abff-7c64296919a1",

@@ -68,7 +68,7 @@ INSERT INTO S_DT_PROXY
 	'Unit',
 	'',
 	'',
-	'../../../../../../Tracking/models/Tracking/Tracking/Shared/Shared.xtuml');
+	'../../Shared/Shared.xtuml');
 INSERT INTO PE_PE
 	VALUES ("d952ffa0-7b4b-43b0-999b-04e44197017b",
 	1,
@@ -101,7 +101,7 @@ INSERT INTO S_DT_PROXY
 	'Indicator',
 	'Graphical indicator.',
 	'',
-	'../../../../../../Tracking/models/Tracking/Tracking/Shared/Shared.xtuml');
+	'../../Shared/Shared.xtuml');
 INSERT INTO PE_PE
 	VALUES ("86863a7d-e663-490c-9076-281db14af243",
 	1,

@@ -64,7 +64,7 @@ INSERT INTO S_DT_PROXY
 	'Unit',
 	'',
 	'',
-	'../../../../../../Tracking/models/Tracking/Tracking/Shared/Shared.xtuml');
+	'../Shared.xtuml');
 INSERT INTO C_EP
 	VALUES ("5ca515d4-2e83-4632-b040-ee98f9ef2a4e",
 	"06e358bd-8488-4092-af9c-7c359b158f4d",
@@ -93,7 +93,7 @@ INSERT INTO S_DT_PROXY
 	'Indicator',
 	'Graphical indicator.',
 	'',
-	'../../../../../../Tracking/models/Tracking/Tracking/Shared/Shared.xtuml');
+	'../Shared.xtuml');
 INSERT INTO C_EP
 	VALUES ("6254528a-deb6-494e-889f-c3251a439e85",
 	"06e358bd-8488-4092-af9c-7c359b158f4d",
@@ -187,7 +187,7 @@ INSERT INTO S_DT_PROXY
 	'GoalSpan',
 	'',
 	'',
-	'../../../../../../Tracking/models/Tracking/Tracking/Shared/Shared.xtuml');
+	'../Shared.xtuml');
 INSERT INTO C_PP
 	VALUES ("3790a683-9ce0-49ca-87f9-d1a0a27408ba",
 	"45a6e44b-1246-4ab3-893d-a1761853347b",
@@ -203,7 +203,7 @@ INSERT INTO S_DT_PROXY
 	'GoalCriteria',
 	'The criteria type for a particular workout goal.  ',
 	'',
-	'../../../../../../Tracking/models/Tracking/Tracking/Shared/Shared.xtuml');
+	'../Shared.xtuml');
 INSERT INTO C_PP
 	VALUES ("b8c7071c-f635-4c81-a0ed-ecd4f0053c0e",
 	"45a6e44b-1246-4ab3-893d-a1761853347b",

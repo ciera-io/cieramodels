@@ -18,9 +18,9 @@ import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
 
 import io.ciera.runtime.application.DefaultLogger;
-import tracking.shared.Indicator;
-import tracking.shared.Unit;
 import ui.shared.IUI;
+import ui.shared.Indicator;
+import ui.shared.Unit;
 
 public class AsciiWatchGui implements WatchGui {
 

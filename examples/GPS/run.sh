@@ -1,11 +1,12 @@
 #!/bin/bash
 CIERA_VERSION=3.0.0-SNAPSHOT
-CLASSPATH=$HOME/.m2/repository/io/ciera/runtime-api/$CIERA_VERSION/runtime-api-$CIERA_VERSION.jar:$HOME/.m2/repository/io/ciera/runtime/$CIERA_VERSION/runtime-$CIERA_VERSION.jar:$HOME/.m2/repository/io/ciera/runtime-util/$CIERA_VERSION/runtime-util-$CIERA_VERSION.jar:$HOME/.m2/repository/org/json/json/20201115/json-20201115.jar:$HOME/.m2/repository/io/ciera/GPS_Watch/1.0.0-SNAPSHOT/GPS_Watch-1.0.0-SNAPSHOT.jar
+GPS_VERSION=1.0.0-SNAPSHOT
+MVN_REPO=$HOME/.m2/repository
+CLASSPATH=$MVN_REPO/io/ciera/runtime-api/$CIERA_VERSION/runtime-api-$CIERA_VERSION.jar:$MVN_REPO/io/ciera/runtime/$CIERA_VERSION/runtime-$CIERA_VERSION.jar:$MVN_REPO/io/ciera/runtime-util/$CIERA_VERSION/runtime-util-$CIERA_VERSION.jar:$MVN_REPO/io/ciera/GPS_Watch/$GPS_VERSION/GPS_Watch-$GPS_VERSION.jar:$MVN_REPO/io/ciera/HeartRateMonitor/$GPS_VERSION/HeartRateMonitor-$GPS_VERSION.jar:$MVN_REPO/io/ciera/Location/$GPS_VERSION/Location-$GPS_VERSION.jar:$MVN_REPO/io/ciera/Tracking/$GPS_VERSION/Tracking-$GPS_VERSION.jar:$MVN_REPO/io/ciera/UI/$GPS_VERSION/UI-$GPS_VERSION.jar
 PROPS="\
   -Dio.ciera.runtime.logLevel=FINEST \
   -Dio.ciera.runtime.useDeterministicIDs\
   -Dio.ciera.runtime.haltWhenIdle\
   -Dio.ciera.runtime.objectStore=GPS.obj\
 "
-java -version
 java $PROPS -cp $CLASSPATH gps_watch.GPS_WatchApplication $@

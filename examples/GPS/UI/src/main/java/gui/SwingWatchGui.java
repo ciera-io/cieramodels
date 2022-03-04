@@ -15,9 +15,9 @@ import javax.swing.JPanel;
 
 import io.ciera.runtime.api.domain.Message;
 import io.ciera.runtime.application.DefaultLogger;
-import tracking.shared.Indicator;
-import tracking.shared.Unit;
 import ui.shared.IUI;
+import ui.shared.Indicator;
+import ui.shared.Unit;
 
 public class SwingWatchGui extends JFrame implements WatchGui {
 

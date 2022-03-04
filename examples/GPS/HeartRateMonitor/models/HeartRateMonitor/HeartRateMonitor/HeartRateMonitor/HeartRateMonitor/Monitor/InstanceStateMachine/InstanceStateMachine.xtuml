@@ -536,14 +536,14 @@ INSERT INTO GD_MD
 	0,
 	0,
 	'4.1.17',
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine');
 INSERT INTO GD_GE
 	VALUES ("44a0b4d9-faa7-4901-b0b1-1b23258925fa",
 	"661e12c5-830f-463e-afd7-65839375e0d1",
 	"cbf54daf-9edc-4ff6-973a-17a04e990b33",
 	41,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::idle');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::idle');
 INSERT INTO GD_SHP
 	VALUES ("44a0b4d9-faa7-4901-b0b1-1b23258925fa");
 INSERT INTO GD_NCS
@@ -587,7 +587,7 @@ INSERT INTO GD_GE
 	"a496f1fd-3770-4808-93dd-cf82a4f28eb7",
 	41,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::monitoring');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::monitoring');
 INSERT INTO GD_SHP
 	VALUES ("8d018a4b-3c4b-437e-b025-df33d4d1b856");
 INSERT INTO GD_NCS
@@ -641,7 +641,7 @@ INSERT INTO GD_GE
 	"30f80546-56e4-41b6-a8a3-5d14f3bbf4d7",
 	42,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::monitoring::HRM3: timeout');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::monitoring::HRM3: timeout');
 INSERT INTO GD_CON
 	VALUES ("6de03af0-dec1-48fb-88d2-65bf02a852c2",
 	"00000000-0000-0000-0000-000000000000");
@@ -767,7 +767,7 @@ INSERT INTO GD_GE
 	"bf1ca9b2-3a8c-48b9-aa32-07118c65e135",
 	41,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::Registering');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Registering');
 INSERT INTO GD_SHP
 	VALUES ("41aa086b-9d91-4a76-8731-6f8e3f282d4f");
 INSERT INTO GD_NCS
@@ -806,7 +806,7 @@ INSERT INTO GD_GE
 	"322a5b67-a9a4-4da2-8e35-1bf07ddea980",
 	41,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::Unregistering');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Unregistering');
 INSERT INTO GD_SHP
 	VALUES ("f707735a-6245-4d20-9301-43d7743cb391");
 INSERT INTO GD_NCS
@@ -840,7 +840,7 @@ INSERT INTO GD_GE
 	"c71a16f7-3f1e-41a6-bb18-2ffb58c4a91a",
 	42,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::idle::HRM8: registerListener');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::idle::HRM8: registerListener');
 INSERT INTO GD_CON
 	VALUES ("883eb9cb-55b6-4c76-9875-3c80d47d4007",
 	"00000000-0000-0000-0000-000000000000");
@@ -953,7 +953,7 @@ INSERT INTO GD_GE
 	"720aae01-ab1e-4238-8a80-9d3f813ca1d5",
 	42,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::Registering::HRM5: registerComplete');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Registering::HRM5: registerComplete');
 INSERT INTO GD_CON
 	VALUES ("4cf50bb8-3648-4e6f-bf56-bd13a336a254",
 	"00000000-0000-0000-0000-000000000000");
@@ -1066,7 +1066,7 @@ INSERT INTO GD_GE
 	"1992c84e-85fd-4ac4-9665-fb9ab46c1be6",
 	42,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::monitoring::HRM9: unregisterListener');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::monitoring::HRM9: unregisterListener');
 INSERT INTO GD_CON
 	VALUES ("fad9b947-6858-48d3-8ae7-b086dffcde09",
 	"00000000-0000-0000-0000-000000000000");
@@ -1179,7 +1179,7 @@ INSERT INTO GD_GE
 	"8209dfc8-cd45-4f6b-bf44-978ed444b711",
 	42,
 	0,
-	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Instance State Machine::Unregistering::HRM7: unregisterComplete');
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Unregistering::HRM7: unregisterComplete');
 INSERT INTO GD_CON
 	VALUES ("b2e0ece1-636e-49e5-8bda-3724f72ff1b4",
 	"00000000-0000-0000-0000-000000000000");
@@ -1295,9 +1295,9 @@ INSERT INTO DIM_DIA
 	"00000000-0000-0000-0000-000000000000");
 INSERT INTO O_OBJ_PROXY
 	VALUES ("43ffa2f7-7cc5-400e-b5f5-59b26ed3c7b5",
-	'HeartRateMonitor',
+	'Monitor',
 	1,
 	'HRM',
 	'Represents the heart-rate monitoring facility.',
 	"00000000-0000-0000-0000-000000000000",
-	'../HeartRateMonitor.xtuml');
+	'../Monitor.xtuml');

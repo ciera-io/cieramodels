@@ -1,4 +1,4 @@
-package gps_watch.tracking;
+package tracking.tracking;
 
 import java.io.IOException;
 import java.io.InvalidClassException;

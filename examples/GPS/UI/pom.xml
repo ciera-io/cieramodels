@@ -6,11 +6,42 @@
     <artifactId>GPS</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>io.ciera</groupId>
   <artifactId>UI</artifactId>
   <packaging>jar</packaging>
-  <version>1.0.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>io.ciera</groupId>
+      <artifactId>runtime</artifactId>
+      <version>3.0.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.googlecode.lanterna</groupId>
+      <artifactId>lanterna</artifactId>
+      <version>3.1.1</version>
+    </dependency>
+  </dependencies>
   <build>
+    <plugins>
+      <plugin>
+        <groupId>io.ciera</groupId>
+        <artifactId>ciera-maven-plugin</artifactId>
+        <version>3.0.0-SNAPSHOT</version>
+        <executions>
+          <execution>
+            <id>pre-build</id>
+            <goals>
+              <goal>pyxtuml-pre-build</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>ciera-core</id>
+            <goals>
+              <goal>core</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
     <resources>
       <resource>
         <directory>${project.basedir}</directory>
@@ -21,11 +52,7 @@
         </includes>
       </resource>
       <resource>
-        <directory>${project.build.directory}/generated-sources/java</directory>
-        <filtering>true</filtering>
-        <includes>
-          <include>**/*.properties</include>
-        </includes>
+        <directory>${project.basedir}/src/main/resources</directory>
       </resource>
     </resources>
   </build>

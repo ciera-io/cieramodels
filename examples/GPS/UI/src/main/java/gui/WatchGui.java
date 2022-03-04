@@ -1,7 +1,7 @@
 package gui;
 
-import tracking.shared.Indicator;
-import tracking.shared.Unit;
+import ui.shared.Indicator;
+import ui.shared.Unit;
 
 public interface WatchGui {
 

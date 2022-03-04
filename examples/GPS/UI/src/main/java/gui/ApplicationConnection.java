@@ -9,9 +9,9 @@ import java.io.StreamCorruptedException;
 import java.net.Socket;
 
 import io.ciera.runtime.api.domain.Message;
-import tracking.shared.Indicator;
-import tracking.shared.Unit;
 import ui.shared.IUI;
+import ui.shared.Indicator;
+import ui.shared.Unit;
 
 /**
  * The <code>ApplicationConnection</code> is the connection to the underlying
