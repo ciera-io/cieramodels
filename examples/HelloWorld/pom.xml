@@ -16,14 +16,14 @@
       <artifactId>runtime</artifactId>
       <version>3.0.0-SNAPSHOT</version>
     </dependency>
-    <dependency>
-      <groupId>io.ciera</groupId>
-      <artifactId>runtime-util</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.10.0</version>
+      </plugin>
       <plugin>
         <groupId>io.ciera</groupId>
         <artifactId>ciera-maven-plugin</artifactId>
@@ -35,29 +35,7 @@
               <goal>core-masl</goal>
             </goals>
             <configuration>
-              <input>${project.basedir}/masl/HelloWorld_OOA</input>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <configuration>
-              <archive>
-                <manifest>
-                  <mainClass>helloworldapplication.HelloWorldApplication</mainClass>
-                </manifest>
-              </archive>
-              <descriptorRefs>
-                <descriptorRef>jar-with-dependencies</descriptorRef>
-              </descriptorRefs>
+              <modFile>${project.basedir}/masl/HelloWorld_OOA/HelloWorld.mod</modFile>
             </configuration>
           </execution>
         </executions>
@@ -65,18 +43,10 @@
     </plugins>
     <resources>
       <resource>
-        <directory>${project.basedir}</directory>
+        <directory>${project.basedir}/masl</directory>
         <filtering>true</filtering>
         <includes>
-          <include>models/**/*.xtuml</include>
-          <include>.project</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>${project.build.directory}/generated-sources/java</directory>
-        <filtering>true</filtering>
-        <includes>
-          <include>**/*.properties</include>
+          <include>**/*.int</include>
         </includes>
       </resource>
     </resources>

@@ -5,7 +5,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.net.URL;
+import java.io.IOException;
+import java.io.UncheckedIOException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -69,13 +70,11 @@ public class SwingWatchGui extends JFrame implements WatchGui {
 	private JLabel[] largeDigitLabel = new JLabel[4];
 
 	protected ImageIcon createStandaloneImageIcon(String path) {
-		URL imgURL = ClassLoader.getSystemResource(path);
-		if (imgURL != null) {
-			return new ImageIcon(imgURL);
-		} else {
-			app.getLogger().error("Couldn't find file: " + path);
-			return null;
-		}
+	    try {
+            return new ImageIcon(getClass().getModule().getResourceAsStream(path).readAllBytes());
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
 	}
 
 	protected void createImageIcons() {

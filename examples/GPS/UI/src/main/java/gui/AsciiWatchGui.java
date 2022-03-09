@@ -3,7 +3,6 @@ package gui;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -174,9 +173,8 @@ public class AsciiWatchGui implements WatchGui {
 		List<TextImage> numerals = new ArrayList<>();
 		List<String> lines = new ArrayList<>();
 		;
-		URL txtURL = ClassLoader.getSystemResource("gui/txt/numbers.txt");
 		try {
-			Scanner sc = new Scanner(txtURL.openStream());
+			Scanner sc = new Scanner(getClass().getModule().getResourceAsStream("gui/txt/numbers.txt"));
 			while (sc.hasNextLine()) {
 				if (lines.size() >= 3) {
 					numerals.add(fromLines(lines));
@@ -193,9 +191,8 @@ public class AsciiWatchGui implements WatchGui {
 
 	private TextImage loadWatchFace() {
 		List<String> lines = new ArrayList<>();
-		URL txtURL = ClassLoader.getSystemResource("gui/txt/watchface.txt");
 		try {
-			Scanner sc = new Scanner(txtURL.openStream());
+			Scanner sc = new Scanner(getClass().getModule().getResourceAsStream("gui/txt/watchface.txt"));
 			while (sc.hasNextLine()) {
 				lines.add(sc.nextLine());
 			}
