@@ -17,10 +17,28 @@ INSERT INTO O_ATTR
 	VALUES ("0721bfe1-3f3c-4746-8922-d325615c4fa3",
 	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
 	"00000000-0000-0000-0000-000000000000",
-	'School_ID',
+	'school_id',
 	'',
 	'',
-	'School_ID',
+	'school_id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000004",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("18295c6e-435e-496d-b458-a68a8ef675c8",
+	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188");
+INSERT INTO O_BATTR
+	VALUES ("18295c6e-435e-496d-b458-a68a8ef675c8",
+	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188");
+INSERT INTO O_ATTR
+	VALUES ("18295c6e-435e-496d-b458-a68a8ef675c8",
+	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
+	"0721bfe1-3f3c-4746-8922-d325615c4fa3",
+	'name',
+	'',
+	'',
+	'name',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000004",
 	'',
@@ -32,7 +50,7 @@ INSERT INTO O_OIDA
 	VALUES ("0721bfe1-3f3c-4746-8922-d325615c4fa3",
 	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
 	0,
-	'School_ID');
+	'school_id');
 INSERT INTO O_ID
 	VALUES (1,
 	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188");

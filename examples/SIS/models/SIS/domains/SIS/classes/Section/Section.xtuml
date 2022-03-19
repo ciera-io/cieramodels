@@ -1,0 +1,284 @@
+-- BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO O_OBJ
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	'Section',
+	3,
+	'Section',
+	'',
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO O_NBATTR
+	VALUES ("856b4f08-b2d9-45ec-99c1-de27beab0fd2",
+	"ec23c744-a139-413a-be02-50929f715d56");
+INSERT INTO O_BATTR
+	VALUES ("856b4f08-b2d9-45ec-99c1-de27beab0fd2",
+	"ec23c744-a139-413a-be02-50929f715d56");
+INSERT INTO O_ATTR
+	VALUES ("856b4f08-b2d9-45ec-99c1-de27beab0fd2",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"00000000-0000-0000-0000-000000000000",
+	'section_id',
+	'',
+	'',
+	'section_id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000002",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
+	0,
+	"9622e4a7-c227-44a3-a39c-ea65b134bbb7",
+	"9d0ee879-efda-4f09-8642-a261bb96ef08",
+	"bff36d0b-4c0c-4072-a09d-14723643791b",
+	"33eefa0f-fec2-4cfa-9599-0c58559428a5",
+	"481dbe36-7fc6-4962-b254-a628a9b5def2",
+	"e54db1d9-7bd0-45c7-862f-cf886b7a4ed6",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Course',
+	'course_number',
+	'R2.''is_occurence_of''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"9d0ee879-efda-4f09-8642-a261bb96ef08",
+	"bff36d0b-4c0c-4072-a09d-14723643791b",
+	'../classes.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("9622e4a7-c227-44a3-a39c-ea65b134bbb7",
+	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
+	0,
+	"9d0ee879-efda-4f09-8642-a261bb96ef08",
+	"33eefa0f-fec2-4cfa-9599-0c58559428a5",
+	'../classes.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("481dbe36-7fc6-4962-b254-a628a9b5def2",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"9622e4a7-c227-44a3-a39c-ea65b134bbb7",
+	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
+	1,
+	'course_number');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("9622e4a7-c227-44a3-a39c-ea65b134bbb7",
+	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
+	'../Course/Course.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("481dbe36-7fc6-4962-b254-a628a9b5def2",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
+	'course_number',
+	'',
+	'',
+	'course_number',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"bdf0e0d1-5266-4979-9b10-234a68d8d86d",
+	0,
+	"18351a78-74c6-4870-92cd-d6b9eff10eb8",
+	"835716eb-f11e-4456-9533-569f589e7294",
+	"047dfd71-4117-4adc-8535-b2f508d2a61c",
+	"75d87bc5-893a-4543-8f5b-b0f1fa8ad8ea",
+	"8fb8e59c-7a6a-4771-b558-362e189c3e5c",
+	"bef31e4c-a9d2-41f7-9d76-5ebec5f7c8fb",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Term',
+	'name',
+	'R3.''is_taught_during''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"835716eb-f11e-4456-9533-569f589e7294",
+	"047dfd71-4117-4adc-8535-b2f508d2a61c",
+	'../classes.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("18351a78-74c6-4870-92cd-d6b9eff10eb8",
+	"bdf0e0d1-5266-4979-9b10-234a68d8d86d",
+	0,
+	"835716eb-f11e-4456-9533-569f589e7294",
+	"75d87bc5-893a-4543-8f5b-b0f1fa8ad8ea",
+	'../classes.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("8fb8e59c-7a6a-4771-b558-362e189c3e5c",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"18351a78-74c6-4870-92cd-d6b9eff10eb8",
+	"bdf0e0d1-5266-4979-9b10-234a68d8d86d",
+	0,
+	'name');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("18351a78-74c6-4870-92cd-d6b9eff10eb8",
+	"bdf0e0d1-5266-4979-9b10-234a68d8d86d",
+	'../Term/Term.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("8fb8e59c-7a6a-4771-b558-362e189c3e5c",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"481dbe36-7fc6-4962-b254-a628a9b5def2",
+	'term',
+	'',
+	'',
+	'term',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	0,
+	"2549736b-27b4-414e-84e9-69520adc3d52",
+	"f2f22d86-1634-41d2-9560-fa2a59029c54",
+	"cee017f4-73c2-44fb-84d3-23e6823ad323",
+	"1861f544-8cf9-488e-8700-2b1051924234",
+	"e1ce7537-db1f-4d8b-b143-0d2a9e10ed4c",
+	"9aaf26e6-d6db-4b46-95f5-e098f5bb25f8",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Teacher',
+	'teacher_id',
+	'R5.''is_taught_by''');
+INSERT INTO R_RGO_PROXY
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"f2f22d86-1634-41d2-9560-fa2a59029c54",
+	"cee017f4-73c2-44fb-84d3-23e6823ad323",
+	'../classes.xtuml');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("2549736b-27b4-414e-84e9-69520adc3d52",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	0,
+	"f2f22d86-1634-41d2-9560-fa2a59029c54",
+	"1861f544-8cf9-488e-8700-2b1051924234",
+	'../classes.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("e1ce7537-db1f-4d8b-b143-0d2a9e10ed4c",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"2549736b-27b4-414e-84e9-69520adc3d52",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	1,
+	'teacher_id');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("2549736b-27b4-414e-84e9-69520adc3d52",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	'../Teacher/Teacher.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("e1ce7537-db1f-4d8b-b143-0d2a9e10ed4c",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"8fb8e59c-7a6a-4771-b558-362e189c3e5c",
+	'teacher_id',
+	'',
+	'',
+	'teacher_id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	0,
+	"7eb42132-9dd1-461b-a3bc-617d510e83c2",
+	"f2f22d86-1634-41d2-9560-fa2a59029c54",
+	"cee017f4-73c2-44fb-84d3-23e6823ad323",
+	"1861f544-8cf9-488e-8700-2b1051924234",
+	"14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
+	"f4bfc4ca-36ec-4344-805a-2457680bc72b",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Teacher',
+	'school_id',
+	'R5.''is_taught_by''');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("7eb42132-9dd1-461b-a3bc-617d510e83c2",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	0,
+	"f2f22d86-1634-41d2-9560-fa2a59029c54",
+	"1861f544-8cf9-488e-8700-2b1051924234",
+	'../classes.xtuml');
+INSERT INTO O_REF
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
+	0,
+	"a4d398d6-ea35-420b-a17c-b87b42eab846",
+	"9d0ee879-efda-4f09-8642-a261bb96ef08",
+	"bff36d0b-4c0c-4072-a09d-14723643791b",
+	"33eefa0f-fec2-4cfa-9599-0c58559428a5",
+	"14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
+	"50eda714-c5d5-47e6-a8de-7b91da5dccd1",
+	"f4bfc4ca-36ec-4344-805a-2457680bc72b",
+	0,
+	'',
+	'Course',
+	'school_id',
+	'R2.''is_occurence_of''');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("a4d398d6-ea35-420b-a17c-b87b42eab846",
+	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
+	0,
+	"9d0ee879-efda-4f09-8642-a261bb96ef08",
+	"33eefa0f-fec2-4cfa-9599-0c58559428a5",
+	'../classes.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"0721bfe1-3f3c-4746-8922-d325615c4fa3",
+	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
+	1,
+	'school_id');
+INSERT INTO O_BATTR_PROXY
+	VALUES ("0721bfe1-3f3c-4746-8922-d325615c4fa3",
+	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
+	'../School/School.xtuml');
+INSERT INTO O_ATTR
+	VALUES ("14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"856b4f08-b2d9-45ec-99c1-de27beab0fd2",
+	'school_id',
+	'
+
+',
+	'',
+	'school_id',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_ID
+	VALUES (0,
+	"ec23c744-a139-413a-be02-50929f715d56");
+INSERT INTO O_OIDA
+	VALUES ("856b4f08-b2d9-45ec-99c1-de27beab0fd2",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	0,
+	'section_id');
+INSERT INTO O_OIDA
+	VALUES ("14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	0,
+	'school_id');
+INSERT INTO O_ID
+	VALUES (1,
+	"ec23c744-a139-413a-be02-50929f715d56");
+INSERT INTO O_ID
+	VALUES (2,
+	"ec23c744-a139-413a-be02-50929f715d56");
+INSERT INTO PE_PE
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	1,
+	"839f36d6-a331-4d30-9b72-3d68545d17c3",
+	"00000000-0000-0000-0000-000000000000",
+	4);
+INSERT INTO EP_PKG_PROXY
+	VALUES ("839f36d6-a331-4d30-9b72-3d68545d17c3",
+	"00000000-0000-0000-0000-000000000000",
+	"d5594751-4128-43b5-89da-bceb50369156",
+	'classes',
+	'',
+	0,
+	'../classes.xtuml');
