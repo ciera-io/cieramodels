@@ -76,16 +76,9 @@ INSERT INTO O_ATTR
 	'',
 	'gender',
 	0,
-	"cd982670-d6df-4240-9815-4c02628bebb4",
+	"ba5eda7a-def5-0000-0000-000000000004",
 	'',
 	'');
-INSERT INTO S_DT_PROXY
-	VALUES ("cd982670-d6df-4240-9815-4c02628bebb4",
-	"00000000-0000-0000-0000-000000000000",
-	'gender',
-	'',
-	'',
-	'../../datatypes/datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("ebbe6a25-7cc8-49e7-bc9f-39560b1f613f",
 	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60");
