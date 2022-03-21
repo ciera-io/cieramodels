@@ -1,0 +1,7 @@
+//! ACTIVITY BEGIN. '6e2fab93-16af-474d-9426-3967b9b4c29a' DO NOT EDIT THIS LINE.
+private service SIS::init () is
+begin
+  null;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

@@ -1,0 +1,2 @@
+domains::SIS::functions::void init,scenario,Function,1
+domains::SIS::functions::void init,startup,Function,true
