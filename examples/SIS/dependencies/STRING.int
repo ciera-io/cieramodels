@@ -1,6 +1,7 @@
 domain STRING is
 
   public service atoi(s: in string) return integer;
+  public service itoa(i: in integer) return string;
   
 end domain;
 pragma utility("io.ciera.runtime.util");

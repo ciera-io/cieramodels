@@ -180,29 +180,6 @@ INSERT INTO O_ATTR
 	'');
 INSERT INTO O_REF
 	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
-	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
-	0,
-	"7eb42132-9dd1-461b-a3bc-617d510e83c2",
-	"f2f22d86-1634-41d2-9560-fa2a59029c54",
-	"cee017f4-73c2-44fb-84d3-23e6823ad323",
-	"1861f544-8cf9-488e-8700-2b1051924234",
-	"14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
-	"f4bfc4ca-36ec-4344-805a-2457680bc72b",
-	"00000000-0000-0000-0000-000000000000",
-	0,
-	'',
-	'Teacher',
-	'school_id',
-	'R5.''is_taught_by''');
-INSERT INTO O_RTIDA_PROXY
-	VALUES ("7eb42132-9dd1-461b-a3bc-617d510e83c2",
-	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
-	0,
-	"f2f22d86-1634-41d2-9560-fa2a59029c54",
-	"1861f544-8cf9-488e-8700-2b1051924234",
-	'../classes.xtuml');
-INSERT INTO O_REF
-	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
 	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
 	0,
 	"a4d398d6-ea35-420b-a17c-b87b42eab846",
@@ -211,7 +188,7 @@ INSERT INTO O_REF
 	"33eefa0f-fec2-4cfa-9599-0c58559428a5",
 	"14073adc-1b9d-4d37-8ae9-22bd9a0aafcb",
 	"50eda714-c5d5-47e6-a8de-7b91da5dccd1",
-	"f4bfc4ca-36ec-4344-805a-2457680bc72b",
+	"00000000-0000-0000-0000-000000000000",
 	0,
 	'',
 	'Course',
@@ -246,6 +223,48 @@ INSERT INTO O_ATTR
 	'',
 	'school_id',
 	0,
+	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_REF
+	VALUES ("ec23c744-a139-413a-be02-50929f715d56",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	0,
+	"7eb42132-9dd1-461b-a3bc-617d510e83c2",
+	"f2f22d86-1634-41d2-9560-fa2a59029c54",
+	"cee017f4-73c2-44fb-84d3-23e6823ad323",
+	"1861f544-8cf9-488e-8700-2b1051924234",
+	"ed09fbb2-d4a2-47ab-b8b3-cb2760ae0480",
+	"f4bfc4ca-36ec-4344-805a-2457680bc72b",
+	"00000000-0000-0000-0000-000000000000",
+	0,
+	'',
+	'Teacher',
+	'school_id',
+	'R5.''is_taught_by''');
+INSERT INTO O_RTIDA_PROXY
+	VALUES ("7eb42132-9dd1-461b-a3bc-617d510e83c2",
+	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
+	0,
+	"f2f22d86-1634-41d2-9560-fa2a59029c54",
+	"1861f544-8cf9-488e-8700-2b1051924234",
+	'../classes.xtuml');
+INSERT INTO O_RATTR
+	VALUES ("ed09fbb2-d4a2-47ab-b8b3-cb2760ae0480",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"0721bfe1-3f3c-4746-8922-d325615c4fa3",
+	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
+	1,
+	'school_id');
+INSERT INTO O_ATTR
+	VALUES ("ed09fbb2-d4a2-47ab-b8b3-cb2760ae0480",
+	"ec23c744-a139-413a-be02-50929f715d56",
+	"e1ce7537-db1f-4d8b-b143-0d2a9e10ed4c",
+	'teacher_school_id',
+	'',
+	'teacher_',
+	'school_id',
+	1,
 	"ba5eda7a-def5-0000-0000-000000000007",
 	'',
 	'');

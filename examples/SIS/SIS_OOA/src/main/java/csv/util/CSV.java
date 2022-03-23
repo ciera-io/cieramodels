@@ -1,24 +1,24 @@
 package csv.util;
 
-import java.io.IOException;
-import java.io.UncheckedIOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.UncheckedIOException;
+import java.nio.charset.Charset;
 
 import io.ciera.runtime.api.domain.Domain;
 
 public class CSV {
 
     private List<String> headers;
-    private List<Map<String, String>> rows;
+    private List<CSVRecord> rows;
 
     public CSV() {
     }
@@ -28,21 +28,11 @@ public class CSV {
     }
 
     public void load_file(final String p_filename) {
-        headers = null;
-        rows = null;
         try {
-            Files.lines(Path.of(p_filename)).forEach(line -> {
-                List<String> row = List.of(line.split(","));
-                if (headers == null) {
-                    headers = Collections.unmodifiableList(row);
-                } else {
-                    if (rows == null) {
-                        rows = new ArrayList<>();
-                    }
-                    rows.add(IntStream.range(0, Math.min(headers.size(), row.size())).boxed()
-                            .collect(Collectors.toMap(headers::get, row::get)));
-                }
-            });
+            CSVParser parser = CSVParser.parse(new File(p_filename), Charset.defaultCharset(),
+                    CSVFormat.Builder.create().setHeader().setSkipHeaderRecord(true).build());
+            headers = parser.getHeaderNames();
+            rows = parser.getRecords();
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
