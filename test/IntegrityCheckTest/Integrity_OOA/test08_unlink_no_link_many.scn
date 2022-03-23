@@ -9,11 +9,37 @@ e5: instance of Element;
 e6: instance of Element;
 begin
 
-  // Attempt to unlink a 'many' relationship that hasn't been created
+  // Create a two lists and print them
 
   l1 := create List(name => "TODO");
 
   e1 := create Element(list_name => l1.name, item => "Finish videos");
-  unlink e1 R1 l1;  // Attempt to unlink before linking
+  link e1 R1 l1;
+  link e1 R2 l1;
+
+  e2 := create Element(list_name => l1.name, item => "Write documentation");
+  link e2 R1 l1;
+  link e1 R3.precedes e2;
+
+  e3 := create Element(list_name => l1.name, item => "Send email");
+  link e3 R1 l1;
+  link e2 R3.precedes e3;
+
+  l2 := create List(name => "Groceries");
+
+  e4 := create Element(list_name => l2.name, item => "Milk");
+  link e4 R1 l2;
+  link e4 R2 l2;
+
+  e5 := create Element(list_name => l2.name, item => "Eggs");
+  link e5 R1 l2;
+  link e4 R3.precedes e5;
+
+  e6 := create Element(list_name => l2.name, item => "Cheese");
+  unlink e6 R1 l2;  // Attempt to unlink before linking
+  link e5 R3.precedes e6;
+
+  l1.print();
+  l2.print();
 
 end service;

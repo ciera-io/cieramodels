@@ -1,7 +1,7 @@
 public instance service Integrity::List.print() is
 e: instance of Element;
 begin
-  console <<< "List: " & this.name;
+  console <<< "List: " & this.name << flush;
   e := this -> R2;
   while e /= null loop
     e.print();
