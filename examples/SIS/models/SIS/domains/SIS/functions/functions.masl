@@ -1,7 +1,35 @@
 //! ACTIVITY BEGIN. '6e2fab93-16af-474d-9426-3967b9b4c29a' DO NOT EDIT THIS LINE.
 private service SIS::init () is
 begin
-  null;
+
+  // register command line arguments TODO
+  CMD::register_value("schools", "school_file", "CSV file containing schools", "", true);
+  CMD::read_command_line();
+  
+  // load the data
+  load_data();
+
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '1486371a-538c-4a79-b8c3-2501c69999e4' DO NOT EDIT THIS LINE.
+private service SIS::load_data () is
+i: integer := 0;
+s: instance of School;
+begin
+
+  // load schools
+  CSV::load_file(CMD::get_value("schools"));
+  while i < CSV::num_rows() loop
+    s := create School(school_id => CSV::get_cell(i, "School_ID"), name => CSV::get_cell(i, "School_Name"));
+    i := i + 1;
+  end loop;
+  
+  // check
+  for s in find School() loop
+    console <<< s;
+  end loop;
+
 end service;
 //! ACTIVITY END. DO NOT EDIT THIS LINE.
 

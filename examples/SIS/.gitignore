@@ -1,1 +1,4 @@
+models/**/*.mod
+models/**/*.int
+models/**/*.prj
 masl/

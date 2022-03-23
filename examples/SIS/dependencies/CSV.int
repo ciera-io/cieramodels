@@ -1,0 +1,12 @@
+domain CSV is
+  
+  public service load_file(filename: in string);
+
+  public service get_headers() return set of string;
+
+  public service num_rows() return integer;
+
+  public service get_cell(row_index: in integer, column_name: in string) return string;
+
+end domain;
+pragma utility();

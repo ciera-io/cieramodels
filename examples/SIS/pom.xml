@@ -21,5 +21,6 @@
   </build>
   <modules>
     <module>SIS_OOA</module>
+    <module>SIS_proc</module>
   </modules>
 </project>

@@ -1,0 +1,91 @@
+-- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+INSERT INTO EP_PKG
+	VALUES ("32daf097-dd34-418c-8e45-b191a02b4bc0",
+	"d5594751-4128-43b5-89da-bceb50369156",
+	"d5594751-4128-43b5-89da-bceb50369156",
+	'deployments',
+	'',
+	0);
+INSERT INTO GD_MD
+	VALUES ("eb840e7d-bd4e-4582-9e1c-c1c97a3eb24c",
+	112,
+	"32daf097-dd34-418c-8e45-b191a02b4bc0",
+	108,
+	0,
+	0,
+	1,
+	1,
+	1,
+	12,
+	1,
+	0,
+	0,
+	200,
+	150,
+	0,
+	'',
+	'SIS::deployments');
+INSERT INTO GD_GE
+	VALUES ("37896c4a-daff-45c2-ab7e-b2e283f46a9b",
+	"eb840e7d-bd4e-4582-9e1c-c1c97a3eb24c",
+	"183157bb-68fd-4915-aae6-a9edb8af3ff1",
+	209,
+	0,
+	'SIS::deployments::SIS_proc');
+INSERT INTO GD_SHP
+	VALUES ("37896c4a-daff-45c2-ab7e-b2e283f46a9b");
+INSERT INTO GD_NCS
+	VALUES ("37896c4a-daff-45c2-ab7e-b2e283f46a9b");
+INSERT INTO DIM_ND
+	VALUES (200.000000,
+	150.000000,
+	"37896c4a-daff-45c2-ab7e-b2e283f46a9b");
+INSERT INTO DIM_GE
+	VALUES (0.000000,
+	0.000000,
+	"37896c4a-daff-45c2-ab7e-b2e283f46a9b",
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_ELE
+	VALUES ("37896c4a-daff-45c2-ab7e-b2e283f46a9b",
+	0,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO DIM_DIA
+	VALUES ("eb840e7d-bd4e-4582-9e1c-c1c97a3eb24c",
+	'',
+	1.000000,
+	0.000000,
+	0.000000,
+	"00000000-0000-0000-0000-000000000000");
+INSERT INTO D_DEPL
+	VALUES ("183157bb-68fd-4915-aae6-a9edb8af3ff1",
+	'SIS_proc',
+	'',
+	'SIS_proc');
+INSERT INTO D_TERM
+	VALUES ("6d61b48c-e662-4ec7-bae3-a0bacf1e9a62",
+	"183157bb-68fd-4915-aae6-a9edb8af3ff1",
+	'SIS',
+	'',
+	'SIS',
+	'',
+	1,
+	'SIS',
+	'');
+INSERT INTO PE_PE
+	VALUES ("183157bb-68fd-4915-aae6-a9edb8af3ff1",
+	1,
+	"32daf097-dd34-418c-8e45-b191a02b4bc0",
+	"00000000-0000-0000-0000-000000000000",
+	25);
+INSERT INTO PE_PE
+	VALUES ("32daf097-dd34-418c-8e45-b191a02b4bc0",
+	1,
+	"00000000-0000-0000-0000-000000000000",
+	"00000000-0000-0000-0000-000000000000",
+	7);
+INSERT INTO S_SYS_PROXY
+	VALUES ("d5594751-4128-43b5-89da-bceb50369156",
+	'SIS',
+	1,
+	'../SIS.xtuml');

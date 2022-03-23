@@ -6,7 +6,7 @@
     <artifactId>SIS</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>SIS_OOA</artifactId>
+  <artifactId>SIS_proc</artifactId>
   <packaging>jar</packaging>
   <dependencies>
     <dependency>
@@ -16,8 +16,8 @@
     </dependency>
     <dependency>
       <groupId>io.ciera</groupId>
-      <artifactId>runtime-util</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <artifactId>SIS_OOA</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>
@@ -33,8 +33,8 @@
               <goal>core-masl</goal>
             </goals>
             <configuration>
-              <modFile>${project.parent.basedir}/masl/SIS/SIS.mod</modFile>
-              <domainPaths>${project.parent.basedir}/dependencies</domainPaths>
+              <prjFile>${project.parent.basedir}/masl/SIS_proc/SIS_proc.prj</prjFile>
+              <domainPaths>${project.parent.basedir}/masl/SIS</domainPaths>
             </configuration>
           </execution>
         </executions>
