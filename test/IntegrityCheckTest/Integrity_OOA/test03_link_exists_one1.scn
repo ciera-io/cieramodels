@@ -1,0 +1,21 @@
+private service Integrity::test03_link_exists_one1() is
+l1: instance of List;
+e1: instance of Element;
+e2: instance of Element;
+begin
+
+  // Relate two instances across a 'one' relationship
+
+  l1 := create List(name => "TODO");
+
+  e1 := create Element(list_name => l1.name, item => "Finish videos");
+  link e1 R1 l1;
+  link e1 R2 l1;
+
+  e2 := create Element(list_name => l1.name, item => "Write documentation");
+  link e2 R1 l1;
+  link e1 R3.precedes e2;
+
+  link e2 R2 l1;  // Cannot have two "first" elements
+
+end service;

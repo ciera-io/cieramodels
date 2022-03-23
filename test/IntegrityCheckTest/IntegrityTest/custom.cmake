@@ -1,0 +1,6 @@
+target_link_libraries(IntegrityTest_metadata STRING_metadata)
+target_link_libraries(IntegrityTest_inspector STRING_inspector)
+target_link_libraries(IntegrityTest_transient STRING_transient)
+target_link_libraries(IntegrityTest_metadata CMD_metadata)
+target_link_libraries(IntegrityTest_inspector CMD_inspector)
+target_link_libraries(IntegrityTest_transient CMD_transient)

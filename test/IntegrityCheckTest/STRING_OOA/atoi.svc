@@ -1,0 +1,4 @@
+public service STRING::atoi(s: in string) return integer is
+begin
+  return integer'parse(s);
+end service;

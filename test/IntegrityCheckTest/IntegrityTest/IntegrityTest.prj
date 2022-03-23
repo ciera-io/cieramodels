@@ -1,0 +1,6 @@
+project IntegrityTest is
+
+  domain Integrity is
+  end domain;
+
+end project;

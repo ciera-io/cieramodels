@@ -1,0 +1,19 @@
+private service Integrity::test05_link_exists_many() is
+l1: instance of List;
+e1: instance of Element;
+e2: instance of Element;
+begin
+
+  // Relate the same instance twice across a 'many' relationship
+
+  l1 := create List(name => "TODO");
+
+  e1 := create Element(list_name => l1.name, item => "Finish videos");
+  link e1 R1 l1;
+  link e1 R2 l1;
+
+  e2 := create Element(list_name => l1.name, item => "Write documentation");
+  link e1 R1 l1;  // Accidentally link the same instance to the list again
+  link e1 R3.precedes e2;
+
+end service;

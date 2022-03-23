@@ -1,0 +1,4 @@
+public service CMD::read_command_line() is
+begin
+  null;  // no-op
+end service;

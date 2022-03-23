@@ -1,0 +1,10 @@
+public instance service Integrity::List.print() is
+e: instance of Element;
+begin
+  console <<< "List: " & this.name;
+  e := this -> R2;
+  while e /= null loop
+    e.print();
+    e := e -> R3.precedes;
+  end loop;
+end service;
