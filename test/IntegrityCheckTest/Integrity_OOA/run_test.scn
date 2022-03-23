@@ -3,7 +3,7 @@ testnum: string;
 begin
 
   testnum := CMD::get_value("t");
-  console <<< "running test " & testnum & "...";
+  console << "running test " & testnum & "..." & endl << flush;
 
   case STRING::atoi(testnum) is
     when 1 =>
