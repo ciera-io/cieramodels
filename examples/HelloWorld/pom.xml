@@ -3,20 +3,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.ciera</groupId>
   <artifactId>HelloWorld</artifactId>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
   <version>1.0.0-SNAPSHOT</version>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
     <maven.compiler.target>11</maven.compiler.target>
   </properties>
-  <dependencies>
-    <dependency>
-      <groupId>io.ciera</groupId>
-      <artifactId>runtime</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
   <build>
     <plugins>
       <plugin>
@@ -24,31 +17,10 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.10.0</version>
       </plugin>
-      <plugin>
-        <groupId>io.ciera</groupId>
-        <artifactId>ciera-maven-plugin</artifactId>
-        <version>3.0.0-SNAPSHOT</version>
-        <executions>
-          <execution>
-            <id>ciera-core</id>
-            <goals>
-              <goal>core-masl</goal>
-            </goals>
-            <configuration>
-              <modFile>${project.basedir}/masl/HelloWorld_OOA/HelloWorld.mod</modFile>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
     </plugins>
-    <resources>
-      <resource>
-        <directory>${project.basedir}/masl</directory>
-        <filtering>true</filtering>
-        <includes>
-          <include>**/*.int</include>
-        </includes>
-      </resource>
-    </resources>
   </build>
+  <modules>
+    <module>HelloWorld_OOA</module>
+    <module>HelloWorld_proc</module>
+  </modules>
 </project>
