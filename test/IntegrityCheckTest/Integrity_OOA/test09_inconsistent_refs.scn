@@ -9,7 +9,7 @@ e5: instance of Element;
 e6: instance of Element;
 begin
 
-  // Attempt to create a situation where referential attributes do not agree
+  // Create a two lists and print them
 
   l1 := create List(name => "TODO");
 
@@ -30,6 +30,7 @@ begin
   e4 := create Element(list_name => l2.name, item => "Milk");
   link e4 R1 l2;
   link e4 R2 l2;
+  link e3 R3.precedes e4;  // Attempt to link elements across two lists
 
   e5 := create Element(list_name => l2.name, item => "Eggs");
   link e5 R1 l2;
@@ -39,6 +40,7 @@ begin
   link e6 R1 l2;
   link e5 R3.precedes e6;
 
-  link e3 R3.precedes e4;  // Attempt to link elements across two lists
+  l1.print();
+  l2.print();
 
 end service;

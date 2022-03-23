@@ -1,4 +1,4 @@
 public instance service Integrity::Element.print() is
 begin
-  console <<< "  Item: " & this.item & " (" & (this -> R1).name & ")";
+  console <<< "  Item: " & this.item & " (" & (this -> R1).name & ")" << flush;
 end service;
