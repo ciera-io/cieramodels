@@ -1,0 +1,13 @@
+domain Logger is
+
+  public service trace       ( message : in anonymous string );
+  public service debug       ( message : in anonymous string );
+  public service information ( message : in anonymous string );
+  public service notice      ( message : in anonymous string );
+  public service warning     ( message : in anonymous string );
+  public service error       ( message : in anonymous string );
+  public service critical    ( message : in anonymous string );
+  public service fatal       ( message : in anonymous string );
+
+end domain;
+pragma utility();

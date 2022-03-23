@@ -76,27 +76,16 @@ INSERT INTO O_ATTR
 	'',
 	'gender',
 	0,
-	"ba5eda7a-def5-0000-0000-000000000004",
+	"cd982670-d6df-4240-9815-4c02628bebb4",
 	'',
 	'');
-INSERT INTO O_NBATTR
-	VALUES ("ebbe6a25-7cc8-49e7-bc9f-39560b1f613f",
-	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60");
-INSERT INTO O_BATTR
-	VALUES ("ebbe6a25-7cc8-49e7-bc9f-39560b1f613f",
-	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60");
-INSERT INTO O_ATTR
-	VALUES ("ebbe6a25-7cc8-49e7-bc9f-39560b1f613f",
-	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60",
-	"e1f87709-865f-4e30-af0f-00893a9a22af",
-	'dob',
+INSERT INTO S_DT_PROXY
+	VALUES ("cd982670-d6df-4240-9815-4c02628bebb4",
+	"00000000-0000-0000-0000-000000000000",
+	'gender',
 	'',
 	'',
-	'dob',
-	0,
-	"ba5eda7a-def5-0000-0000-000000000010",
-	'',
-	'');
+	'../../datatypes/datatypes.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("46590adc-a95c-47d9-8622-05b940172d47",
 	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60");
@@ -106,7 +95,7 @@ INSERT INTO O_BATTR
 INSERT INTO O_ATTR
 	VALUES ("46590adc-a95c-47d9-8622-05b940172d47",
 	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60",
-	"ebbe6a25-7cc8-49e7-bc9f-39560b1f613f",
+	"b36e96ed-b038-4c2e-a9d0-28188435c010",
 	'grade',
 	'',
 	'',
@@ -164,6 +153,24 @@ INSERT INTO O_ATTR
 	'school_id',
 	0,
 	"ba5eda7a-def5-0000-0000-000000000007",
+	'',
+	'');
+INSERT INTO O_NBATTR
+	VALUES ("b36e96ed-b038-4c2e-a9d0-28188435c010",
+	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60");
+INSERT INTO O_BATTR
+	VALUES ("b36e96ed-b038-4c2e-a9d0-28188435c010",
+	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60");
+INSERT INTO O_ATTR
+	VALUES ("b36e96ed-b038-4c2e-a9d0-28188435c010",
+	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60",
+	"e1f87709-865f-4e30-af0f-00893a9a22af",
+	'dob',
+	'',
+	'',
+	'dob',
+	0,
+	"ba5eda7a-def5-0000-0000-000000000010",
 	'',
 	'');
 INSERT INTO O_ID

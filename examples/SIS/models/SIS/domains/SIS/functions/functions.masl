@@ -3,7 +3,11 @@ private service SIS::init () is
 begin
 
   // register command line arguments TODO
-  CMD::register_value("schools", "school_file", "CSV file containing schools", "", true);
+  CMD::register_value("schools", "schools_file", "CSV file containing schools", "", true);
+  CMD::register_value("students", "students_file", "CSV file containing students", "", true);
+  CMD::register_value("teachers", "teachers_file", "CSV file containing teachers", "", true);
+  CMD::register_value("sections", "sections_file", "CSV file containing sections", "", true);
+  CMD::register_value("enrollments", "enrollments_file", "CSV file containing enrollments", "", true);
   CMD::read_command_line();
   
   // load the data
@@ -16,19 +20,105 @@ end service;
 private service SIS::load_data () is
 i: integer := 0;
 s: instance of School;
+st: instance of Student;
+t: instance of Teacher;
+sec: instance of Section;
+c: instance of Course;
+sub: instance of Subject;
+tm: instance of Term;
+e: instance of Enrollment;
+logMessage: string;
 begin
 
   // load schools
+  i := 0;
   CSV::load_file(CMD::get_value("schools"));
   while i < CSV::num_rows() loop
-    s := create School(school_id => CSV::get_cell(i, "School_ID"), name => CSV::get_cell(i, "School_Name"));
+    s := create School(school_id => CSV::get_cell(i, "School_ID"));
+    s.name := CSV::get_cell(i, "School_Name");
     i := i + 1;
   end loop;
   
-  // check
-  for s in find School() loop
-    console <<< s;
+  // load students
+  i := 0;
+  CSV::load_file(CMD::get_value("students"));
+  while i < CSV::num_rows() loop
+    s := find_one School(school_id = CSV::get_cell(i, "School_id"));
+    if s = null then
+      logMessage := "Could not find school with ID: " & CSV::get_cell(i, "School_id") & " for student with ID: " & CSV::get_cell(i, "Student_id");
+      Logger::warning(logMessage);
+    else
+      st := create Student(student_id => STRING::atoi(CSV::get_cell(i, "Student_id")), school_id => s.school_id);
+      st.last_name := CSV::get_cell(i, "Last_name");
+      st.first_name := CSV::get_cell(i, "First_name");
+      if CSV::get_cell(i, "Gender") = "M" then
+        st.gender := MALE;
+      else
+        st.gender := FEMALE;
+      end if;
+      st.dob := UTIL::parse_date(CSV::get_cell(i, "dob"), "MM/dd/yyyy");
+      declare
+      begin
+        st.grade := STRING::atoi(CSV::get_cell(i, "Grade"));
+      exception
+        when others =>
+          if CSV::get_cell(i, "Grade") = "Preschool" or CSV::get_cell(i, "Grade") = "Kindergarten" then
+            st.grade := 0;
+          else
+            st.grade := -1;
+            logMessage := "Could not parse grade: " & CSV::get_cell(i, "Grade") & " for student with ID: " & CSV::get_cell(i, "Student_id");
+            Logger::warning(logMessage);
+          end if;
+      end;
+    end if;
+    i := i + 1;
   end loop;
+  
+  // load teachers
+  i := 0;
+  CSV::load_file(CMD::get_value("teachers"));
+  while i < CSV::num_rows() loop
+    s := find_one School(school_id = CSV::get_cell(i, "School_id"));
+    if s = null then
+      logMessage := "Could not find school with ID: " & CSV::get_cell(i, "School_id") & " for teacher with ID: " & CSV::get_cell(i, "Teacher_id");
+      Logger::warning(logMessage);
+    else
+      t := create Teacher(teacher_id => STRING::atoi(CSV::get_cell(i, "Teacher_id")), school_id => s.school_id);
+      t.last_name := CSV::get_cell(i, "Last_name");
+      t.first_name := CSV::get_cell(i, "First_name");
+      t.title := CSV::get_cell(i, "Title");
+    end if;
+    i := i + 1;
+  end loop;
+  
+  // load sections
+  //i := 0;
+  //CSV::load_file(CMD::get_value("students"));
+  //while i < CSV::num_rows() loop
+  //  i := i + 1;
+  //end loop;
+  
+  // load enrollments
+  //i := 0;
+  //CSV::load_file(CMD::get_value("students"));
+  //while i < CSV::num_rows() loop
+  //  i := i + 1;
+  //end loop;
+  
+  // check TODO
+  for s in find School() loop
+    //console <<< s;
+  end loop;
+  for st in find Student() loop
+    //console <<< st;
+  end loop;
+  for t in find Teacher() loop
+    //console <<< t;
+  end loop;
+  
+  console <<< find_one Teacher(first_name = "Levi" and last_name = "Starrett");
+  console <<< find_one Student(first_name = "Lexi" and last_name = "Lux");
+  console <<< find_one Student(first_name = "Nicholas" and last_name = "Wall");
 
 end service;
 //! ACTIVITY END. DO NOT EDIT THIS LINE.

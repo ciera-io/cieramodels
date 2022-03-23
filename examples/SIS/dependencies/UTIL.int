@@ -1,0 +1,6 @@
+domain UTIL is
+
+  public service parse_date(s: in string, pattern: in string) return timestamp;
+  
+end domain;
+pragma utility();
