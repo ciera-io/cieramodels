@@ -1,0 +1,8 @@
+private service Integrity::init() is
+begin
+  CMD::register_value("t", "test_num", "test case number", "-1", true);
+  CMD::read_command_line();
+  if CMD::get_value("t") /= "" then
+    run_test();
+  end if;
+end service;

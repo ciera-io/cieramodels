@@ -1,0 +1,8 @@
+public service CMD::register_value(name: in string, value_name: in string, usage: in string, default_value: in string, required: in boolean) is
+option_required: CommandLine::Conditionality := CommandLine::Optional;
+begin
+  if required then
+    option_required := CommandLine::Required;
+  end if;
+  CommandLine::register_value("-" & name, usage, option_required, value_name, CommandLine::Required, CommandLine::Single);
+end service;

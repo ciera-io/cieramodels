@@ -1,0 +1,44 @@
+private service Integrity::test09_inconsistent_refs() is
+l1: instance of List;
+e1: instance of Element;
+e2: instance of Element;
+e3: instance of Element;
+l2: instance of List;
+e4: instance of Element;
+e5: instance of Element;
+e6: instance of Element;
+begin
+
+  // Attempt to create a situation where referential attributes do not agree
+
+  l1 := create List(name => "TODO");
+
+  e1 := create Element(list_name => l1.name, item => "Finish videos");
+  link e1 R1 l1;
+  link e1 R2 l1;
+
+  e2 := create Element(list_name => l1.name, item => "Write documentation");
+  link e2 R1 l1;
+  link e1 R3.precedes e2;
+
+  e3 := create Element(list_name => l1.name, item => "Send email");
+  link e3 R1 l1;
+  link e2 R3.precedes e3;
+
+  l2 := create List(name => "Groceries");
+
+  e4 := create Element(list_name => l2.name, item => "Milk");
+  link e4 R1 l2;
+  link e4 R2 l2;
+
+  e5 := create Element(list_name => l2.name, item => "Eggs");
+  link e5 R1 l2;
+  link e4 R3.precedes e5;
+
+  e6 := create Element(list_name => l2.name, item => "Cheese");
+  link e6 R1 l2;
+  link e5 R3.precedes e6;
+
+  link e3 R3.precedes e4;  // Attempt to link elements across two lists
+
+end service;

@@ -1,0 +1,26 @@
+private service Integrity::test10_delete() is
+l1: instance of List;
+e1: instance of Element;
+e2: instance of Element;
+e3: instance of Element;
+begin
+
+  // Attempt to create a situation where referential attributes do not agree
+
+  l1 := create List(name => "TODO");
+
+  e1 := create Element(list_name => l1.name, item => "Finish videos");
+  link e1 R1 l1;
+  link e1 R2 l1;
+
+  e2 := create Element(list_name => l1.name, item => "Write documentation");
+  link e2 R1 l1;
+  link e1 R3.precedes e2;
+
+  e3 := create Element(list_name => l1.name, item => "Send email");
+  link e3 R1 l1;
+  link e2 R3.precedes e3;
+
+  delete l1;  // Attempt to delete an instance that is actively participating in relationships
+
+end service;

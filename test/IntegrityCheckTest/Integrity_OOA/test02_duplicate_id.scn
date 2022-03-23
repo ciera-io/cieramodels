@@ -1,0 +1,11 @@
+private service Integrity::test02_duplicate_id() is
+l1: instance of List;
+l2: instance of List;
+begin
+
+  // Create two lists with the same preferred identifier
+
+  l1 := create List(name => "TODO");
+  l2 := create List(name => "TODO");
+
+end service;

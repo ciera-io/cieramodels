@@ -1,0 +1,4 @@
+public service CMD::get_value(name: in string) return string is
+begin
+  return CommandLine::get_option_value("-" & name);
+end service;
