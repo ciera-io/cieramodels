@@ -4,7 +4,7 @@ INSERT INTO EP_PKG
 	VALUES ("b4165665-ace7-46e6-aba9-4c0c6adb3676",
 	"00000000-0000-0000-0000-000000000000",
 	"d5594751-4128-43b5-89da-bceb50369156",
-	'functions',
+	'private_functions',
 	'',
 	0);
 INSERT INTO GD_MD
@@ -25,7 +25,7 @@ INSERT INTO GD_MD
 	0,
 	0,
 	'',
-	'SIS::domains::SIS::functions');
+	'SIS::domains::SIS::private_functions');
 INSERT INTO DIM_DIA
 	VALUES ("f3e242f6-0b4d-4c44-803b-d5a602ea4055",
 	'',

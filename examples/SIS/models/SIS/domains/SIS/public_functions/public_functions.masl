@@ -1,0 +1,66 @@
+//! ACTIVITY BEGIN. 'd847a9e0-db1c-48e5-bb37-6b9d24d66c93' DO NOT EDIT THIS LINE.
+private service SIS::get_course_section ( course_name : in string ) return integer is
+course: instance of Course;
+begin
+  course := find_one Course(short_name = course_name);
+  if course = null then
+    raise SISException("Could not find course: " & course_name);
+  else
+    for section in course -> R2.Section loop
+      // return the first section you find
+      return section.section_id;
+    end loop;
+    raise SISException("No sections found");
+  end if;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. 'd1b8a36e-5f08-4828-bff0-42a42d278d59' DO NOT EDIT THIS LINE.
+private service SIS::register_for_course ( student_id : in integer,
+                                          section_id : in integer ) is
+student: instance of Student;
+section: instance of Section;
+begin
+  section := find_one Section(section_id = section_id);
+  student := find_one Student(student_id = student_id);
+  if section = null or student = null then
+    raise SISException("Could not find section and student for enrollment: " & STRING::itoa(section_id) & ", " & STRING::itoa(student_id));
+  else
+    // create and link the enrollment
+    link section R4 student using create Enrollment(school_id => student.school_id, section_id => section.section_id, student_id => student.student_id);
+  end if;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. '63ee76b6-2d06-453a-b60b-8941ff4f95a5' DO NOT EDIT THIS LINE.
+private service SIS::get_student_id ( first_name : in string,
+                                     last_name : in string ) return integer is
+student: instance of Student;
+begin
+  student := find_one Student(first_name = first_name and last_name = last_name);
+  if student = null then
+    raise SISException("Could not find student: " & first_name & " " & last_name);
+  else
+    return student.student_id;
+  end if;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+
+//! ACTIVITY BEGIN. 'baf72670-e783-4424-940f-334827d18a70' DO NOT EDIT THIS LINE.
+private service SIS::get_schedule ( student_id : in integer ) return string is
+scheduleString: string := "";
+student: instance of Student;
+begin
+  student := find_one Student(student_id = student_id);
+  if student = null then
+    raise SISException("Could not find student with ID: " & STRING::itoa(student_id));
+  else
+    scheduleString := scheduleString & student.first_name & "'s schedule:\n";
+    for c in student -> R4.Section -> R2.Course loop
+      scheduleString := scheduleString & "  - " & c.course_name & "\n";
+    end loop;
+    return scheduleString;
+  end if;
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

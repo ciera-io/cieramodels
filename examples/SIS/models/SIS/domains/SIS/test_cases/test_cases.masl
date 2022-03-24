@@ -1,0 +1,29 @@
+//! ACTIVITY BEGIN. 'b1cdd6fe-9522-41f8-a504-eb3e824e531c' DO NOT EDIT THIS LINE.
+private service SIS::enroll_test () is
+student_first_name: readonly string := "Lexi";
+student_last_name: readonly string := "Lux";
+course_name: readonly string := "BEGBAND";
+student_id: integer;
+section_id: integer;
+begin
+  
+  console <<< "Enroll test start";
+
+  // get the student ID
+  student_id := get_student_id(student_first_name, student_last_name);
+
+  // print the schedule before register
+  console << get_schedule(student_id) << flush;
+  
+  // try to register for a course (register in the first section available)
+  section_id := get_course_section(course_name);
+  register_for_course(student_id, section_id);
+
+  // print the schedule after register
+  console << get_schedule(student_id) << flush;
+
+  console <<< "Done";
+
+end service;
+//! ACTIVITY END. DO NOT EDIT THIS LINE.
+

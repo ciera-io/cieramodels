@@ -2,17 +2,21 @@
 private service SIS::init () is
 begin
 
-  // register command line arguments TODO
-  CMD::register_value("schools", "schools_file", "CSV file containing schools", "", true);
-  CMD::register_value("students", "students_file", "CSV file containing students", "", true);
-  CMD::register_value("teachers", "teachers_file", "CSV file containing teachers", "", true);
-  CMD::register_value("sections", "sections_file", "CSV file containing sections", "", true);
-  CMD::register_value("enrollments", "enrollments_file", "CSV file containing enrollments", "", true);
+  // register command line arguments
+  CMD::register_value("schools", "schools_file", "CSV file containing schools", "", false);
+  CMD::register_value("students", "students_file", "CSV file containing students", "", false);
+  CMD::register_value("teachers", "teachers_file", "CSV file containing teachers", "", false);
+  CMD::register_value("sections", "sections_file", "CSV file containing sections", "", false);
+  CMD::register_value("enrollments", "enrollments_file", "CSV file containing enrollments", "", false);
   CMD::read_command_line();
   
-  // load the data
-  load_data();
-
+  // load the data if not already loaded
+  if find_one School() = null then
+    load_data();
+  end if;
+  
+  enroll_test();
+  
 end service;
 //! ACTIVITY END. DO NOT EDIT THIS LINE.
 
@@ -205,7 +209,6 @@ begin
         if section = null or student = null then
           logMessage := "Could not find section and student for enrollment: " & school_id & ", " & STRING::itoa(section_id) & ", " & STRING::itoa(student_id);
           Logger::warning(logMessage);
-          console << school_id << "," << section_id << "," << student_id << endl << flush;
         else
           // create and link the enrollment
           link section R4 student using create Enrollment(school_id => school.school_id, section_id => section.section_id, student_id => student.student_id);
@@ -215,15 +218,6 @@ begin
     i := i + 1;
   end loop;
   
-  // check TODO
-  //for sec in find Section() loop
-  //  console <<< sec;
-  //end loop;
-  
-  console <<< find_one Teacher(first_name = "Levi" and last_name = "Starrett");
-  console <<< find_one Student(first_name = "Lexi" and last_name = "Lux");
-  console <<< find_one Student(first_name = "Nicholas" and last_name = "Wall");
-
 end service;
 //! ACTIVITY END. DO NOT EDIT THIS LINE.
 

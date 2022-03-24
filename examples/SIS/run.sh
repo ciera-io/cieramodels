@@ -7,5 +7,6 @@ PROPS="\
   -Dio.ciera.runtime.logLevel=FINEST \
   -Dio.ciera.runtime.useDeterministicIDs\
   -Dio.ciera.runtime.haltWhenIdle\
+  -Dio.ciera.runtime.objectStore=SIS.obj\
 "
 java $PROPS --module-path $MODULEPATH --add-modules commons.csv -m SIS_proc/sis_proc.SIS_proc "$@"

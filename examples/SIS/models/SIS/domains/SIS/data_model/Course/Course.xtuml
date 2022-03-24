@@ -99,14 +99,14 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("53d6ef3a-44cd-4b76-b01d-4223176ee223",
 	"cf617dc7-5613-4a5e-8af4-54d55c8c2f1d",
 	"62c48398-f3f4-4145-a37d-9ec28ccee0aa",
-	'../classes.xtuml');
+	'../data_model.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("9408458a-70a8-4308-bc03-74472f1e28b1",
 	"396f2a51-264e-45ee-aec8-c9b5cdfbfcf4",
 	0,
 	"cf617dc7-5613-4a5e-8af4-54d55c8c2f1d",
 	"a8a8292c-891a-4d12-beb2-852e9f35d47c",
-	'../classes.xtuml');
+	'../data_model.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("231b57a2-1256-4dfa-ba38-323a98b55c8b",
 	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
@@ -150,14 +150,14 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("53d6ef3a-44cd-4b76-b01d-4223176ee223",
 	"043eadb0-7f93-4605-b9df-142b59cde1f2",
 	"f38149e2-638a-493c-afc5-cc3dd849736d",
-	'../classes.xtuml');
+	'../data_model.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("0721bfe1-3f3c-4746-8922-d325615c4fa3",
 	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
 	0,
 	"043eadb0-7f93-4605-b9df-142b59cde1f2",
 	"c3d4914f-2caf-4ef1-a031-10a370123656",
-	'../classes.xtuml');
+	'../data_model.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("a4d398d6-ea35-420b-a17c-b87b42eab846",
 	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
@@ -210,7 +210,7 @@ INSERT INTO EP_PKG_PROXY
 	VALUES ("839f36d6-a331-4d30-9b72-3d68545d17c3",
 	"00000000-0000-0000-0000-000000000000",
 	"d5594751-4128-43b5-89da-bceb50369156",
-	'classes',
+	'data_model',
 	'',
 	0,
-	'../classes.xtuml');
+	'../data_model.xtuml');

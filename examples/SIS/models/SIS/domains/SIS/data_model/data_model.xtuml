@@ -4,7 +4,7 @@ INSERT INTO EP_PKG
 	VALUES ("839f36d6-a331-4d30-9b72-3d68545d17c3",
 	"00000000-0000-0000-0000-000000000000",
 	"d5594751-4128-43b5-89da-bceb50369156",
-	'classes',
+	'data_model',
 	'',
 	0);
 INSERT INTO GD_MD
@@ -25,14 +25,14 @@ INSERT INTO GD_MD
 	0,
 	0,
 	'4.1.17',
-	'SIS::domains::SIS::classes');
+	'SIS::domains::SIS::data_model');
 INSERT INTO GD_GE
 	VALUES ("4f05838a-8694-47cc-b232-8358fdeadbf5",
 	"bfaeb44d-9dc0-4bd1-abf9-d9a029225961",
 	"ea7b2d19-0a4b-4a91-8cc1-270287e2c188",
 	21,
 	0,
-	'SIS::domains::SIS::classes::School');
+	'SIS::domains::SIS::data_model::School');
 INSERT INTO GD_SHP
 	VALUES ("4f05838a-8694-47cc-b232-8358fdeadbf5");
 INSERT INTO GD_NCS
@@ -71,7 +71,7 @@ INSERT INTO GD_GE
 	"65486b53-ad17-4e87-bc6e-5ee2d79e6b60",
 	21,
 	0,
-	'SIS::domains::SIS::classes::Student');
+	'SIS::domains::SIS::data_model::Student');
 INSERT INTO GD_SHP
 	VALUES ("54f2c71c-7c37-41c8-b7bc-722ade67d177");
 INSERT INTO GD_NCS
@@ -105,7 +105,7 @@ INSERT INTO GD_GE
 	"ec23c744-a139-413a-be02-50929f715d56",
 	21,
 	0,
-	'SIS::domains::SIS::classes::Section');
+	'SIS::domains::SIS::data_model::Section');
 INSERT INTO GD_SHP
 	VALUES ("5282d06b-2112-45df-94c6-6c0f2456af3a");
 INSERT INTO GD_NCS
@@ -149,7 +149,7 @@ INSERT INTO GD_GE
 	"51a39b55-cdc2-4234-bc04-a1e59d7bd04e",
 	21,
 	0,
-	'SIS::domains::SIS::classes::Teacher');
+	'SIS::domains::SIS::data_model::Teacher');
 INSERT INTO GD_SHP
 	VALUES ("aef87e85-a7c7-4985-9a01-b8dcb2befb08");
 INSERT INTO GD_NCS
@@ -183,7 +183,7 @@ INSERT INTO GD_GE
 	"12e5711c-0ccd-4da3-8cfe-e7a5156d1ae4",
 	21,
 	0,
-	'SIS::domains::SIS::classes::Enrollment');
+	'SIS::domains::SIS::data_model::Enrollment');
 INSERT INTO GD_SHP
 	VALUES ("6efe524f-b50e-44e2-9245-cd647d01d270");
 INSERT INTO GD_NCS
@@ -212,7 +212,7 @@ INSERT INTO GD_GE
 	"53d6ef3a-44cd-4b76-b01d-4223176ee223",
 	21,
 	0,
-	'SIS::domains::SIS::classes::Course');
+	'SIS::domains::SIS::data_model::Course');
 INSERT INTO GD_SHP
 	VALUES ("05ea8d7e-8007-4255-9398-4f03a01a7914");
 INSERT INTO GD_NCS
@@ -251,7 +251,7 @@ INSERT INTO GD_GE
 	"396f2a51-264e-45ee-aec8-c9b5cdfbfcf4",
 	21,
 	0,
-	'SIS::domains::SIS::classes::Subject');
+	'SIS::domains::SIS::data_model::Subject');
 INSERT INTO GD_SHP
 	VALUES ("34fde850-db8c-46c7-832d-0e1d0145810c");
 INSERT INTO GD_NCS
@@ -280,7 +280,7 @@ INSERT INTO GD_GE
 	"bdf0e0d1-5266-4979-9b10-234a68d8d86d",
 	21,
 	0,
-	'SIS::domains::SIS::classes::Term');
+	'SIS::domains::SIS::data_model::Term');
 INSERT INTO GD_SHP
 	VALUES ("89704cbe-875d-4fa7-964e-a446cc8ac04d");
 INSERT INTO GD_NCS
@@ -309,7 +309,7 @@ INSERT INTO GD_GE
 	"cf617dc7-5613-4a5e-8af4-54d55c8c2f1d",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R1');
+	'SIS::domains::SIS::data_model::R1');
 INSERT INTO GD_CON
 	VALUES ("dbe45165-2584-4fb3-a6be-76501ee2d413",
 	"00000000-0000-0000-0000-000000000000");
@@ -409,7 +409,7 @@ INSERT INTO GD_GE
 	"9d0ee879-efda-4f09-8642-a261bb96ef08",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R2');
+	'SIS::domains::SIS::data_model::R2');
 INSERT INTO GD_CON
 	VALUES ("f604e5f5-8c70-4f34-be44-ba74f4bd617d",
 	"00000000-0000-0000-0000-000000000000");
@@ -509,7 +509,7 @@ INSERT INTO GD_GE
 	"835716eb-f11e-4456-9533-569f589e7294",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R3');
+	'SIS::domains::SIS::data_model::R3');
 INSERT INTO GD_CON
 	VALUES ("764c421e-0aa0-4f23-a326-79c0828ea05a",
 	"00000000-0000-0000-0000-000000000000");
@@ -609,7 +609,7 @@ INSERT INTO GD_GE
 	"b5364a3a-3fe4-4bbf-88be-56df1228e560",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R4');
+	'SIS::domains::SIS::data_model::R4');
 INSERT INTO GD_CON
 	VALUES ("bfe5f937-015c-4444-8cf9-a9e2d559cee1",
 	"00000000-0000-0000-0000-000000000000");
@@ -717,7 +717,7 @@ INSERT INTO GD_GE
 	"b5364a3a-3fe4-4bbf-88be-56df1228e560",
 	34,
 	0,
-	'SIS::domains::SIS::classes::R4::Enrollment');
+	'SIS::domains::SIS::data_model::R4::Enrollment');
 INSERT INTO GD_CON
 	VALUES ("2a2d26ca-a2e9-4dbf-b427-2dbd1245be51",
 	"00000000-0000-0000-0000-000000000000");
@@ -817,7 +817,7 @@ INSERT INTO GD_GE
 	"f2f22d86-1634-41d2-9560-fa2a59029c54",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R5');
+	'SIS::domains::SIS::data_model::R5');
 INSERT INTO GD_CON
 	VALUES ("a5d9f151-0459-471c-b9fd-6f11450333d5",
 	"00000000-0000-0000-0000-000000000000");
@@ -917,7 +917,7 @@ INSERT INTO GD_GE
 	"2284e58b-e702-4c33-8504-7c0b96776900",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R6');
+	'SIS::domains::SIS::data_model::R6');
 INSERT INTO GD_CON
 	VALUES ("fd15e910-d659-467d-b7b8-43d6b8ec7aa0",
 	"00000000-0000-0000-0000-000000000000");
@@ -1017,7 +1017,7 @@ INSERT INTO GD_GE
 	"1e6ca22a-2d65-4de7-afc5-f6125bdad292",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R7');
+	'SIS::domains::SIS::data_model::R7');
 INSERT INTO GD_CON
 	VALUES ("6698a4da-46e6-4fef-8edd-247e5e514747",
 	"00000000-0000-0000-0000-000000000000");
@@ -1117,7 +1117,7 @@ INSERT INTO GD_GE
 	"043eadb0-7f93-4605-b9df-142b59cde1f2",
 	24,
 	0,
-	'SIS::domains::SIS::classes::R8');
+	'SIS::domains::SIS::data_model::R8');
 INSERT INTO GD_CON
 	VALUES ("72c47fbe-ffcc-4d01-a59e-16f9d8e9c7fd",
 	"00000000-0000-0000-0000-000000000000");
