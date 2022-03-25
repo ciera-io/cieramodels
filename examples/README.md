@@ -1,3 +1,21 @@
+# Ciera example models
+
+## Building the examples
+
+In a particular example folder:
+
+```
+mvn install
+```
+
+## Running the examples
+
+In a particular example folder:
+
+```
+bash run.sh
+```
+
 ## To build and run examples docker image:
 
 ### Dependencies
@@ -16,14 +34,11 @@ docker build -t ciera-examples .
 docker run -it ciera-examples
 ```
 
+Once in a shell inside the docker image, individual projects can be execused by
+running their `run.sh` scripts.
+
 ### Download/run prebuilt version
 
 ```
 docker run -it levistarrett:ciera-examples
-```
-
-## Updating projects to use the latest Ciera version
-
-```
-mvn versions:use-latest-versions
 ```
