@@ -12,7 +12,7 @@
     <dependency>
       <groupId>io.ciera</groupId>
       <artifactId>runtime</artifactId>
-      <version>3.0.0-SNAPSHOT</version>
+      <version>3.0.0-beta1</version>
     </dependency>
   </dependencies>
   <build>
@@ -20,7 +20,7 @@
       <plugin>
         <groupId>io.ciera</groupId>
         <artifactId>ciera-maven-plugin</artifactId>
-        <version>3.0.0-SNAPSHOT</version>
+        <version>3.0.0-beta1</version>
         <executions>
           <execution>
             <id>ciera-core</id>
@@ -36,11 +36,15 @@
     </plugins>
     <resources>
       <resource>
-        <directory>${project.basedir}/masl</directory>
+        <targetPath>masl</targetPath>
+        <directory>${project.basedir}</directory>
         <filtering>true</filtering>
         <includes>
           <include>**/*.int</include>
         </includes>
+        <excludes>
+          <exclude>target/**</exclude>
+        </excludes>
       </resource>
     </resources>
   </build>
