@@ -6,6 +6,5 @@ cmake_install.cmake
 include/
 install_manifest.txt
 lib/
-src/
 target/
 _build/

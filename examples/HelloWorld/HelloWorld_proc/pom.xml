@@ -12,7 +12,7 @@
     <dependency>
       <groupId>io.ciera</groupId>
       <artifactId>runtime</artifactId>
-      <version>3.0.0-beta1</version>
+      <version>3.0.0-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>io.ciera</groupId>
@@ -25,19 +25,21 @@
       <plugin>
         <groupId>io.ciera</groupId>
         <artifactId>ciera-maven-plugin</artifactId>
-        <version>3.0.0-beta1</version>
+        <version>3.0.0-SNAPSHOT</version>
         <executions>
           <execution>
             <id>ciera-core</id>
             <goals>
               <goal>core-masl</goal>
             </goals>
-            <configuration>
-              <prjFile>${project.basedir}/HelloWorld_proc.prj</prjFile>
-            </configuration>
           </execution>
         </executions>
       </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <directory>${project.basedir}/src/main/masl</directory>
+      </resource>
+    </resources>
   </build>
 </project>

@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 
 # Metadata
 LABEL maintainer="levi@roxsoftware.com"
-LABEL version="v3.0.0-beta1"
+LABEL version="v3.0.0-SNAPSHOT"
 
 # Install dependencies
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && apt-get install -y maven python3 python3-pip
