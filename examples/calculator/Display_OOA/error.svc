@@ -1,0 +1,4 @@
+public service Display::error ( message: in string ) is
+begin
+  console << "Displaying message 'error'. message: " << message << endl;
+end service;

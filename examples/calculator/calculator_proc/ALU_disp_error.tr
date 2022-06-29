@@ -1,0 +1,4 @@
+public service ALU::disp~>error ( message: in string ) is
+begin
+  Display::error(message);
+end service;

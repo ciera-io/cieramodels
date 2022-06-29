@@ -6,23 +6,13 @@
     <artifactId>calculator</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <artifactId>calculator_proc</artifactId>
+  <artifactId>Display</artifactId>
   <packaging>jar</packaging>
   <dependencies>
     <dependency>
       <groupId>io.ciera</groupId>
       <artifactId>runtime</artifactId>
       <version>3.0.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>io.ciera</groupId>
-      <artifactId>ALU</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-    <dependency>
-      <groupId>io.ciera</groupId>
-      <artifactId>Display</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
   <build>
@@ -38,11 +28,24 @@
               <goal>core-masl</goal>
             </goals>
             <configuration>
-              <prjFile>${project.basedir}/calculator.prj</prjFile>
+              <modFile>${project.basedir}/Display.mod</modFile>
             </configuration>
           </execution>
         </executions>
       </plugin>
     </plugins>
+    <resources>
+      <resource>
+        <targetPath>Display_OOA</targetPath>
+        <directory>${project.basedir}</directory>
+        <filtering>true</filtering>
+        <includes>
+          <include>**/*.int</include>
+        </includes>
+        <excludes>
+          <exclude>target/**</exclude>
+        </excludes>
+      </resource>
+    </resources>
   </build>
 </project>

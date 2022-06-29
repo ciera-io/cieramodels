@@ -1,0 +1,4 @@
+public service Display::result ( value: in real ) is
+begin
+  console << "Displaying message 'result'. value: " << value << endl;
+end service;

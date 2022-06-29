@@ -1,6 +1,13 @@
 project calculator is
   
   domain ALU is
+    terminator disp is
+      public service result ( value: in real );
+      public service error ( message: in string );
+    end terminator;
+  end domain;
+
+  domain Display is
   end domain;
 
 end project;

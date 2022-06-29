@@ -1,0 +1,4 @@
+public service ALU::disp~>result ( value: in real ) is
+begin
+  Display::result(value);
+end service;

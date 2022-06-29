@@ -36,7 +36,7 @@
     </plugins>
     <resources>
       <resource>
-        <targetPath>masl</targetPath>
+        <targetPath>ALU_OOA</targetPath>
         <directory>${project.basedir}</directory>
         <filtering>true</filtering>
         <includes>

@@ -21,6 +21,7 @@
   </build>
   <modules>
     <module>ALU_OOA</module>
+    <module>Display_OOA</module>
     <module>calculator_proc</module>
   </modules>
 </project>
