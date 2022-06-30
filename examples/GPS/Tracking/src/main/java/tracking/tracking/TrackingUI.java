@@ -19,7 +19,7 @@ public class TrackingUI extends SocketPort implements IUI {
 
     // inbound messages
     public void modePressed() {
-        getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.modePressed");
+        getContext().getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.modePressed");
         int _lineNumber = -1;
         try {
             /* ::modePressed() */
@@ -32,12 +32,12 @@ public class TrackingUI extends SocketPort implements IUI {
             ((ActionException) _e).updateStack("Tracking::Tracking::UI::UI", "modePressed", "<Unknown>", _lineNumber);
             throw _e;
         } finally {
-            getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.modePressed");
+            getContext().getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.modePressed");
         }
     }
 
     public void startStopPressed() {
-        getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.startStopPressed");
+        getContext().getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.startStopPressed");
         int _lineNumber = -1;
         try {
             /* ::startStopPressed() */
@@ -50,12 +50,12 @@ public class TrackingUI extends SocketPort implements IUI {
             ((ActionException) _e).updateStack("Tracking::Tracking::UI::UI", "startStopPressed", "<Unknown>", _lineNumber);
             throw _e;
         } finally {
-            getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.startStopPressed");
+            getContext().getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.startStopPressed");
         }
     }
 
     public void setTargetPressed() {
-        getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.setTargetPressed");
+        getContext().getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.setTargetPressed");
         int _lineNumber = -1;
         try {
             /* ::setTargetPressed() */
@@ -68,12 +68,12 @@ public class TrackingUI extends SocketPort implements IUI {
             ((ActionException) _e).updateStack("Tracking::Tracking::UI::UI", "setTargetPressed", "<Unknown>", _lineNumber);
             throw _e;
         } finally {
-            getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.setTargetPressed");
+            getContext().getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.setTargetPressed");
         }
     }
 
     public void lapResetPressed() {
-        getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.lapResetPressed");
+        getContext().getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.lapResetPressed");
         int _lineNumber = -1;
         try {
             /* ::lapResetPressed() */
@@ -86,12 +86,12 @@ public class TrackingUI extends SocketPort implements IUI {
             ((ActionException) _e).updateStack("Tracking::Tracking::UI::UI", "lapResetPressed", "<Unknown>", _lineNumber);
             throw _e;
         } finally {
-            getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.lapResetPressed");
+            getContext().getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.lapResetPressed");
         }
     }
 
     public void newGoalSpec(final GoalSpan p_spanType,  final GoalCriteria p_criteriaType,  final double p_span,  final double p_maximum,  final double p_minimum,  final int p_sequenceNumber) {
-        getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.newGoalSpec");
+        getContext().getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.newGoalSpec");
         int _lineNumber = -1;
         try {
             /* ::newGoalSpec( spanType:param.spanType, criteriaType:param.criteriaType, span:param.span, maximum:param.maximum, minimum:param.minimum, sequenceNumber:param.sequenceNumber ) */
@@ -104,12 +104,12 @@ public class TrackingUI extends SocketPort implements IUI {
             ((ActionException) _e).updateStack("Tracking::Tracking::UI::UI", "newGoalSpec", "<Unknown>", _lineNumber);
             throw _e;
         } finally {
-            getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.newGoalSpec");
+            getContext().getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.newGoalSpec");
         }
     }
 
     public void lightPressed() {
-        getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.lightPressed");
+        getContext().getApplication().getLogger().trace("SMT: Enter action: Tracking::Tracking::UI::UI.lightPressed");
         int _lineNumber = -1;
         try {
             /* ::lightPressed() */
@@ -122,7 +122,7 @@ public class TrackingUI extends SocketPort implements IUI {
             ((ActionException) _e).updateStack("Tracking::Tracking::UI::UI", "lightPressed", "<Unknown>", _lineNumber);
             throw _e;
         } finally {
-            getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.lightPressed");
+            getContext().getApplication().getLogger().trace("SMT: Exit action: Tracking::Tracking::UI::UI.lightPressed");
         }
     }
 

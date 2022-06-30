@@ -41,7 +41,7 @@ public abstract class SocketPort extends AbstractPort implements Port {
             connect();
             listenTimer = getContext().scheduleRecurringAction(Duration.ZERO, LISTEN_PERIOD, this::listen);
         } catch (IOException e) {
-            getApplication().getLogger().error("Failed to connect to %s:%d", HOSTNAME, PORT);
+            getContext().getApplication().getLogger().error("Failed to connect to %s:%d", HOSTNAME, PORT);
             tearDown();
         }
     }
@@ -57,7 +57,7 @@ public abstract class SocketPort extends AbstractPort implements Port {
             out.writeObject(message);
             out.flush();
         } catch (IOException e) {
-            getApplication().getLogger().error("Failed to send message", e);
+            getContext().getApplication().getLogger().error("Failed to send message", e);
             e.printStackTrace();
         }
     }
@@ -69,7 +69,7 @@ public abstract class SocketPort extends AbstractPort implements Port {
                 deliver(data);
             }
         } catch (IOException e) {
-            getApplication().getLogger().warn("Connection closed");
+            getContext().getApplication().getLogger().warn("Connection closed");
             tearDown();
         }
     }
@@ -82,7 +82,7 @@ public abstract class SocketPort extends AbstractPort implements Port {
                     return (Message) in.readObject();
                 } catch (InvalidClassException | StreamCorruptedException | OptionalDataException
                         | ClassNotFoundException e) {
-                    getApplication().getLogger().error("Failed to deserialize message.");
+                    getContext().getApplication().getLogger().error("Failed to deserialize message.");
                     return null;
                 }
             } catch (IOException e) {
@@ -98,7 +98,7 @@ public abstract class SocketPort extends AbstractPort implements Port {
 
     private void connect() throws IOException {
         socket = new Socket(HOSTNAME, PORT);
-        getApplication().getLogger().info("Connected to localhost on port 2003");
+        getContext().getApplication().getLogger().info("Connected to localhost on port 2003");
         in = new ObjectInputStream(socket.getInputStream());
         out = new ObjectOutputStream(socket.getOutputStream());
         out.flush();
