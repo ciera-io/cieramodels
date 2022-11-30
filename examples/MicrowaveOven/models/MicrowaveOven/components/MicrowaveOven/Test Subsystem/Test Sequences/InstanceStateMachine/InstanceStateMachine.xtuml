@@ -425,9 +425,9 @@ end if;
 select any tube from instances of MO_MT;
 if (not_empty tube)
    create event instance lower_power of MO_MT2:''decrease_power'' to tube;
-   step5a_timer =TIM::timer_start(microseconds:3000000,event_inst:lower_power);
+   step5a_timer =TIM::timer_start(microseconds:7000000,event_inst:lower_power);
    create event instance lower_power2 of MO_MT2:''decrease_power'' to tube;
-   step5b_timer = TIM::timer_start(microseconds:3000001,event_inst:lower_power2);
+   step5b_timer = TIM::timer_start(microseconds:7000001,event_inst:lower_power2);
 end if;
 
 // Step 6. At T+9000000us, close oven door
