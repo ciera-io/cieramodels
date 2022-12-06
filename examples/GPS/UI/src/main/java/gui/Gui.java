@@ -1,62 +1,70 @@
 package gui;
 
-import io.ciera.runtime.api.application.Logger;
-import io.ciera.runtime.api.domain.Message;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.googlecode.jsonrpc4j.JsonRpcClient;
+import com.googlecode.jsonrpc4j.JsonRpcServer;
+import com.googlecode.jsonrpc4j.ProxyUtil;
+import com.googlecode.jsonrpc4j.StreamServer;
+
+import ui.shared.IUI;
 
 public class Gui {
 
-	WatchGui guiDisplay = null;
-	ApplicationConnection server = null;
-	ConnectionHandler connHandler = null;
-	Logger logger;
+  private static final int APP_PORT = 1420;
+  private static final int SERVER_PORT = 1421;
 
-	public void start(String[] args) {
+  private static final Logger logger = LoggerFactory.getLogger(Gui.class);
 
-		// Create GUI
-		if (args.length == 1 && "--console".equals(args[0])) {
-			guiDisplay = new AsciiWatchGui(this);
-		} else {
-			guiDisplay = new SwingWatchGui(this);
-		}
+  public static void main(String[] args) {
 
-		// The connection handle lives for the entire duration of this program
-		connHandler = new ConnectionHandler(this);
+    // create RPC client to proxy UI interface
+    IUI uiProxy = null;
+    while (uiProxy == null) {
+      try {
+        logger.debug("MAIN: Connecting to the application...");
+        final Socket socket = new Socket();
+        socket.connect(new InetSocketAddress(InetAddress.getLocalHost(), APP_PORT), 1000);
+        uiProxy =
+            ProxyUtil.createClientProxy(
+                Gui.class.getClassLoader(), IUI.class, new JsonRpcClient(), socket);
+      } catch (IOException e) {
+        logger.debug("MAIN: failed to connect to UI. Retrying...");
+      }
+      try {
+        Thread.sleep(1000);
+      } catch (InterruptedException e) {
+      }
+    }
 
-		// Start the connection handler
-		connHandler.start();
+    // Create GUI
+    WatchGui guiDisplay;
+    if (args.length == 1 && "--console".equals(args[0])) {
+      guiDisplay = new AsciiWatchGui(uiProxy);
+    } else {
+      guiDisplay = new SwingWatchGui(uiProxy);
+    }
 
-		// Display the GUI
-		guiDisplay.display();
-	}
+    // create the RPC server to receive calls from the application
+    StreamServer streamServer = null;
+    try {
+      streamServer =
+          new StreamServer(
+              new JsonRpcServer(guiDisplay, IUI.class), 50, new ServerSocket(SERVER_PORT));
+      streamServer.start();
+    } catch (IOException e) {
+      logger.debug("MAIN: failed to start RPC server");
+      e.printStackTrace();
+    }
 
-	public void setApplicationConnection(ApplicationConnection server) {
-		this.server = server;
-	}
-
-	public void sendSignal(Message message) {
-		if (server != null) {
-			server.sendSignal(message);
-		} else {
-			logger.error("Server is not connected");
-		}
-
-	}
-
-	public WatchGui getGuiDisplay() {
-		return guiDisplay;
-	}
-
-	public Logger getLogger() {
-		return logger;
-	}
-
-	public void setLogger(Logger logger) {
-		this.logger = logger;
-	}
-
-	public static void main(String[] args) {
-		Gui gui = new Gui();
-		gui.start(args);
-	}
-
+    // Display the GUI
+    guiDisplay.display();
+  }
 }
