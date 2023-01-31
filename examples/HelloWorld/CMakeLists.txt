@@ -2,9 +2,12 @@ cmake_minimum_required(VERSION 3.5)
 
 project(HelloWorld VERSION 1.0)
 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} $ENV{HOME}/masl/core-cpp/cmake)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} $ENV{HOME}/masl/install/lib/cmake/MaslCore)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} $ENV{HOME}/masl/install/lib/cmake/UtilityDomains)
+set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/masl)
+set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/poco)
+
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /opt/masl/lib/cmake/MaslCore)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /opt/masl/lib/cmake/UtilityDomains)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /opt/poco/lib/cmake/Poco)
 
 set(INSTALL_LIB_DIR lib CACHE PATH "Installation directory for libraries")
 set(INSTALL_BIN_DIR bin CACHE PATH "Installation directory for executables")
@@ -19,6 +22,5 @@ find_package(Sqlite3 REQUIRED)
 find_package(Boost REQUIRED QUIET COMPONENTS system)
 link_libraries(Boost::boost)
 
-add_subdirectory(src/STRING)
 add_subdirectory(src/HelloWorld)
 add_subdirectory(src/HelloWorld_proc)
