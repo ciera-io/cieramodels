@@ -122,9 +122,11 @@ product.',
 	0,
 	'',
 	'',
+	'Tracking::Tracking::Tracking',
 	'../Tracking.xtuml');
 INSERT INTO S_SYS_PROXY
 	VALUES ("f6183599-e913-4960-ac9a-ad495a6db59f",
 	'Tracking',
 	1,
+	'Tracking',
 	'../../../Tracking.xtuml');

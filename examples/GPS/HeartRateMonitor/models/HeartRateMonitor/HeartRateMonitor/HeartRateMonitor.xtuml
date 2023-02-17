@@ -206,4 +206,5 @@ INSERT INTO S_SYS_PROXY
 	VALUES ("4740e777-a5cc-452b-8cd1-16250baeab10",
 	'HeartRateMonitor',
 	1,
+	'HeartRateMonitor',
 	'../HeartRateMonitor.xtuml');

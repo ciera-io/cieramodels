@@ -774,6 +774,7 @@ INSERT INTO C_IR_PROXY
 	"203a4287-09f9-4c6c-97fa-12e9ac462a4e",
 	"00000000-0000-0000-0000-000000000000",
 	"27ecb3f0-b295-472c-b64f-1d0b2042b174",
+	'Tracking::Tracking::Tracking::HR::HeartRateProvider',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO C_PO_PROXY
 	VALUES ("27ecb3f0-b295-472c-b64f-1d0b2042b174",
@@ -782,6 +783,7 @@ INSERT INTO C_PO_PROXY
 	0,
 	0,
 	'',
+	'Tracking::Tracking::Tracking::HR',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO CL_POR
 	VALUES ("24c4c6ef-38db-4499-b7d5-e79f13beda8b",
@@ -805,6 +807,7 @@ INSERT INTO C_IR_PROXY
 	"de38d4b0-e70e-49ee-a5b9-590645243ae5",
 	"00000000-0000-0000-0000-000000000000",
 	"d00db55b-e6d1-4cde-a83e-09cfefdc2474",
+	'Tracking::Tracking::Tracking::LOC::LocationProvider',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO C_PO_PROXY
 	VALUES ("d00db55b-e6d1-4cde-a83e-09cfefdc2474",
@@ -813,6 +816,7 @@ INSERT INTO C_PO_PROXY
 	0,
 	0,
 	'',
+	'Tracking::Tracking::Tracking::LOC',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO CL_POR
 	VALUES ("24c4c6ef-38db-4499-b7d5-e79f13beda8b",
@@ -836,6 +840,7 @@ INSERT INTO C_IR_PROXY
 	"06e358bd-8488-4092-af9c-7c359b158f4d",
 	"00000000-0000-0000-0000-000000000000",
 	"19eaf11c-ec25-4b9a-a943-a0c8ce109545",
+	'Tracking::Tracking::Tracking::UI::UI',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO C_PO_PROXY
 	VALUES ("19eaf11c-ec25-4b9a-a943-a0c8ce109545",
@@ -844,6 +849,7 @@ INSERT INTO C_PO_PROXY
 	0,
 	0,
 	'',
+	'Tracking::Tracking::Tracking::UI',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO PE_PE
 	VALUES ("24c4c6ef-38db-4499-b7d5-e79f13beda8b",
@@ -864,6 +870,7 @@ product.',
 	0,
 	'',
 	'',
+	'Tracking::Tracking::Tracking',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO CL_IC
 	VALUES ("6a0cc33b-29d6-416c-9738-4f8b906dc574",
@@ -898,6 +905,7 @@ INSERT INTO C_IR_PROXY
 	"203a4287-09f9-4c6c-97fa-12e9ac462a4e",
 	"00000000-0000-0000-0000-000000000000",
 	"251e195a-8675-48a9-88f3-91492d685109",
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HR::HeartRateProvider',
 	'../../../../HeartRateMonitor/models/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor.xtuml');
 INSERT INTO PE_PE
 	VALUES ("6a0cc33b-29d6-416c-9738-4f8b906dc574",
@@ -916,6 +924,7 @@ INSERT INTO C_C_PROXY
 	0,
 	'',
 	'',
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor',
 	'../../../../HeartRateMonitor/models/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor.xtuml');
 INSERT INTO CL_IC
 	VALUES ("dd09953f-1972-4a64-ba0b-ffadd2997a6e",
@@ -950,6 +959,7 @@ INSERT INTO C_IR_PROXY
 	"de38d4b0-e70e-49ee-a5b9-590645243ae5",
 	"00000000-0000-0000-0000-000000000000",
 	"e0c03225-6067-49eb-8ee3-2cfa4f1e90cf",
+	'Location::Location::Location::LOC::LocationProvider',
 	'../../../../Location/models/Location/Location/Location/Location.xtuml');
 INSERT INTO C_PO_PROXY
 	VALUES ("e0c03225-6067-49eb-8ee3-2cfa4f1e90cf",
@@ -958,6 +968,7 @@ INSERT INTO C_PO_PROXY
 	0,
 	0,
 	'',
+	'Location::Location::Location::LOC',
 	'../../../../Location/models/Location/Location/Location/Location.xtuml');
 INSERT INTO PE_PE
 	VALUES ("dd09953f-1972-4a64-ba0b-ffadd2997a6e",
@@ -976,6 +987,7 @@ INSERT INTO C_C_PROXY
 	0,
 	'',
 	'',
+	'Location::Location::Location',
 	'../../../../Location/models/Location/Location/Location/Location.xtuml');
 INSERT INTO C_SF
 	VALUES ("9a7b7491-5a2f-4294-8cbf-a736c52a6210",
@@ -995,6 +1007,7 @@ INSERT INTO C_R_PROXY
 	'',
 	'Unnamed Interface',
 	'Tracking::HR::HeartRateProvider',
+	'Tracking::Tracking::Tracking::HR::HeartRateProvider',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO C_P_PROXY
 	VALUES ("5659a879-3ecf-47ee-99d2-11f373c4a8b8",
@@ -1002,6 +1015,7 @@ INSERT INTO C_P_PROXY
 	'Unnamed Interface',
 	'',
 	'HeartRateMonitor::HR::HeartRateProvider',
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HR::HeartRateProvider',
 	'../../../../HeartRateMonitor/models/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor/HeartRateMonitor.xtuml');
 INSERT INTO C_SF
 	VALUES ("5b06a5d1-5b15-4ac8-90ce-05bd7c43031a",
@@ -1021,6 +1035,7 @@ INSERT INTO C_R_PROXY
 	'',
 	'Unnamed Interface',
 	'Tracking::LOC::LocationProvider',
+	'Tracking::Tracking::Tracking::LOC::LocationProvider',
 	'../../../../Tracking/models/Tracking/Tracking/Tracking/Tracking.xtuml');
 INSERT INTO C_P_PROXY
 	VALUES ("f5aac2f0-f369-43f5-9c93-082599586590",
@@ -1028,6 +1043,7 @@ INSERT INTO C_P_PROXY
 	'Unnamed Interface',
 	'',
 	'Location::LOC::LocationProvider',
+	'Location::Location::Location::LOC::LocationProvider',
 	'../../../../Location/models/Location/Location/Location/Location.xtuml');
 INSERT INTO PE_PE
 	VALUES ("4971b185-e248-48bc-9109-70a9a5229274",
@@ -1039,4 +1055,5 @@ INSERT INTO S_SYS_PROXY
 	VALUES ("36a41cf7-d411-488d-99fc-74866d4fea39",
 	'GPS_Watch',
 	1,
+	'GPS_Watch',
 	'../GPS_Watch.xtuml');

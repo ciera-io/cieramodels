@@ -185,6 +185,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("d2828038-110a-4559-8452-91651af0adcb",
 	"f84935c8-946a-434d-91c1-1a845ca84868",
 	"ec15c2ed-969c-4bd8-a4b3-7836ade53f24",
+	'Tracking::Tracking::Tracking::Tracking::R4::[captures_path_in]TrackLog',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
@@ -192,6 +193,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"f84935c8-946a-434d-91c1-1a845ca84868",
 	"f06356fc-6379-42e9-b434-db7f7122bde1",
+	'Tracking::Tracking::Tracking::Tracking::R4::WorkoutSession::startTime {R4}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("4e0a65c3-0128-4fda-b003-cff06b9b7367",
@@ -203,6 +205,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
 	"2522ffa2-db69-4807-ab45-06acf4cf893a",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession::startTime',
 	'../WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("4e0a65c3-0128-4fda-b003-cff06b9b7367",
@@ -240,6 +243,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("d2828038-110a-4559-8452-91651af0adcb",
 	"7ea6b294-af80-4908-a92d-d4dd2302915f",
 	"1b5f7923-03d0-4fc7-a309-d2f7b7a6b4e6",
+	'Tracking::Tracking::Tracking::Tracking::R1::[is_start_of]TrackLog',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("7080b4f6-ebf6-47fe-be82-a1c2cf39143c",
@@ -247,6 +251,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"7ea6b294-af80-4908-a92d-d4dd2302915f",
 	"17a1dc07-400a-430f-a30d-38f8acae3b54",
+	'Tracking::Tracking::Tracking::Tracking::R1::TrackPoint::time {R1}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("6330fb87-3134-4985-adea-574f9d600295",
@@ -258,6 +263,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("7080b4f6-ebf6-47fe-be82-a1c2cf39143c",
 	"66920350-b77d-4876-9b05-0c545b5437ae",
+	'Tracking::Tracking::Tracking::Tracking::TrackPoint::time',
 	'../TrackPoint/TrackPoint.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("6330fb87-3134-4985-adea-574f9d600295",
@@ -291,6 +297,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("d2828038-110a-4559-8452-91651af0adcb",
 	"aa6b0d93-73c8-47bd-8bb3-254041981d6a",
 	"f1f6b7aa-026c-4630-b816-38cbe28f9a76",
+	'Tracking::Tracking::Tracking::Tracking::R3::[is_last_for]TrackLog',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("7080b4f6-ebf6-47fe-be82-a1c2cf39143c",
@@ -298,6 +305,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"aa6b0d93-73c8-47bd-8bb3-254041981d6a",
 	"42077769-719f-418f-a6b7-14b60f40a3e8",
+	'Tracking::Tracking::Tracking::Tracking::R3::TrackPoint::time {R3}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("ce232b1e-b632-42c5-8aac-d2b7c2a9d8fb",
@@ -345,4 +353,5 @@ INSERT INTO EP_PKG_PROXY
 	'Tracking',
 	'',
 	0,
+	'Tracking::Tracking::Tracking::Tracking',
 	'../Tracking.xtuml');

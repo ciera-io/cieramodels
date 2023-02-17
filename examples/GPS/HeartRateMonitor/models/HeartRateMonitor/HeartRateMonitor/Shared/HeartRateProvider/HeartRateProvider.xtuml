@@ -66,4 +66,5 @@ INSERT INTO EP_PKG_PROXY
 	'Shared',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::Shared',
 	'../Shared.xtuml');

@@ -1886,4 +1886,5 @@ display.
 This is a singleton instance.
 ',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::Display',
 	'../Display.xtuml');

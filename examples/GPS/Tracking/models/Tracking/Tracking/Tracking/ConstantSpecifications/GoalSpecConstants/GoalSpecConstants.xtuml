@@ -87,4 +87,5 @@ INSERT INTO EP_PKG_PROXY
 	'ConstantSpecifications',
 	'',
 	0,
+	'Tracking::Tracking::Tracking::ConstantSpecifications',
 	'../ConstantSpecifications.xtuml');

@@ -227,6 +227,7 @@ INSERT INTO C_EP_PROXY
 	'setTime',
 	'',
 	0,
+	'UI::UI::Shared::UI::setTime',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("ed713602-6f31-49d7-a274-b5cef6329f68",
@@ -247,6 +248,7 @@ INSERT INTO C_EP_PROXY
 	'setData',
 	'',
 	0,
+	'UI::UI::Shared::UI::setData',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("afae4676-6b8a-48d6-952e-bb402d291ca7",
@@ -267,6 +269,7 @@ INSERT INTO C_EP_PROXY
 	'setIndicator',
 	'',
 	0,
+	'UI::UI::Shared::UI::setIndicator',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("0a7740c7-0322-40c5-879d-8b427cbac0dd",
@@ -287,6 +290,7 @@ INSERT INTO C_EP_PROXY
 	'setTargetPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::setTargetPressed',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("74884116-ca1d-41a0-b164-6d00f6d5e49b",
@@ -307,6 +311,7 @@ INSERT INTO C_EP_PROXY
 	'startStopPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::startStopPressed',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("3dc34a58-a86b-41a4-bc72-e2b1e2690d42",
@@ -327,6 +332,7 @@ INSERT INTO C_EP_PROXY
 	'lapResetPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::lapResetPressed',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("2e72d50a-d8b7-4748-8c22-a544dce9d957",
@@ -347,6 +353,7 @@ INSERT INTO C_EP_PROXY
 	'lightPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::lightPressed',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("14f40ce6-a6a2-4100-8cd4-5c61f909677e",
@@ -367,6 +374,7 @@ INSERT INTO C_EP_PROXY
 	'modePressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::modePressed',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("18a59919-7e2f-4705-834d-ec8d36176a44",
@@ -387,12 +395,14 @@ INSERT INTO C_EP_PROXY
 	'newGoalSpec',
 	'',
 	0,
+	'UI::UI::Shared::UI::newGoalSpec',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("06e358bd-8488-4092-af9c-7c359b158f4d",
 	"00000000-0000-0000-0000-000000000000",
 	'UI',
 	'',
+	'UI::UI::Shared::UI',
 	'../Shared/UI/UI.xtuml');
 INSERT INTO PE_PE
 	VALUES ("819d6fdc-c0a2-45c0-af06-300eba7ea99d",
@@ -407,4 +417,5 @@ INSERT INTO EP_PKG_PROXY
 	'UI',
 	'',
 	0,
+	'UI::UI',
 	'../UI.xtuml');

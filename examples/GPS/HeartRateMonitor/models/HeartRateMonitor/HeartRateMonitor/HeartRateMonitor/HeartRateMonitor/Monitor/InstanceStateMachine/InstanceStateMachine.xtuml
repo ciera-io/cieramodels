@@ -1300,4 +1300,5 @@ INSERT INTO O_OBJ_PROXY
 	'HRM',
 	'Represents the heart-rate monitoring facility.',
 	"00000000-0000-0000-0000-000000000000",
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor',
 	'../Monitor.xtuml');

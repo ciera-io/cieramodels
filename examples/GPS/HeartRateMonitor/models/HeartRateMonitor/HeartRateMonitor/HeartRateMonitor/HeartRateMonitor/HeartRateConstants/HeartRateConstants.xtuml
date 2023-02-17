@@ -107,4 +107,5 @@ INSERT INTO EP_PKG_PROXY
 	'HeartRateMonitor',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor',
 	'../HeartRateMonitor.xtuml');

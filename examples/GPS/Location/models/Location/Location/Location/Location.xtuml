@@ -261,6 +261,7 @@ INSERT INTO C_EP_PROXY
 	'registerListener',
 	'',
 	0,
+	'Location::Location::Shared::LocationProvider::registerListener',
 	'../Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("c0944bb8-d030-4d3a-a5e6-0328cce2c496",
@@ -281,6 +282,7 @@ INSERT INTO C_EP_PROXY
 	'unregisterListener',
 	'',
 	0,
+	'Location::Location::Shared::LocationProvider::unregisterListener',
 	'../Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("6c018661-d89f-423f-8b3c-acccff978a5d",
@@ -301,12 +303,14 @@ INSERT INTO C_EP_PROXY
 	'locationChanged',
 	'',
 	0,
+	'Location::Location::Shared::LocationProvider::locationChanged',
 	'../Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("de38d4b0-e70e-49ee-a5b9-590645243ae5",
 	"00000000-0000-0000-0000-000000000000",
 	'LocationProvider',
 	'',
+	'Location::Location::Shared::LocationProvider',
 	'../Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO PE_PE
 	VALUES ("2a5126a3-4272-42f2-810c-07c57c5a58d1",
@@ -321,4 +325,5 @@ INSERT INTO EP_PKG_PROXY
 	'Location',
 	'',
 	0,
+	'Location::Location',
 	'../Location.xtuml');

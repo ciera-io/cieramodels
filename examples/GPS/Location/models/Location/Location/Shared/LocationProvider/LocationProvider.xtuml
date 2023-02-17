@@ -75,4 +75,5 @@ INSERT INTO EP_PKG_PROXY
 	'Shared',
 	'',
 	0,
+	'Location::Location::Shared',
 	'../Shared.xtuml');

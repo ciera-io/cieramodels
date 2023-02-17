@@ -106,6 +106,7 @@ INSERT INTO S_DT_PROXY
 	'GoalCriteria',
 	'The criteria type for a particular workout goal.  ',
 	'',
+	'UI::UI::Shared::GoalCriteria',
 	'../../../../../../../UI/models/UI/UI/Shared/Shared.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("1d622105-74c9-41c3-8547-4323b5540107",
@@ -131,6 +132,7 @@ INSERT INTO S_DT_PROXY
 	'GoalSpan',
 	'',
 	'',
+	'UI::UI::Shared::GoalSpan',
 	'../../../../../../../UI/models/UI/UI/Shared/Shared.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("f568c69e-b0ba-41ee-aef1-25eb2c07142f",
@@ -171,6 +173,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("be6ddd8b-37a5-4534-961b-772bb1d940ac",
 	"c43c8e88-54fd-4de3-9adf-b324850fd9ec",
 	"5553a101-fdfb-405c-b7fb-b3546e23b1cb",
+	'Tracking::Tracking::Tracking::Tracking::R10::[includes]GoalSpec',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
@@ -178,6 +181,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"c43c8e88-54fd-4de3-9adf-b324850fd9ec",
 	"d47d174a-e192-4afc-afce-98d9e984bad4",
+	'Tracking::Tracking::Tracking::Tracking::R10::WorkoutSession::startTime {R10}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("f08d1723-c13d-473f-8cd7-05a3f01d3371",
@@ -189,6 +193,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
 	"2522ffa2-db69-4807-ab45-06acf4cf893a",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession::startTime',
 	'../WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("f08d1723-c13d-473f-8cd7-05a3f01d3371",
@@ -252,4 +257,5 @@ INSERT INTO EP_PKG_PROXY
 	'Tracking',
 	'',
 	0,
+	'Tracking::Tracking::Tracking::Tracking',
 	'../Tracking.xtuml');
