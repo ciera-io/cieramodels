@@ -42,7 +42,7 @@
           <execution>
             <id>pre-build</id>
             <goals>
-              <goal>pyxtuml-pre-build</goal>
+              <goal>bridgepoint-pre-build</goal>
             </goals>
             <!-- Enable verbose logging, must use Ciera >= 2.2.0
             Logging levels available are:
