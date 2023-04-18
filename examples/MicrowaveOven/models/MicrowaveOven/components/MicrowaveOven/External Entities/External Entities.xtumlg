@@ -1,0 +1,12 @@
+render : "MicrowaveOven::components::MicrowaveOven::External Entities"
+
+properties :
+  viewport : x : 1725.0 y : 1191.0
+  zoom : 0.0
+
+shapes :
+  shape : ControlPanel
+    render : ee "MicrowaveOven::components::MicrowaveOven::External Entities::Control Panel"
+    bounds : x : 1884.0 y : 1248.0 width : 160.0 height : 96.0
+
+connectors :
