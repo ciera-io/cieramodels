@@ -1962,6 +1962,7 @@ is always the active one for the current workout session.
 However, future releases may add a capability for storing
 multiple track logs on the device.',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::TrackLog',
 	'./TrackLog/TrackLog.xtuml');
 INSERT INTO R_PART
 	VALUES ("66920350-b77d-4876-9b05-0c545b5437ae",
@@ -1981,6 +1982,7 @@ INSERT INTO O_OIDA_PROXY
 	"66920350-b77d-4876-9b05-0c545b5437ae",
 	0,
 	'time',
+	'Tracking::Tracking::Tracking::Tracking::TrackPoint::time::*1',
 	'./TrackPoint/TrackPoint.xtuml');
 INSERT INTO R_RTO
 	VALUES ("66920350-b77d-4876-9b05-0c545b5437ae",
@@ -1990,6 +1992,7 @@ INSERT INTO R_RTO
 INSERT INTO O_ID_PROXY
 	VALUES (0,
 	"66920350-b77d-4876-9b05-0c545b5437ae",
+	'Tracking::Tracking::Tracking::Tracking::TrackPoint::1',
 	'./TrackPoint/TrackPoint.xtuml');
 INSERT INTO R_OIR
 	VALUES ("66920350-b77d-4876-9b05-0c545b5437ae",
@@ -2004,6 +2007,7 @@ INSERT INTO O_OBJ_PROXY
 	'Each instance represents a single location through which the device
 passed during a workout session.',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::TrackPoint',
 	'./TrackPoint/TrackPoint.xtuml');
 INSERT INTO PE_PE
 	VALUES ("7ea6b294-af80-4908-a92d-d4dd2302915f",
@@ -2151,6 +2155,7 @@ INSERT INTO O_OBJ_PROXY
 	'LapMarker',
 	'Each instance represents a single lap marker.',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::LapMarker',
 	'./LapMarker/LapMarker.xtuml');
 INSERT INTO R_PART
 	VALUES ("d2828038-110a-4559-8452-91651af0adcb",
@@ -2170,6 +2175,7 @@ INSERT INTO O_OIDA_PROXY
 	"d2828038-110a-4559-8452-91651af0adcb",
 	0,
 	'session_startTime',
+	'Tracking::Tracking::Tracking::Tracking::TrackLog::session_startTime::*1',
 	'./TrackLog/TrackLog.xtuml');
 INSERT INTO R_RTO
 	VALUES ("d2828038-110a-4559-8452-91651af0adcb",
@@ -2179,6 +2185,7 @@ INSERT INTO R_RTO
 INSERT INTO O_ID_PROXY
 	VALUES (0,
 	"d2828038-110a-4559-8452-91651af0adcb",
+	'Tracking::Tracking::Tracking::Tracking::TrackLog::1',
 	'./TrackLog/TrackLog.xtuml');
 INSERT INTO R_OIR
 	VALUES ("d2828038-110a-4559-8452-91651af0adcb",
@@ -2217,6 +2224,7 @@ INSERT INTO O_OIDA_PROXY
 	"2522ffa2-db69-4807-ab45-06acf4cf893a",
 	0,
 	'startTime',
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession::startTime::*1',
 	'./WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO R_RTO
 	VALUES ("2522ffa2-db69-4807-ab45-06acf4cf893a",
@@ -2226,6 +2234,7 @@ INSERT INTO R_RTO
 INSERT INTO O_ID_PROXY
 	VALUES (0,
 	"2522ffa2-db69-4807-ab45-06acf4cf893a",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession::1',
 	'./WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO R_OIR
 	VALUES ("2522ffa2-db69-4807-ab45-06acf4cf893a",
@@ -2245,6 +2254,7 @@ Even in that case, only a single session is executing
 at any given time.  Other sessions represent completed
 or planned workout sessions.',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession',
 	'./WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO R_FORM
 	VALUES ("e4f33430-b3cd-4e2a-8dff-b91094d7d095",
@@ -2273,6 +2283,7 @@ display.
 This is a singleton instance.
 ',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::Display',
 	'./Display/Display.xtuml');
 INSERT INTO PE_PE
 	VALUES ("624a7f7e-f307-4c75-9412-3258327be18a",
@@ -2343,6 +2354,7 @@ stopwatch is currently running.
 This is a singleton instance.
 ',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutTimer',
 	'./WorkoutTimer/WorkoutTimer.xtuml');
 INSERT INTO PE_PE
 	VALUES ("b04987ba-d80b-4527-a1fd-894139a710d8",
@@ -2434,6 +2446,7 @@ INSERT INTO O_OBJ_PROXY
 	'HeartRateSample',
 	'Each instance represents a single heart-rate sample.',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::HeartRateSample',
 	'./HeartRateSample/HeartRateSample.xtuml');
 INSERT INTO R_PART
 	VALUES ("2522ffa2-db69-4807-ab45-06acf4cf893a",
@@ -2489,6 +2502,7 @@ INSERT INTO O_OIDA_PROXY
 	"be6ddd8b-37a5-4534-961b-772bb1d940ac",
 	0,
 	'sequenceNumber',
+	'Tracking::Tracking::Tracking::Tracking::GoalSpec::sequenceNumber::*1',
 	'./GoalSpec/GoalSpec.xtuml');
 INSERT INTO O_RTIDA
 	VALUES ("f08d1723-c13d-473f-8cd7-05a3f01d3371",
@@ -2501,6 +2515,7 @@ INSERT INTO O_OIDA_PROXY
 	"be6ddd8b-37a5-4534-961b-772bb1d940ac",
 	0,
 	'session_startTime',
+	'Tracking::Tracking::Tracking::Tracking::GoalSpec::session_startTime::*1',
 	'./GoalSpec/GoalSpec.xtuml');
 INSERT INTO R_RTO
 	VALUES ("be6ddd8b-37a5-4534-961b-772bb1d940ac",
@@ -2510,6 +2525,7 @@ INSERT INTO R_RTO
 INSERT INTO O_ID_PROXY
 	VALUES (0,
 	"be6ddd8b-37a5-4534-961b-772bb1d940ac",
+	'Tracking::Tracking::Tracking::Tracking::GoalSpec::1',
 	'./GoalSpec/GoalSpec.xtuml');
 INSERT INTO R_OIR
 	VALUES ("be6ddd8b-37a5-4534-961b-772bb1d940ac",
@@ -2532,6 +2548,7 @@ a faster speed.  Even so, when specifying a pace-related goal the value for
 minimum should be the lowest number (fastest pace) and the value for maximum should
 be the higher number (slower pace).',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::GoalSpec',
 	'./GoalSpec/GoalSpec.xtuml');
 INSERT INTO R_FORM
 	VALUES ("c1022670-c44d-401e-bb23-dfcef6084fba",
@@ -2558,6 +2575,7 @@ INSERT INTO O_OBJ_PROXY
 This class knows how to evaluate whether the goal is being achieved 
 and whether the goal has completed.',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::Goal',
 	'./Goal/Goal.xtuml');
 INSERT INTO PE_PE
 	VALUES ("78e3e6fd-b6ad-409d-a611-d20499f533da",
@@ -2696,6 +2714,7 @@ INSERT INTO O_OIDA_PROXY
 	"c1022670-c44d-401e-bb23-dfcef6084fba",
 	0,
 	'session_startTime',
+	'Tracking::Tracking::Tracking::Tracking::Goal::session_startTime::*1',
 	'./Goal/Goal.xtuml');
 INSERT INTO O_RTIDA
 	VALUES ("645a58ca-7e54-4f1b-bb56-64249dab5aaa",
@@ -2708,6 +2727,7 @@ INSERT INTO O_OIDA_PROXY
 	"c1022670-c44d-401e-bb23-dfcef6084fba",
 	0,
 	'ID',
+	'Tracking::Tracking::Tracking::Tracking::Goal::ID::*1',
 	'./Goal/Goal.xtuml');
 INSERT INTO O_RTIDA
 	VALUES ("3d76c79d-be06-4cb9-8efd-0960b4a4e8d4",
@@ -2720,6 +2740,7 @@ INSERT INTO O_OIDA_PROXY
 	"c1022670-c44d-401e-bb23-dfcef6084fba",
 	0,
 	'spec_sequenceNumber',
+	'Tracking::Tracking::Tracking::Tracking::Goal::spec_sequenceNumber::*1',
 	'./Goal/Goal.xtuml');
 INSERT INTO R_RTO
 	VALUES ("c1022670-c44d-401e-bb23-dfcef6084fba",
@@ -2729,6 +2750,7 @@ INSERT INTO R_RTO
 INSERT INTO O_ID_PROXY
 	VALUES (0,
 	"c1022670-c44d-401e-bb23-dfcef6084fba",
+	'Tracking::Tracking::Tracking::Tracking::Goal::1',
 	'./Goal/Goal.xtuml');
 INSERT INTO R_OIR
 	VALUES ("c1022670-c44d-401e-bb23-dfcef6084fba",
@@ -2759,6 +2781,7 @@ INSERT INTO O_OBJ_PROXY
 	'Each instance represents one contiguous period of time during 
 which a particular goal was being met (achieved).',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::Achievement',
 	'./Achievement/Achievement.xtuml');
 INSERT INTO PE_PE
 	VALUES ("b8328a39-3292-4b79-9990-82aae21a82e6",
@@ -2904,9 +2927,11 @@ product.',
 	0,
 	'',
 	'',
+	'Tracking::Tracking::Tracking',
 	'../Tracking.xtuml');
 INSERT INTO S_SYS_PROXY
 	VALUES ("f6183599-e913-4960-ac9a-ad495a6db59f",
 	'Tracking',
 	1,
+	'Tracking',
 	'../../../Tracking.xtuml');

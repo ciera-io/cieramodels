@@ -52,6 +52,7 @@ INSERT INTO S_DT_PROXY
 	'Indicator',
 	'Graphical indicator.',
 	'',
+	'UI::UI::Shared::Indicator',
 	'../../../../../../../UI/models/UI/UI/Shared/Shared.xtuml');
 INSERT INTO O_NBATTR
 	VALUES ("916bb9f2-3357-4bf4-87c4-0c9f6759e965",
@@ -91,6 +92,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("e4f33430-b3cd-4e2a-8dff-b91094d7d095",
 	"624a7f7e-f307-4c75-9412-3258327be18a",
 	"443bb730-83d0-4714-bf48-28d75dea6c97",
+	'Tracking::Tracking::Tracking::Tracking::R7::[current_status_indicated_on]Display',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
@@ -98,6 +100,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"624a7f7e-f307-4c75-9412-3258327be18a",
 	"fbd6fc51-af92-459e-8801-91c949fcd221",
+	'Tracking::Tracking::Tracking::Tracking::R7::WorkoutSession::startTime {R7}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("b68a74bc-c90b-4f2b-8838-bb69dea746ec",
@@ -109,6 +112,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
 	"2522ffa2-db69-4807-ab45-06acf4cf893a",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession::startTime',
 	'../WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("b68a74bc-c90b-4f2b-8838-bb69dea746ec",
@@ -149,4 +153,5 @@ INSERT INTO EP_PKG_PROXY
 	'Tracking',
 	'',
 	0,
+	'Tracking::Tracking::Tracking::Tracking',
 	'../Tracking.xtuml');

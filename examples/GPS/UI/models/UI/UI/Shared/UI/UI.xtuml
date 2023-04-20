@@ -64,6 +64,7 @@ INSERT INTO S_DT_PROXY
 	'Unit',
 	'',
 	'',
+	'UI::UI::Shared::Unit',
 	'../Shared.xtuml');
 INSERT INTO C_EP
 	VALUES ("5ca515d4-2e83-4632-b040-ee98f9ef2a4e",
@@ -93,6 +94,7 @@ INSERT INTO S_DT_PROXY
 	'Indicator',
 	'Graphical indicator.',
 	'',
+	'UI::UI::Shared::Indicator',
 	'../Shared.xtuml');
 INSERT INTO C_EP
 	VALUES ("6254528a-deb6-494e-889f-c3251a439e85",
@@ -187,6 +189,7 @@ INSERT INTO S_DT_PROXY
 	'GoalSpan',
 	'',
 	'',
+	'UI::UI::Shared::GoalSpan',
 	'../Shared.xtuml');
 INSERT INTO C_PP
 	VALUES ("3790a683-9ce0-49ca-87f9-d1a0a27408ba",
@@ -203,6 +206,7 @@ INSERT INTO S_DT_PROXY
 	'GoalCriteria',
 	'The criteria type for a particular workout goal.  ',
 	'',
+	'UI::UI::Shared::GoalCriteria',
 	'../Shared.xtuml');
 INSERT INTO C_PP
 	VALUES ("b8c7071c-f635-4c81-a0ed-ecd4f0053c0e",
@@ -253,4 +257,5 @@ INSERT INTO EP_PKG_PROXY
 	'Shared',
 	'',
 	0,
+	'UI::UI::Shared',
 	'../Shared.xtuml');

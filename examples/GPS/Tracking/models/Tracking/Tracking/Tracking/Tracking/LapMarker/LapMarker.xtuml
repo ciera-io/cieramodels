@@ -45,6 +45,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("21bd91e4-0a7e-4836-84f1-253f2298df88",
 	"d62976b4-4258-4aa6-8a5b-a1bb8dea1e60",
 	"05024aea-a603-4e50-bdc3-af1a9a3b88a8",
+	'Tracking::Tracking::Tracking::Tracking::R5::[has_laps_defined_by]LapMarker',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("4e0a65c3-0128-4fda-b003-cff06b9b7367",
@@ -52,6 +53,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"d62976b4-4258-4aa6-8a5b-a1bb8dea1e60",
 	"2b89183d-5002-42b6-bcce-1ad8d016ceb1",
+	'Tracking::Tracking::Tracking::Tracking::R5::TrackLog::session_startTime {R5}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("4bcd3698-56f6-4d19-990f-d412d2db046e",
@@ -63,6 +65,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
 	"2522ffa2-db69-4807-ab45-06acf4cf893a",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession::startTime',
 	'../WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("4bcd3698-56f6-4d19-990f-d412d2db046e",
@@ -108,4 +111,5 @@ INSERT INTO EP_PKG_PROXY
 	'Tracking',
 	'',
 	0,
+	'Tracking::Tracking::Tracking::Tracking',
 	'../Tracking.xtuml');

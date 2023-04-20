@@ -173,4 +173,5 @@ INSERT INTO EP_PKG_PROXY
 	'Location',
 	'',
 	0,
+	'Location::Location::Location::Location',
 	'../Location.xtuml');

@@ -261,6 +261,7 @@ INSERT INTO C_EP_PROXY
 	'registerListener',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider::registerListener',
 	'../Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("453032a5-c340-459e-ae7d-901388e3d22a",
@@ -281,6 +282,7 @@ INSERT INTO C_EP_PROXY
 	'unregisterListener',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider::unregisterListener',
 	'../Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO SPR_PEP
 	VALUES ("fb3d7511-78c9-4e24-8d39-25c5a3a35d1d",
@@ -301,12 +303,14 @@ INSERT INTO C_EP_PROXY
 	'heartRateChanged',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider::heartRateChanged',
 	'../Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("203a4287-09f9-4c6c-97fa-12e9ac462a4e",
 	"00000000-0000-0000-0000-000000000000",
 	'HeartRateProvider',
 	'',
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider',
 	'../Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO PE_PE
 	VALUES ("fff30510-d90f-4286-962f-f99732ae7c5a",
@@ -321,4 +325,5 @@ INSERT INTO EP_PKG_PROXY
 	'HeartRateMonitor',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor',
 	'../HeartRateMonitor.xtuml');

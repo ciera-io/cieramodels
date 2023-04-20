@@ -338,9 +338,11 @@ INSERT INTO EP_PKG_PROXY
 	'UI',
 	'',
 	0,
+	'UI::UI',
 	'../UI.xtuml');
 INSERT INTO S_SYS_PROXY
 	VALUES ("ff0e51de-d303-43e1-8216-8e06a44596c7",
 	'UI',
 	1,
+	'UI',
 	'../../UI.xtuml');

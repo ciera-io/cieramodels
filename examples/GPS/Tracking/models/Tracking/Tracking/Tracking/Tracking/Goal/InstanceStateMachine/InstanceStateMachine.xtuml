@@ -1379,4 +1379,5 @@ INSERT INTO O_OBJ_PROXY
 This class knows how to evaluate whether the goal is being achieved 
 and whether the goal has completed.',
 	"00000000-0000-0000-0000-000000000000",
+	'Tracking::Tracking::Tracking::Tracking::Goal',
 	'../Goal.xtuml');

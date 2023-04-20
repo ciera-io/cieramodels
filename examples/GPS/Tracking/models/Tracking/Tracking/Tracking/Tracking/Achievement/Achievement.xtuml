@@ -88,6 +88,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("313e48f7-0516-49bd-9401-5c67c2e55db9",
 	"b8328a39-3292-4b79-9990-82aae21a82e6",
 	"dd8fe793-e15c-4ad3-b625-2aaf0c5a4173",
+	'Tracking::Tracking::Tracking::Tracking::R12::[has_recorded]Achievement',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("1112db20-38b9-44b6-8df7-863caab66a7d",
@@ -95,6 +96,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"b8328a39-3292-4b79-9990-82aae21a82e6",
 	"2a974a63-3880-400e-a031-c56390a6083f",
+	'Tracking::Tracking::Tracking::Tracking::R12::Goal::session_startTime {R12}',
 	'../Tracking.xtuml');
 INSERT INTO O_REF
 	VALUES ("313e48f7-0516-49bd-9401-5c67c2e55db9",
@@ -116,6 +118,7 @@ INSERT INTO R_RGO_PROXY
 	VALUES ("313e48f7-0516-49bd-9401-5c67c2e55db9",
 	"bc95f1bf-69a4-4013-ab97-58e1c1b23b15",
 	"af362b48-c65b-4376-b576-1fd79da9a092",
+	'Tracking::Tracking::Tracking::Tracking::R14::[has_open]Achievement',
 	'../Tracking.xtuml');
 INSERT INTO O_RTIDA_PROXY
 	VALUES ("1112db20-38b9-44b6-8df7-863caab66a7d",
@@ -123,6 +126,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"bc95f1bf-69a4-4013-ab97-58e1c1b23b15",
 	"9bd2e282-0d41-4dc4-9e49-54af9316b174",
+	'Tracking::Tracking::Tracking::Tracking::R14::Goal::session_startTime {R14}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("9a4cc2c2-78c6-4a7b-8b3a-7ff01a3c12fc",
@@ -134,6 +138,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("7f25f45e-231c-4cfe-9481-7a86cabddbc6",
 	"2522ffa2-db69-4807-ab45-06acf4cf893a",
+	'Tracking::Tracking::Tracking::Tracking::WorkoutSession::startTime',
 	'../WorkoutSession/WorkoutSession.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("9a4cc2c2-78c6-4a7b-8b3a-7ff01a3c12fc",
@@ -171,6 +176,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"b8328a39-3292-4b79-9990-82aae21a82e6",
 	"2a974a63-3880-400e-a031-c56390a6083f",
+	'Tracking::Tracking::Tracking::Tracking::R12::Goal::ID {R12}',
 	'../Tracking.xtuml');
 INSERT INTO O_REF
 	VALUES ("313e48f7-0516-49bd-9401-5c67c2e55db9",
@@ -194,6 +200,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"bc95f1bf-69a4-4013-ab97-58e1c1b23b15",
 	"9bd2e282-0d41-4dc4-9e49-54af9316b174",
+	'Tracking::Tracking::Tracking::Tracking::R14::Goal::ID {R14}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("cded74fd-309e-4629-99ff-b9445b82116c",
@@ -205,6 +212,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("645a58ca-7e54-4f1b-bb56-64249dab5aaa",
 	"c1022670-c44d-401e-bb23-dfcef6084fba",
+	'Tracking::Tracking::Tracking::Tracking::Goal::ID',
 	'../Goal/Goal.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("cded74fd-309e-4629-99ff-b9445b82116c",
@@ -242,6 +250,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"b8328a39-3292-4b79-9990-82aae21a82e6",
 	"2a974a63-3880-400e-a031-c56390a6083f",
+	'Tracking::Tracking::Tracking::Tracking::R12::Goal::spec_sequenceNumber {R12}',
 	'../Tracking.xtuml');
 INSERT INTO O_REF
 	VALUES ("313e48f7-0516-49bd-9401-5c67c2e55db9",
@@ -265,6 +274,7 @@ INSERT INTO O_RTIDA_PROXY
 	0,
 	"bc95f1bf-69a4-4013-ab97-58e1c1b23b15",
 	"9bd2e282-0d41-4dc4-9e49-54af9316b174",
+	'Tracking::Tracking::Tracking::Tracking::R14::Goal::spec_sequenceNumber {R14}',
 	'../Tracking.xtuml');
 INSERT INTO O_RATTR
 	VALUES ("3469b65e-2f3d-4971-b9b8-f938563b1d17",
@@ -276,6 +286,7 @@ INSERT INTO O_RATTR
 INSERT INTO O_BATTR_PROXY
 	VALUES ("f568c69e-b0ba-41ee-aef1-25eb2c07142f",
 	"be6ddd8b-37a5-4534-961b-772bb1d940ac",
+	'Tracking::Tracking::Tracking::Tracking::GoalSpec::sequenceNumber',
 	'../GoalSpec/GoalSpec.xtuml');
 INSERT INTO O_ATTR
 	VALUES ("3469b65e-2f3d-4971-b9b8-f938563b1d17",
@@ -333,4 +344,5 @@ INSERT INTO EP_PKG_PROXY
 	'Tracking',
 	'',
 	0,
+	'Tracking::Tracking::Tracking::Tracking',
 	'../Tracking.xtuml');

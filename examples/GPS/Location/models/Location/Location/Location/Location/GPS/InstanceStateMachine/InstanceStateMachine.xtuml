@@ -1328,4 +1328,5 @@ INSERT INTO O_OBJ_PROXY
 	'GPS',
 	'Simulates a GPS.',
 	"00000000-0000-0000-0000-000000000000",
+	'Location::Location::Location::Location::GPS',
 	'../GPS.xtuml');

@@ -70,9 +70,11 @@ INSERT INTO EP_PKG_PROXY
 	'Location',
 	'',
 	0,
+	'Location::Location',
 	'../Location.xtuml');
 INSERT INTO S_SYS_PROXY
 	VALUES ("61e01c56-c824-4c5f-9ef6-43d87e721b88",
 	'Location',
 	1,
+	'Location',
 	'../../Location.xtuml');

@@ -68,6 +68,7 @@ INSERT INTO S_DT_PROXY
 	'Unit',
 	'',
 	'',
+	'UI::UI::Shared::Unit',
 	'../../Shared/Shared.xtuml');
 INSERT INTO PE_PE
 	VALUES ("d952ffa0-7b4b-43b0-999b-04e44197017b",
@@ -101,6 +102,7 @@ INSERT INTO S_DT_PROXY
 	'Indicator',
 	'Graphical indicator.',
 	'',
+	'UI::UI::Shared::Indicator',
 	'../../Shared/Shared.xtuml');
 INSERT INTO PE_PE
 	VALUES ("86863a7d-e663-490c-9076-281db14af243",
@@ -151,9 +153,11 @@ INSERT INTO C_C_PROXY
 	1,
 	'',
 	'',
+	'UI::UI::UI',
 	'../UI.xtuml');
 INSERT INTO S_SYS_PROXY
 	VALUES ("ff0e51de-d303-43e1-8216-8e06a44596c7",
 	'UI',
 	1,
+	'UI',
 	'../../../UI.xtuml');

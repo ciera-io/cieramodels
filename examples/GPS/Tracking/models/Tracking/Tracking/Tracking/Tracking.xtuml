@@ -570,6 +570,7 @@ INSERT INTO C_EP_PROXY
 	'registerListener',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider::registerListener',
 	'../../../../../HeartRateMonitor/models/HeartRateMonitor/HeartRateMonitor/Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("9142bc73-5b7d-4f48-8af1-137a738f59f5",
@@ -590,6 +591,7 @@ INSERT INTO C_EP_PROXY
 	'unregisterListener',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider::unregisterListener',
 	'../../../../../HeartRateMonitor/models/HeartRateMonitor/HeartRateMonitor/Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("213e63b6-745f-4b4e-a4a7-53564e4344be",
@@ -610,12 +612,14 @@ INSERT INTO C_EP_PROXY
 	'heartRateChanged',
 	'',
 	0,
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider::heartRateChanged',
 	'../../../../../HeartRateMonitor/models/HeartRateMonitor/HeartRateMonitor/Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("203a4287-09f9-4c6c-97fa-12e9ac462a4e",
 	"00000000-0000-0000-0000-000000000000",
 	'HeartRateProvider',
 	'',
+	'HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider',
 	'../../../../../HeartRateMonitor/models/HeartRateMonitor/HeartRateMonitor/Shared/HeartRateProvider/HeartRateProvider.xtuml');
 INSERT INTO C_PO
 	VALUES ("d00db55b-e6d1-4cde-a83e-09cfefdc2474",
@@ -654,6 +658,7 @@ INSERT INTO C_EP_PROXY
 	'registerListener',
 	'',
 	0,
+	'Location::Location::Shared::LocationProvider::registerListener',
 	'../../../../../Location/models/Location/Location/Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("9ca10bca-351d-4ce7-82a8-ff8fd49dce59",
@@ -674,6 +679,7 @@ INSERT INTO C_EP_PROXY
 	'unregisterListener',
 	'',
 	0,
+	'Location::Location::Shared::LocationProvider::unregisterListener',
 	'../../../../../Location/models/Location/Location/Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("120a1b90-a2f7-4c7d-ad96-d2df97e645e3",
@@ -694,12 +700,14 @@ INSERT INTO C_EP_PROXY
 	'locationChanged',
 	'',
 	0,
+	'Location::Location::Shared::LocationProvider::locationChanged',
 	'../../../../../Location/models/Location/Location/Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("de38d4b0-e70e-49ee-a5b9-590645243ae5",
 	"00000000-0000-0000-0000-000000000000",
 	'LocationProvider',
 	'',
+	'Location::Location::Shared::LocationProvider',
 	'../../../../../Location/models/Location/Location/Shared/LocationProvider/LocationProvider.xtuml');
 INSERT INTO C_PO
 	VALUES ("19eaf11c-ec25-4b9a-a943-a0c8ce109545",
@@ -738,6 +746,7 @@ INSERT INTO C_EP_PROXY
 	'setTime',
 	'',
 	0,
+	'UI::UI::Shared::UI::setTime',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("b714be27-ba5e-45b5-ba00-6941711f7b7c",
@@ -758,6 +767,7 @@ INSERT INTO C_EP_PROXY
 	'setData',
 	'',
 	0,
+	'UI::UI::Shared::UI::setData',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("4431a269-cb83-4b90-b711-1e0484a9cf52",
@@ -778,6 +788,7 @@ INSERT INTO C_EP_PROXY
 	'setIndicator',
 	'',
 	0,
+	'UI::UI::Shared::UI::setIndicator',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("1e0a565b-7282-4f3c-9c8d-1c2ec813455e",
@@ -798,6 +809,7 @@ INSERT INTO C_EP_PROXY
 	'setTargetPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::setTargetPressed',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("a49df3bd-fe1b-40ea-b5aa-dc318a14793a",
@@ -818,6 +830,7 @@ INSERT INTO C_EP_PROXY
 	'startStopPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::startStopPressed',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("74d94e35-aaf8-497b-bd82-0e2b77389a3d",
@@ -838,6 +851,7 @@ INSERT INTO C_EP_PROXY
 	'lapResetPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::lapResetPressed',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("f47e6dfb-5655-4503-a7b4-a4ff23bf71ee",
@@ -858,6 +872,7 @@ INSERT INTO C_EP_PROXY
 	'lightPressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::lightPressed',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("66158cf6-37a8-4620-9451-86f434d9df24",
@@ -878,6 +893,7 @@ INSERT INTO C_EP_PROXY
 	'modePressed',
 	'',
 	0,
+	'UI::UI::Shared::UI::modePressed',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO SPR_REP
 	VALUES ("89315a75-e5c9-4302-b730-a0dfd6b4143f",
@@ -898,12 +914,14 @@ INSERT INTO C_EP_PROXY
 	'newGoalSpec',
 	'',
 	0,
+	'UI::UI::Shared::UI::newGoalSpec',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO C_I_PROXY
 	VALUES ("06e358bd-8488-4092-af9c-7c359b158f4d",
 	"00000000-0000-0000-0000-000000000000",
 	'UI',
 	'',
+	'UI::UI::Shared::UI',
 	'../../../../../UI/models/UI/UI/Shared/UI/UI.xtuml');
 INSERT INTO PE_PE
 	VALUES ("7faca62d-bd68-4fa6-8c7d-c02d7890cba2",
@@ -918,4 +936,5 @@ INSERT INTO EP_PKG_PROXY
 	'Tracking',
 	'',
 	0,
+	'Tracking::Tracking',
 	'../Tracking.xtuml');
