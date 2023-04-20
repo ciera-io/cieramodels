@@ -1,0 +1,20 @@
+render : "Tracking::Tracking::Tracking::ConstantSpecifications"
+
+shapes :
+  shape : Speed
+    render : class "Tracking::Tracking::Tracking::ConstantSpecifications::Speed"
+    bounds : x : 0.0 y : 0.0 width : 200.0 height : 150.0
+  shape : HeartRateConstants
+    render : class "Tracking::Tracking::Tracking::ConstantSpecifications::HeartRateConstants"
+    bounds : x : 220.0 y : 0.0 width : 200.0 height : 150.0
+  shape : GoalAchievement
+    render : class "Tracking::Tracking::Tracking::ConstantSpecifications::GoalAchievement"
+    bounds : x : 440.0 y : 0.0 width : 200.0 height : 150.0
+  shape : GoalSpecConstants
+    render : class "Tracking::Tracking::Tracking::ConstantSpecifications::GoalSpecConstants"
+    bounds : x : 660.0 y : 0.0 width : 200.0 height : 150.0
+  shape : WorkoutTimerConstants
+    render : class "Tracking::Tracking::Tracking::ConstantSpecifications::WorkoutTimerConstants"
+    bounds : x : 880.0 y : 0.0 width : 200.0 height : 150.0
+
+connectors :

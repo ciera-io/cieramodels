@@ -1,0 +1,8 @@
+render : "Tracking"
+
+shapes :
+  shape : Tracking
+    render : package "Tracking::Tracking"
+    bounds : x : 4914.0 y : 3624.0 width : 200.0 height : 150.0
+
+connectors :

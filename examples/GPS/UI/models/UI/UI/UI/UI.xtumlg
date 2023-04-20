@@ -1,0 +1,24 @@
+render : "UI::UI::UI"
+
+shapes :
+  shape : UI____UI____UI container
+    render : component_container "UI::UI::UI"
+    bounds : x : -12.0 y : -12.0 width : 5144.0 height : 3912.0
+  shape : functions
+    render : package "UI::UI::UI::functions"
+    bounds : x : 0.0 y : 0.0 width : 200.0 height : 150.0
+
+connectors :
+  connector : UI____UI
+    render : provided_interface "UI::UI::UI::UI::UI"
+    polyline :
+      segment :
+        start : x : 4482.0 y : 3900.0
+        end :   x : 4480.0 y : 3972.0
+    anchors :
+      start :
+        point : x : 4482.0 y : 3900.0
+        shape : UI____UI____UI
+      end :
+        point : x : 4480.0 y : 3972.0
+    texts :

@@ -1,116 +1,22 @@
--- BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+// BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
 
-INSERT INTO EP_PKG
-	VALUES ("ad493808-4242-43f2-b94c-96813f06a733",
-	"00000000-0000-0000-0000-000000000000",
-	"f6183599-e913-4960-ac9a-ad495a6db59f",
-	'Shared',
-	'',
-	0);
-INSERT INTO GD_MD
-	VALUES ("5a3d1360-d9b3-4ca1-a96f-76c5b0eb7049",
-	112,
-	"ad493808-4242-43f2-b94c-96813f06a733",
-	108,
-	0,
-	0,
-	1,
-	1,
-	1,
-	12,
-	1,
-	0,
-	0,
-	200,
-	150,
-	0,
-	'4.1.17',
-	'Tracking::Tracking::Shared');
-INSERT INTO GD_GE
-	VALUES ("46bf169b-6533-4c01-928e-c3611d2abd43",
-	"5a3d1360-d9b3-4ca1-a96f-76c5b0eb7049",
-	"ca91d910-53ec-403c-9551-bfc1a9aa9b73",
-	52,
-	0,
-	'Tracking::Tracking::Shared::GoalDisposition');
-INSERT INTO GD_SHP
-	VALUES ("46bf169b-6533-4c01-928e-c3611d2abd43");
-INSERT INTO GD_NCS
-	VALUES ("46bf169b-6533-4c01-928e-c3611d2abd43");
-INSERT INTO DIM_ND
-	VALUES (132.000000,
-	108.000000,
-	"46bf169b-6533-4c01-928e-c3611d2abd43");
-INSERT INTO DIM_GE
-	VALUES (1308.000000,
-	276.000000,
-	"46bf169b-6533-4c01-928e-c3611d2abd43",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_ELE
-	VALUES ("46bf169b-6533-4c01-928e-c3611d2abd43",
-	0,
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO DIM_DIA
-	VALUES ("5a3d1360-d9b3-4ca1-a96f-76c5b0eb7049",
-	'',
-	1.000000,
-	0.000000,
-	0.000000,
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO S_DT
-	VALUES ("ca91d910-53ec-403c-9551-bfc1a9aa9b73",
-	"00000000-0000-0000-0000-000000000000",
-	'GoalDisposition',
-	'Disposition of a currently executing goal.',
-	'');
-INSERT INTO S_EDT
-	VALUES ("ca91d910-53ec-403c-9551-bfc1a9aa9b73");
-INSERT INTO S_ENUM
-	VALUES ("4747b6cc-cb1a-4559-82f9-915290ff03fb",
-	'Decrease',
-	'The value associated with the goal is presently above the maximum 
-specified in the criteria for the goal, so the user must decrease
-that value to achieve the goal.',
-	"ca91d910-53ec-403c-9551-bfc1a9aa9b73",
-	"9b20494e-b74a-43a6-827e-bdf246f511aa");
-INSERT INTO S_ENUM
-	VALUES ("9b20494e-b74a-43a6-827e-bdf246f511aa",
-	'Increase',
-	'The value associated with the goal is presently below the minimum 
-specified in the criteria for the goal, so the user must increase
-that value to achieve the goal.',
-	"ca91d910-53ec-403c-9551-bfc1a9aa9b73",
-	"42d59715-a1d3-4693-82cd-e43c5e41c1cd");
-INSERT INTO S_ENUM
-	VALUES ("42d59715-a1d3-4693-82cd-e43c5e41c1cd",
-	'Achieving',
-	'The goal is currently being achieved.',
-	"ca91d910-53ec-403c-9551-bfc1a9aa9b73",
-	"00000000-0000-0000-0000-000000000000");
-INSERT INTO PE_PE
-	VALUES ("ca91d910-53ec-403c-9551-bfc1a9aa9b73",
-	1,
-	"ad493808-4242-43f2-b94c-96813f06a733",
-	"00000000-0000-0000-0000-000000000000",
-	3);
-INSERT INTO PE_PE
-	VALUES ("ad493808-4242-43f2-b94c-96813f06a733",
-	1,
-	"45a02e0a-7a50-4803-b943-a9e0c2ab6c1d",
-	"00000000-0000-0000-0000-000000000000",
-	7);
-INSERT INTO EP_PKG_PROXY
-	VALUES ("45a02e0a-7a50-4803-b943-a9e0c2ab6c1d",
-	"f6183599-e913-4960-ac9a-ad495a6db59f",
-	"f6183599-e913-4960-ac9a-ad495a6db59f",
-	'Tracking',
-	'',
-	0,
-	'Tracking::Tracking',
-	'../Tracking.xtuml');
-INSERT INTO S_SYS_PROXY
-	VALUES ("f6183599-e913-4960-ac9a-ad495a6db59f",
-	'Tracking',
-	1,
-	'Tracking',
-	'../../Tracking.xtuml');
+within Tracking::Tracking is
+
+  package Shared is
+    //! Disposition of a currently executing goal.
+    type GoalDisposition is enum (
+      //! The goal is currently being achieved.
+      Achieving, 
+      //! The value associated with the goal is presently below the minimum
+      //! specified in the criteria for the goal, so the user must increase
+      //! that value to achieve the goal.
+      Increase, 
+      //! The value associated with the goal is presently above the maximum
+      //! specified in the criteria for the goal, so the user must decrease
+      //! that value to achieve the goal.
+      Decrease
+    );
+
+  end package;
+
+end;

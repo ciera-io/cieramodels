@@ -1,0 +1,33 @@
+render : "Location::Location::Location"
+
+properties :
+  viewport : x : 4000.0 y : 3000.0
+  zoom : 1.0
+
+shapes :
+  shape : Location____Location____Location container
+    render : component_container "Location::Location::Location"
+    bounds : x : 2028.0 y : 1344.0 width : 1187.0 height : 330.0
+  shape : Location
+    render : package "Location::Location::Location::Location"
+    bounds : x : 2184.0 y : 1440.0 width : 168.0 height : 108.0
+  shape : functions
+    render : package "Location::Location::Location::functions"
+    bounds : x : 2372.0 y : 1440.0 width : 200.0 height : 150.0
+
+connectors :
+  connector : LOC____LocationProvider
+    render : provided_interface "Location::Location::Location::LOC::LocationProvider"
+    polyline :
+      segment :
+        start : x : 3215.0 y : 1578.0
+        end :   x : 3290.0 y : 1578.0
+    anchors :
+      start :
+        point : x : 3215.0 y : 1578.0
+        shape : Location____Location____Location
+      end :
+        point : x : 3290.0 y : 1578.0
+    texts :
+      text :
+        bounds : x : 3207.0 y : 1538.0 width : 0.0 height : 0.0 where : middle

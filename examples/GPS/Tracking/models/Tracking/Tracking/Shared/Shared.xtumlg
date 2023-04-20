@@ -1,0 +1,8 @@
+render : "Tracking::Tracking::Shared"
+
+shapes :
+  shape : GoalDisposition
+    render : enumeration_data_type "Tracking::Tracking::Shared::GoalDisposition"
+    bounds : x : 1308.0 y : 276.0 width : 132.0 height : 108.0
+
+connectors :

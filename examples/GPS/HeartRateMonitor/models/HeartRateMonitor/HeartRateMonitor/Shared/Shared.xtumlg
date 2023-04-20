@@ -1,0 +1,8 @@
+render : "HeartRateMonitor::HeartRateMonitor::Shared"
+
+shapes :
+  shape : HeartRateProvider
+    render : interface "HeartRateMonitor::HeartRateMonitor::Shared::HeartRateProvider"
+    bounds : x : 4570.0 y : 3108.0 width : 170.0 height : 97.0
+
+connectors :

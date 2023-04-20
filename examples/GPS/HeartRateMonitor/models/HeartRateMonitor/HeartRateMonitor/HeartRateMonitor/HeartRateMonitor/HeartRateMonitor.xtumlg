@@ -1,0 +1,15 @@
+render : "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor"
+
+properties :
+  viewport : x : 4000.0 y : 3000.0
+  zoom : 1.0
+
+shapes :
+  shape : Monitor
+    render : class "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor"
+    bounds : x : 4332.0 y : 3120.0 width : 200.0 height : 150.0
+  shape : HeartRateConstants
+    render : class "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateConstants"
+    bounds : x : 4552.0 y : 3120.0 width : 200.0 height : 150.0
+
+connectors :

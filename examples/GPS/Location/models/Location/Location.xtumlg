@@ -1,0 +1,8 @@
+render : "Location"
+
+shapes :
+  shape : Location
+    render : package "Location::Location"
+    bounds : x : 4694.0 y : 3624.0 width : 200.0 height : 150.0
+
+connectors :

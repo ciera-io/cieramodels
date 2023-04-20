@@ -1,0 +1,15 @@
+render : "Location::Location::Location::Location"
+
+properties :
+  viewport : x : 4000.0 y : 3048.0
+  zoom : 1.0
+
+shapes :
+  shape : GPS
+    render : class "Location::Location::Location::Location::GPS"
+    bounds : x : 4272.0 y : 3132.0 width : 200.0 height : 150.0
+  shape : simulatedGPS
+    render : class "Location::Location::Location::Location::simulatedGPS"
+    bounds : x : 4756.0 y : 3132.0 width : 200.0 height : 150.0
+
+connectors :

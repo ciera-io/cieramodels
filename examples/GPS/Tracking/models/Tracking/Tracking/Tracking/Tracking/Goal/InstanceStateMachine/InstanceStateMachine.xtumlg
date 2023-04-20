@@ -1,0 +1,129 @@
+render : "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine"
+
+properties :
+  viewport : x : 4000.0 y : 3000.0
+  zoom : 1.0
+
+shapes :
+  shape : Executing
+    render : state "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Executing"
+    bounds : x : 4032.0 y : 3084.0 width : 565.0 height : 541.0
+  shape : Completed
+    render : state "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Completed"
+    bounds : x : 4848.0 y : 3084.0 width : 481.0 height : 409.0
+  shape : Paused
+    render : state "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Paused"
+    bounds : x : 4044.0 y : 4020.0 width : 421.0 height : 121.0
+  shape : Evaluating
+    render : state "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Evaluating"
+    bounds : x : 4332.0 y : 3768.0 width : 200.0 height : 150.0
+
+connectors :
+  connector : Executing____Goal1__Completed
+    render : transition "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Executing::Goal1: Completed"
+    polyline :
+      segment :
+        start : x : 4597.0 y : 3132.0
+        end :   x : 4848.0 y : 3132.0
+    anchors :
+      start :
+        point : x : 4597.0 y : 3132.0
+        shape : Executing
+      end :
+        point : x : 4848.0 y : 3132.0
+        shape : Completed
+    texts :
+      text :
+        bounds : x : 4605.0 y : 3103.0 width : 0.0 height : 0.0 where : middle
+  connector : Executing____Goal2__Evaluate
+    render : transition "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Executing::Goal2: Evaluate"
+    polyline :
+      segment :
+        start : x : 4597.0 y : 3324.0
+        end :   x : 4692.0 y : 3324.0
+      segment :
+        start : x : 4692.0 y : 3324.0
+        end :   x : 4692.0 y : 3696.0
+      segment :
+        start : x : 4692.0 y : 3696.0
+        end :   x : 4500.0 y : 3696.0
+      segment :
+        start : x : 4500.0 y : 3696.0
+        end :   x : 4500.0 y : 3625.0
+    anchors :
+      start :
+        point : x : 4597.0 y : 3324.0
+        shape : Executing
+      end :
+        point : x : 4500.0 y : 3625.0
+        shape : Executing
+    texts :
+      text :
+        bounds : x : 4612.0 y : 3288.0 width : 0.0 height : 0.0 where : middle
+  connector : Executing____Goal3__Pause
+    render : transition "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Executing::Goal3: Pause"
+    polyline :
+      segment :
+        start : x : 4092.0 y : 3625.0
+        end :   x : 4092.0 y : 4020.0
+    anchors :
+      start :
+        point : x : 4092.0 y : 3625.0
+        shape : Executing
+      end :
+        point : x : 4092.0 y : 4020.0
+        shape : Paused
+    texts :
+      text :
+        bounds : x : 4101.0 y : 3774.0 width : 0.0 height : 0.0 where : middle
+  connector : Paused____Goal1__Completed
+    render : transition "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Paused::Goal1: Completed"
+    polyline :
+      segment :
+        start : x : 4465.0 y : 4091.0
+        end :   x : 4963.0 y : 4091.0
+      segment :
+        start : x : 4963.0 y : 4091.0
+        end :   x : 4963.0 y : 3493.0
+    anchors :
+      start :
+        point : x : 4465.0 y : 4091.0
+        shape : Paused
+      end :
+        point : x : 4963.0 y : 3493.0
+        shape : Completed
+    texts :
+      text :
+        bounds : x : 4665.0 y : 4105.0 width : 0.0 height : 0.0 where : middle
+  connector : Evaluating____Goal4__evaluationComplete
+    render : transition "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Evaluating::Goal4: evaluationComplete"
+    polyline :
+      segment :
+        start : x : 4415.0 y : 3768.0
+        end :   x : 4415.0 y : 3625.0
+    anchors :
+      start :
+        point : x : 4415.0 y : 3768.0
+        shape : Evaluating
+      end :
+        point : x : 4415.0 y : 3625.0
+        shape : Executing
+    texts :
+      text :
+        bounds : x : 4273.0 y : 3695.0 width : 0.0 height : 0.0 where : middle
+  connector : Paused____Goal2__Evaluate
+    render : transition "Tracking::Tracking::Tracking::Tracking::Goal::Instance State Machine::Paused::Goal2: Evaluate"
+    polyline :
+      segment :
+        start : x : 4391.0 y : 4020.0
+        end :   x : 4391.0 y : 3918.0
+    anchors :
+      start :
+        point : x : 4391.0 y : 4020.0
+        shape : Paused
+      end :
+        point : x : 4391.0 y : 3918.0
+        shape : Evaluating
+    texts :
+      text :
+        bounds : x : 4404.0 y : 3957.0 width : 0.0 height : 0.0 where : middle

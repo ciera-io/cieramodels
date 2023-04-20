@@ -1,0 +1,328 @@
+render : "Tracking::Tracking::Tracking::Tracking"
+
+properties :
+  viewport : x : 3850.0 y : 2925.0
+  zoom : 0.0
+
+shapes :
+  shape : WorkoutTimer
+    render : class "Tracking::Tracking::Tracking::Tracking::WorkoutTimer"
+    bounds : x : 4020.0 y : 2700.0 width : 216.0 height : 157.0
+  shape : TrackLog
+    render : class "Tracking::Tracking::Tracking::Tracking::TrackLog"
+    bounds : x : 4512.0 y : 3097.0 width : 240.0 height : 155.0
+  shape : TrackPoint
+    render : class "Tracking::Tracking::Tracking::Tracking::TrackPoint"
+    bounds : x : 4980.0 y : 3072.0 width : 241.0 height : 168.0
+  shape : LapMarker
+    render : class "Tracking::Tracking::Tracking::Tracking::LapMarker"
+    bounds : x : 4116.0 y : 3108.0 width : 200.0 height : 97.0
+  shape : HeartRateSample
+    render : class "Tracking::Tracking::Tracking::Tracking::HeartRateSample"
+    bounds : x : 4020.0 y : 2904.0 width : 200.0 height : 108.0
+  shape : Display
+    render : class "Tracking::Tracking::Tracking::Tracking::Display"
+    bounds : x : 5124.0 y : 2772.0 width : 200.0 height : 150.0
+  shape : WorkoutSession
+    render : class "Tracking::Tracking::Tracking::Tracking::WorkoutSession"
+    bounds : x : 4441.0 y : 2736.0 width : 431.0 height : 229.0
+  shape : GoalSpec
+    render : class "Tracking::Tracking::Tracking::Tracking::GoalSpec"
+    bounds : x : 4296.0 y : 2412.0 width : 205.0 height : 157.0
+  shape : Goal
+    render : class "Tracking::Tracking::Tracking::Tracking::Goal"
+    bounds : x : 4692.0 y : 2388.0 width : 265.0 height : 228.0
+  shape : Achievement
+    render : class "Tracking::Tracking::Tracking::Tracking::Achievement"
+    bounds : x : 5196.0 y : 2412.0 width : 240.0 height : 150.0
+
+connectors :
+  connector : R1
+    render : association "Tracking::Tracking::Tracking::Tracking::R1"
+    polyline :
+      segment :
+        start : x : 4752.0 y : 3119.0
+        end :   x : 4980.0 y : 3120.0
+    anchors :
+      start :
+        point : x : 4752.0 y : 3119.0
+        shape : TrackLog
+      end :
+        point : x : 4980.0 y : 3120.0
+        shape : TrackPoint
+    texts :
+      text :
+        bounds : x : 4754.0 y : 3132.0 width : 56.0 height : 24.0 where : start
+      text :
+        bounds : x : 4857.0 y : 3093.0 width : 24.0 height : 24.0 where : middle
+      text :
+        bounds : x : 4921.0 y : 3123.0 width : 56.0 height : 24.0 where : end
+  connector : R2
+    render : association "Tracking::Tracking::Tracking::Tracking::R2"
+    polyline :
+      segment :
+        start : x : 5221.0 y : 3102.0
+        end :   x : 5261.0 y : 3102.0
+      segment :
+        start : x : 5261.0 y : 3102.0
+        end :   x : 5261.0 y : 3192.0
+      segment :
+        start : x : 5261.0 y : 3192.0
+        end :   x : 5221.0 y : 3192.0
+    anchors :
+      start :
+        point : x : 5221.0 y : 3102.0
+        shape : TrackPoint
+      end :
+        point : x : 5221.0 y : 3192.0
+        shape : TrackPoint
+    texts :
+      text :
+        bounds : x : 5227.0 y : 3059.0 width : 62.0 height : 24.0 where : start
+      text :
+        bounds : x : 5269.0 y : 3137.0 width : 24.0 height : 24.0 where : middle
+      text :
+        bounds : x : 5231.0 y : 3202.0 width : 50.0 height : 24.0 where : end
+  connector : R3
+    render : association "Tracking::Tracking::Tracking::Tracking::R3"
+    polyline :
+      segment :
+        start : x : 4980.0 y : 3216.0
+        end :   x : 4752.0 y : 3215.0
+    anchors :
+      start :
+        point : x : 4980.0 y : 3216.0
+        shape : TrackPoint
+      end :
+        point : x : 4752.0 y : 3215.0
+        shape : TrackLog
+    texts :
+      text :
+        bounds : x : 4923.0 y : 3223.0 width : 53.0 height : 24.0 where : start
+      text :
+        bounds : x : 4857.0 y : 3186.0 width : 24.0 height : 24.0 where : middle
+      text :
+        bounds : x : 4756.0 y : 3223.0 width : 65.0 height : 24.0 where : end
+  connector : R5
+    render : association "Tracking::Tracking::Tracking::Tracking::R5"
+    polyline :
+      segment :
+        start : x : 4316.0 y : 3167.0
+        end :   x : 4512.0 y : 3167.0
+    anchors :
+      start :
+        point : x : 4316.0 y : 3167.0
+        shape : LapMarker
+      end :
+        point : x : 4512.0 y : 3167.0
+        shape : TrackLog
+    texts :
+      text :
+        bounds : x : 4313.0 y : 3174.0 width : 74.0 height : 38.0 where : start
+      text :
+        bounds : x : 4390.0 y : 3143.0 width : 24.0 height : 24.0 where : middle
+      text :
+        bounds : x : 4389.0 y : 3117.0 width : 74.0 height : 38.0 where : end
+  connector : R7
+    render : association "Tracking::Tracking::Tracking::Tracking::R7"
+    polyline :
+      segment :
+        start : x : 4872.0 y : 2880.0
+        end :   x : 5124.0 y : 2880.0
+    anchors :
+      start :
+        point : x : 4872.0 y : 2880.0
+        shape : WorkoutSession
+      end :
+        point : x : 5124.0 y : 2880.0
+        shape : Display
+    texts :
+      text :
+        bounds : x : 4875.0 y : 2886.0 width : 57.0 height : 55.0 where : start
+      text :
+        bounds : x : 4991.0 y : 2840.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4971.0 y : 2814.0 width : 82.0 height : 40.0 where : end
+  connector : R8
+    render : association "Tracking::Tracking::Tracking::Tracking::R8"
+    polyline :
+      segment :
+        start : x : 4441.0 y : 2771.0
+        end :   x : 4236.0 y : 2771.0
+    anchors :
+      start :
+        point : x : 4441.0 y : 2771.0
+        shape : WorkoutSession
+      end :
+        point : x : 4236.0 y : 2771.0
+        shape : WorkoutTimer
+    texts :
+      text :
+        bounds : x : 4302.0 y : 2718.0 width : 83.0 height : 40.0 where : start
+      text :
+        bounds : x : 4319.0 y : 2741.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4234.0 y : 2775.0 width : 0.0 height : 0.0 where : end
+  connector : R4
+    render : association "Tracking::Tracking::Tracking::Tracking::R4"
+    polyline :
+      segment :
+        start : x : 4572.0 y : 2965.0
+        end :   x : 4572.0 y : 3097.0
+    anchors :
+      start :
+        point : x : 4572.0 y : 2965.0
+        shape : WorkoutSession
+      end :
+        point : x : 4572.0 y : 3097.0
+        shape : TrackLog
+    texts :
+      text :
+        bounds : x : 4574.0 y : 2966.0 width : 0.0 height : 0.0 where : start
+      text :
+        bounds : x : 4534.0 y : 3023.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4582.0 y : 3072.0 width : 0.0 height : 0.0 where : end
+  connector : R6
+    render : association "Tracking::Tracking::Tracking::Tracking::R6"
+    polyline :
+      segment :
+        start : x : 4220.0 y : 2928.0
+        end :   x : 4351.0 y : 2928.0
+      segment :
+        start : x : 4351.0 y : 2928.0
+        end :   x : 4441.0 y : 2928.0
+    anchors :
+      start :
+        point : x : 4220.0 y : 2928.0
+        shape : HeartRateSample
+      end :
+        point : x : 4441.0 y : 2928.0
+        shape : WorkoutSession
+    texts :
+      text :
+        bounds : x : 4220.0 y : 2934.0 width : 94.0 height : 40.0 where : start
+      text :
+        bounds : x : 4321.0 y : 2904.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4316.0 y : 2875.0 width : 81.0 height : 40.0 where : end
+  connector : R9
+    render : association "Tracking::Tracking::Tracking::Tracking::R9"
+    polyline :
+      segment :
+        start : x : 4501.0 y : 2532.0
+        end :   x : 4692.0 y : 2532.0
+    anchors :
+      start :
+        point : x : 4501.0 y : 2532.0
+        shape : GoalSpec
+      end :
+        point : x : 4692.0 y : 2532.0
+        shape : Goal
+    texts :
+      text :
+        bounds : x : 4500.0 y : 2535.0 width : 0.0 height : 0.0 where : start
+      text :
+        bounds : x : 4590.0 y : 2492.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4637.0 y : 2537.0 width : 0.0 height : 0.0 where : end
+  connector : R10
+    render : association "Tracking::Tracking::Tracking::Tracking::R10"
+    polyline :
+      segment :
+        start : x : 4476.0 y : 2736.0
+        end :   x : 4476.0 y : 2569.0
+    anchors :
+      start :
+        point : x : 4476.0 y : 2736.0
+        shape : WorkoutSession
+      end :
+        point : x : 4476.0 y : 2569.0
+        shape : GoalSpec
+    texts :
+      text :
+        bounds : x : 4486.0 y : 2711.0 width : 0.0 height : 0.0 where : start
+      text :
+        bounds : x : 4432.0 y : 2646.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4486.0 y : 2579.0 width : 0.0 height : 0.0 where : end
+  connector : R11
+    render : association "Tracking::Tracking::Tracking::Tracking::R11"
+    polyline :
+      segment :
+        start : x : 4859.0 y : 2736.0
+        end :   x : 4860.0 y : 2616.0
+    anchors :
+      start :
+        point : x : 4859.0 y : 2736.0
+        shape : WorkoutSession
+      end :
+        point : x : 4860.0 y : 2616.0
+        shape : Goal
+    texts :
+      text :
+        bounds : x : 4869.0 y : 2711.0 width : 0.0 height : 0.0 where : start
+      text :
+        bounds : x : 4815.0 y : 2669.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4864.0 y : 2616.0 width : 0.0 height : 0.0 where : end
+  connector : R12
+    render : association "Tracking::Tracking::Tracking::Tracking::R12"
+    polyline :
+      segment :
+        start : x : 4957.0 y : 2470.0
+        end :   x : 5196.0 y : 2470.0
+    anchors :
+      start :
+        point : x : 4957.0 y : 2470.0
+        shape : Goal
+      end :
+        point : x : 5196.0 y : 2470.0
+        shape : Achievement
+    texts :
+      text :
+        bounds : x : 4953.0 y : 2472.0 width : 0.0 height : 0.0 where : start
+      text :
+        bounds : x : 5067.0 y : 2429.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 5117.0 y : 2472.0 width : 0.0 height : 0.0 where : end
+  connector : R13
+    render : association "Tracking::Tracking::Tracking::Tracking::R13"
+    polyline :
+      segment :
+        start : x : 4716.0 y : 2616.0
+        end :   x : 4715.0 y : 2736.0
+    anchors :
+      start :
+        point : x : 4716.0 y : 2616.0
+        shape : Goal
+      end :
+        point : x : 4715.0 y : 2736.0
+        shape : WorkoutSession
+    texts :
+      text :
+        bounds : x : 4714.0 y : 2617.0 width : 82.0 height : 40.0 where : start
+      text :
+        bounds : x : 4671.0 y : 2668.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 4715.0 y : 2694.0 width : 82.0 height : 55.0 where : end
+  connector : R14
+    render : association "Tracking::Tracking::Tracking::Tracking::R14"
+    polyline :
+      segment :
+        start : x : 4957.0 y : 2541.0
+        end :   x : 5196.0 y : 2541.0
+    anchors :
+      start :
+        point : x : 4957.0 y : 2541.0
+        shape : Goal
+      end :
+        point : x : 5196.0 y : 2541.0
+        shape : Achievement
+    texts :
+      text :
+        bounds : x : 4955.0 y : 2545.0 width : 0.0 height : 0.0 where : start
+      text :
+        bounds : x : 5068.0 y : 2510.0 width : 0.0 height : 0.0 where : middle
+      text :
+        bounds : x : 5139.0 y : 2544.0 width : 0.0 height : 0.0 where : end

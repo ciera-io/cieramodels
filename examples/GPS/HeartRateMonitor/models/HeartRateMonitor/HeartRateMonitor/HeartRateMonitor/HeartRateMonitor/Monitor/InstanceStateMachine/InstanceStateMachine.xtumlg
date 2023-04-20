@@ -1,0 +1,115 @@
+render : "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine"
+
+shapes :
+  shape : idle
+    render : state "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::idle"
+    bounds : x : 4293.0 y : 3303.0 width : 200.0 height : 150.0
+  shape : monitoring
+    render : state "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::monitoring"
+    bounds : x : 5028.0 y : 3360.0 width : 444.0 height : 150.0
+  shape : Registering
+    render : state "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Registering"
+    bounds : x : 4560.0 y : 3084.0 width : 348.0 height : 241.0
+  shape : Unregistering
+    render : state "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Unregistering"
+    bounds : x : 4572.0 y : 3564.0 width : 349.0 height : 202.0
+
+connectors :
+  connector : monitoring____HRM3__timeout
+    render : transition "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::monitoring::HRM3: timeout"
+    polyline :
+      segment :
+        start : x : 5286.0 y : 3510.0
+        end :   x : 5286.0 y : 3575.0
+      segment :
+        start : x : 5286.0 y : 3575.0
+        end :   x : 5106.0 y : 3575.0
+      segment :
+        start : x : 5106.0 y : 3575.0
+        end :   x : 5106.0 y : 3510.0
+    anchors :
+      start :
+        point : x : 5286.0 y : 3510.0
+        shape : monitoring
+      end :
+        point : x : 5106.0 y : 3510.0
+        shape : monitoring
+    texts :
+      text :
+        bounds : x : 5132.0 y : 3582.0 width : 158.0 height : 38.0 where : middle
+  connector : idle____HRM8__registerListener
+    render : transition "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::idle::HRM8: registerListener"
+    polyline :
+      segment :
+        start : x : 4482.0 y : 3303.0
+        end :   x : 4482.0 y : 3211.0
+      segment :
+        start : x : 4482.0 y : 3211.0
+        end :   x : 4560.0 y : 3210.0
+    anchors :
+      start :
+        point : x : 4482.0 y : 3303.0
+        shape : idle
+      end :
+        point : x : 4560.0 y : 3210.0
+        shape : Registering
+    texts :
+      text :
+        bounds : x : 4324.0 y : 3162.0 width : 0.0 height : 0.0 where : middle
+  connector : Registering____HRM5__registerComplete
+    render : transition "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Registering::HRM5: registerComplete"
+    polyline :
+      segment :
+        start : x : 4908.0 y : 3180.0
+        end :   x : 5100.0 y : 3180.0
+      segment :
+        start : x : 5100.0 y : 3180.0
+        end :   x : 5100.0 y : 3360.0
+    anchors :
+      start :
+        point : x : 4908.0 y : 3180.0
+        shape : Registering
+      end :
+        point : x : 5100.0 y : 3360.0
+        shape : monitoring
+    texts :
+      text :
+        bounds : x : 5106.0 y : 3170.0 width : 0.0 height : 0.0 where : middle
+  connector : monitoring____HRM9__unregisterListener
+    render : transition "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::monitoring::HRM9: unregisterListener"
+    polyline :
+      segment :
+        start : x : 5040.0 y : 3510.0
+        end :   x : 5040.0 y : 3624.0
+      segment :
+        start : x : 5040.0 y : 3624.0
+        end :   x : 4921.0 y : 3624.0
+    anchors :
+      start :
+        point : x : 5040.0 y : 3510.0
+        shape : monitoring
+      end :
+        point : x : 4921.0 y : 3624.0
+        shape : Unregistering
+    texts :
+      text :
+        bounds : x : 4958.0 y : 3637.0 width : 146.0 height : 26.0 where : middle
+  connector : Unregistering____HRM7__unregisterComplete
+    render : transition "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::Monitor::Instance State Machine::Unregistering::HRM7: unregisterComplete"
+    polyline :
+      segment :
+        start : x : 4572.0 y : 3660.0
+        end :   x : 4411.0 y : 3660.0
+      segment :
+        start : x : 4411.0 y : 3660.0
+        end :   x : 4410.0 y : 3453.0
+    anchors :
+      start :
+        point : x : 4572.0 y : 3660.0
+        shape : Unregistering
+      end :
+        point : x : 4410.0 y : 3453.0
+        shape : idle
+    texts :
+      text :
+        bounds : x : 4283.0 y : 3676.0 width : 0.0 height : 0.0 where : middle

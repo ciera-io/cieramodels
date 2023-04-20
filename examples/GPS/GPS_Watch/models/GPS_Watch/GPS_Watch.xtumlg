@@ -1,0 +1,12 @@
+render : "GPS_Watch"
+
+properties :
+  viewport : x : 4000.0 y : 2953.0
+  zoom : 1.0
+
+shapes :
+  shape : GPS_Watch
+    render : package "GPS_Watch::GPS_Watch"
+    bounds : x : 4272.0 y : 3012.0 width : 200.0 height : 150.0
+
+connectors :

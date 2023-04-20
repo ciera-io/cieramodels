@@ -1,0 +1,8 @@
+render : "Location::Location::Shared"
+
+shapes :
+  shape : LocationProvider
+    render : interface "Location::Location::Shared::LocationProvider"
+    bounds : x : 4486.0 y : 3072.0 width : 200.0 height : 150.0
+
+connectors :

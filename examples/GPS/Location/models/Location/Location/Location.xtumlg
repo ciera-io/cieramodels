@@ -1,0 +1,26 @@
+render : "Location::Location"
+
+shapes :
+  shape : Location
+    render : component "Location::Location::Location"
+    bounds : x : 349.0 y : -23.0 width : 127.0 height : 95.0
+  shape : Shared
+    render : package "Location::Location::Shared"
+    bounds : x : 349.0 y : 96.0 width : 127.0 height : 72.0
+
+connectors :
+  connector : Location____LOC____LocationProvider
+    render : provided_interface "Location::Location::Location::LOC::LocationProvider"
+    polyline :
+      segment :
+        start : x : 476.0 y : 45.0
+        end :   x : 579.0 y : 45.0
+    anchors :
+      start :
+        point : x : 476.0 y : 45.0
+        shape : Location
+      end :
+        point : x : 579.0 y : 45.0
+    texts :
+      text :
+        bounds : x : 486.0 y : 10.0 width : 0.0 height : 0.0 where : middle

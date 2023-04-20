@@ -1,0 +1,20 @@
+render : "UI::UI::Shared"
+
+shapes :
+  shape : UI
+    render : interface "UI::UI::Shared::UI"
+    bounds : x : 1692.0 y : 168.0 width : 265.0 height : 120.0
+  shape : GoalCriteria
+    render : enumeration_data_type "UI::UI::Shared::GoalCriteria"
+    bounds : x : 2007.0 y : 168.0 width : 131.0 height : 109.0
+  shape : GoalSpan
+    render : enumeration_data_type "UI::UI::Shared::GoalSpan"
+    bounds : x : 2188.0 y : 168.0 width : 131.0 height : 108.0
+  shape : Indicator
+    render : enumeration_data_type "UI::UI::Shared::Indicator"
+    bounds : x : 2369.0 y : 168.0 width : 105.0 height : 120.0
+  shape : Unit
+    render : enumeration_data_type "UI::UI::Shared::Unit"
+    bounds : x : 2524.0 y : 0.0 width : 200.0 height : 150.0
+
+connectors :

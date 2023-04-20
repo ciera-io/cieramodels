@@ -1,0 +1,26 @@
+render : "HeartRateMonitor::HeartRateMonitor"
+
+shapes :
+  shape : HeartRateMonitor
+    render : component "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor"
+    bounds : x : 204.0 y : -84.0 width : 163.0 height : 121.0
+  shape : Shared
+    render : package "HeartRateMonitor::HeartRateMonitor::Shared"
+    bounds : x : 204.0 y : 60.0 width : 157.0 height : 85.0
+
+connectors :
+  connector : HeartRateMonitor____HR____HeartRateProvider
+    render : provided_interface "HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HR::HeartRateProvider"
+    polyline :
+      segment :
+        start : x : 367.0 y : -48.0
+        end :   x : 470.0 y : -48.0
+    anchors :
+      start :
+        point : x : 367.0 y : -48.0
+        shape : HeartRateMonitor
+      end :
+        point : x : 470.0 y : -48.0
+    texts :
+      text :
+        bounds : x : 374.0 y : -82.0 width : 0.0 height : 0.0 where : middle

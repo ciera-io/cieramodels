@@ -1,0 +1,112 @@
+render : "Location::Location::Location::Location::GPS::Instance State Machine"
+
+shapes :
+  shape : idle
+    render : state "Location::Location::Location::Location::GPS::Instance State Machine::idle"
+    bounds : x : 4416.0 y : 3024.0 width : 445.0 height : 204.0
+  shape : locating
+    render : state "Location::Location::Location::Location::GPS::Instance State Machine::locating"
+    bounds : x : 4428.0 y : 3336.0 width : 613.0 height : 290.0
+  shape : registeringListener
+    render : state "Location::Location::Location::Location::GPS::Instance State Machine::registeringListener"
+    bounds : x : 4094.0 y : 3229.0 width : 298.0 height : 217.0
+  shape : unregistering
+    render : state "Location::Location::Location::Location::GPS::Instance State Machine::unregistering"
+    bounds : x : 5052.0 y : 3024.0 width : 373.0 height : 181.0
+
+connectors :
+  connector : registeringListener____GPS4__registeringComplete
+    render : transition "Location::Location::Location::Location::GPS::Instance State Machine::registeringListener::GPS4: registeringComplete"
+    polyline :
+      segment :
+        start : x : 4320.0 y : 3446.0
+        end :   x : 4320.0 y : 3530.0
+      segment :
+        start : x : 4320.0 y : 3530.0
+        end :   x : 4428.0 y : 3528.0
+    anchors :
+      start :
+        point : x : 4320.0 y : 3446.0
+        shape : registeringListener
+      end :
+        point : x : 4428.0 y : 3528.0
+        shape : locating
+    texts :
+      text :
+        bounds : x : 4245.0 y : 3551.0 width : 0.0 height : 0.0 where : middle
+  connector : idle____GPS10__registerListener
+    render : transition "Location::Location::Location::Location::GPS::Instance State Machine::idle::GPS10: registerListener"
+    polyline :
+      segment :
+        start : x : 4416.0 y : 3120.0
+        end :   x : 4266.0 y : 3119.0
+      segment :
+        start : x : 4266.0 y : 3119.0
+        end :   x : 4266.0 y : 3229.0
+    anchors :
+      start :
+        point : x : 4416.0 y : 3120.0
+        shape : idle
+      end :
+        point : x : 4266.0 y : 3229.0
+        shape : registeringListener
+    texts :
+      text :
+        bounds : x : 4229.0 y : 3063.0 width : 0.0 height : 0.0 where : middle
+  connector : locating____GPS11__unregisterListener
+    render : transition "Location::Location::Location::Location::GPS::Instance State Machine::locating::GPS11: unregisterListener"
+    polyline :
+      segment :
+        start : x : 5041.0 y : 3516.0
+        end :   x : 5183.0 y : 3515.0
+      segment :
+        start : x : 5183.0 y : 3515.0
+        end :   x : 5184.0 y : 3205.0
+    anchors :
+      start :
+        point : x : 5041.0 y : 3516.0
+        shape : locating
+      end :
+        point : x : 5184.0 y : 3205.0
+        shape : unregistering
+    texts :
+      text :
+        bounds : x : 5099.0 y : 3520.0 width : 0.0 height : 0.0 where : middle
+  connector : unregistering____GPS12__unregisterComplete
+    render : transition "Location::Location::Location::Location::GPS::Instance State Machine::unregistering::GPS12: unregisterComplete"
+    polyline :
+      segment :
+        start : x : 5052.0 y : 3107.0
+        end :   x : 4861.0 y : 3108.0
+    anchors :
+      start :
+        point : x : 5052.0 y : 3107.0
+        shape : unregistering
+      end :
+        point : x : 4861.0 y : 3108.0
+        shape : idle
+    texts :
+      text :
+        bounds : x : 4878.0 y : 3070.0 width : 0.0 height : 0.0 where : middle
+  connector : locating____GPS1__tick
+    render : transition "Location::Location::Location::Location::GPS::Instance State Machine::locating::GPS1: tick"
+    polyline :
+      segment :
+        start : x : 4488.0 y : 3624.0
+        end :   x : 4488.0 y : 3675.0
+      segment :
+        start : x : 4488.0 y : 3675.0
+        end :   x : 4799.0 y : 3675.0
+      segment :
+        start : x : 4799.0 y : 3675.0
+        end :   x : 4799.0 y : 3624.0
+    anchors :
+      start :
+        point : x : 4488.0 y : 3624.0
+        shape : locating
+      end :
+        point : x : 4799.0 y : 3624.0
+        shape : locating
+    texts :
+      text :
+        bounds : x : 4588.0 y : 3713.0 width : 0.0 height : 0.0 where : middle
