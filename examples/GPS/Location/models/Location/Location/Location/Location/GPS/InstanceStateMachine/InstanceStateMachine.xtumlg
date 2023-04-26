@@ -29,7 +29,7 @@ connectors :
         point : x : 4320.0 y : 3446.0
         shape : registeringListener
       end :
-        point : x : 4428.0 y : 3528.0
+        point : x : 4320.0 y : 3530.0
         shape : locating
     texts :
       text :
@@ -48,7 +48,7 @@ connectors :
         point : x : 4416.0 y : 3120.0
         shape : idle
       end :
-        point : x : 4266.0 y : 3229.0
+        point : x : 4266.0 y : 3119.0
         shape : registeringListener
     texts :
       text :
@@ -67,7 +67,7 @@ connectors :
         point : x : 5041.0 y : 3516.0
         shape : locating
       end :
-        point : x : 5184.0 y : 3205.0
+        point : x : 5183.0 y : 3515.0
         shape : unregistering
     texts :
       text :
@@ -105,7 +105,7 @@ connectors :
         point : x : 4488.0 y : 3624.0
         shape : locating
       end :
-        point : x : 4799.0 y : 3624.0
+        point : x : 4488.0 y : 3675.0
         shape : locating
     texts :
       text :

@@ -37,10 +37,10 @@ within Location::Location::Location::Location::GPS is
 
     |                     | tick                | registeringComplete | registerListener    | unregisterListener  | unregisterComplete  |
     | ------------------- | ------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-    | idle                | cannot_happen       | cannot_happen       | registeringListener | cannot_happen       | cannot_happen       |
+    | idle                | ignore              | cannot_happen       | registeringListener | cannot_happen       | cannot_happen       |
     | locating            | locating            | cannot_happen       | cannot_happen       | unregistering       | cannot_happen       |
-    | registeringListener | cannot_happen       | locating            | cannot_happen       | cannot_happen       | cannot_happen       |
-    | unregistering       | cannot_happen       | cannot_happen       | cannot_happen       | cannot_happen       | idle                |
+    | registeringListener | ignore              | locating            | cannot_happen       | cannot_happen       | cannot_happen       |
+    | unregistering       | ignore              | cannot_happen       | cannot_happen       | cannot_happen       | idle                |
 
   end state machine;
 
