@@ -6,8 +6,10 @@ within GPS_Watch is
     component HeartRateMonitor is HeartRateMonitor::HeartRateMonitor::HeartRateMonitor;
     component Location is Location::Location::Location;
     component Tracking is Tracking::Tracking::Tracking;
+    component UI is UI::UI::UI;
     satisfaction is Tracking::HR -(o- HeartRateMonitor::HR;
     satisfaction is Tracking::LOC -(o- Location::LOC;
+    satisfaction is Tracking::UI -(o- UI::UI;
   end package;
 
 end;

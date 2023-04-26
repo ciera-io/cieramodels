@@ -19,6 +19,9 @@ import com.googlecode.jsonrpc4j.StreamServer;
 
 import heartratemonitor.heartratemonitor.HeartRateMonitor;
 import io.ciera.runtime.AbstractPort;
+import io.ciera.runtime.CommandLine;
+import io.ciera.runtime.CommandLine.Conditionality;
+import io.ciera.runtime.CommandLine.Multiplicity;
 import io.ciera.runtime.SimpleScheduler;
 import io.ciera.runtime.api.Architecture;
 import location.location.Location;
@@ -38,31 +41,47 @@ public class GPS_Watch {
 
   public static void main(String[] args) {
 
+    // process command line
+    logger.debug("MAIN: processing arguments");
+    CommandLine.initialize(args);
+    CommandLine.getInstance()
+        .registerValue(
+            "-config",
+            "Config file path",
+            Conditionality.Optional,
+            "path",
+            Conditionality.Required,
+            Multiplicity.Single);
+
     // load configuration
     logger.debug("MAIN: loading config");
-    if (args.length > 0 && Files.exists(Path.of(args[0]))) {
-      Architecture.getInstance().loadConfig(Path.of(args[0]));
+    final String configPath = CommandLine.getInstance().getOptionValue("-config");
+    if (configPath != "" && Files.exists(Path.of(configPath))) {
+      logger.debug("MAIN: loading configuration");
+      Architecture.getInstance().loadConfig(Path.of(configPath));
     }
 
     // create domains
     logger.debug("MAIN: creating domains");
-    final HeartRateMonitor hrm = new HeartRateMonitor();
-    final Location loc = new Location();
-    final Tracking track = new Tracking();
-    
+    final HeartRateMonitor heartratemonitor = new HeartRateMonitor();
+    final Location location = new Location();
+    final Tracking tracking = new Tracking();
+
     // create scheduler
-    final SimpleScheduler scheduler = new SimpleScheduler(hrm, loc, track);
+    final SimpleScheduler scheduler = new SimpleScheduler(heartratemonitor, location, tracking);
 
     // create satisfactions
-    AbstractPort.satisfy(hrm.HR(), track.HR());
-    AbstractPort.satisfy(loc.LOC(), track.LOC());
+    AbstractPort.satisfy(tracking.HR(), heartratemonitor.HR());
+    AbstractPort.satisfy(tracking.LOC(), location.LOC());
 
     // create the RPC server to receive calls from the UI
     StreamServer streamServer = null;
     try {
       streamServer =
           new StreamServer(
-              new JsonRpcServer(new UIProxy(scheduler, track.UI()), IUI.class), 50, new ServerSocket(SERVER_PORT));
+              new JsonRpcServer(new UIProxy(scheduler, tracking.UI()), IUI.class),
+              50,
+              new ServerSocket(SERVER_PORT));
       streamServer.start();
     } catch (IOException e) {
       logger.debug("MAIN: failed to start RPC server");
@@ -78,8 +97,8 @@ public class GPS_Watch {
         socket.connect(new InetSocketAddress(InetAddress.getLocalHost(), UI_PORT), 1000);
         uiProxy =
             ProxyUtil.createClientProxy(
-                track.getClass().getClassLoader(), IUI.class, new JsonRpcClient(), socket);
-        track.UI().setPeer(uiProxy);
+                tracking.getClass().getClassLoader(), IUI.class, new JsonRpcClient(), socket);
+        tracking.UI().setPeer(uiProxy);
       } catch (IOException e) {
         logger.debug("MAIN: failed to connect to UI. Retrying.");
       }
@@ -91,9 +110,9 @@ public class GPS_Watch {
 
     // initialize domains
     logger.debug("MAIN: initializing domains");
-    scheduler.execute(hrm::initialize);
-    scheduler.execute(loc::initialize);
-    scheduler.execute(track::initialize);
+    scheduler.execute(heartratemonitor::initialize);
+    scheduler.execute(location::initialize);
+    scheduler.execute(tracking::initialize);
 
     // schedule tasks forever in a single thread
     logger.debug("MAIN: starting up...");
@@ -110,9 +129,9 @@ public class GPS_Watch {
       }
     }
   }
-  
+
   private static final class UIProxy extends AbstractPort implements IUI {
-    
+
     private final Executor executor;
     private final IUI ui;
 
@@ -145,7 +164,10 @@ public class GPS_Watch {
         double p_maximum,
         double p_minimum,
         int p_sequenceNumber) {
-      executor.execute(() -> ui.newGoalSpec(p_spanType, p_criteriaType, p_span, p_maximum, p_minimum, p_sequenceNumber));
+      executor.execute(
+          () ->
+              ui.newGoalSpec(
+                  p_spanType, p_criteriaType, p_span, p_maximum, p_minimum, p_sequenceNumber));
     }
 
     @Override
