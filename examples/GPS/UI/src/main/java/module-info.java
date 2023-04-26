@@ -1,6 +1,7 @@
 module UI {
 
     exports ui.shared;
+    exports ui.ui;
 
     requires io.ciera.runtime;
 

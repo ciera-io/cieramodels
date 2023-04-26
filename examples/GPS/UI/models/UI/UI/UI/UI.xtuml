@@ -6,6 +6,7 @@ within UI::UI is
   component UI is
     
     package functions;
+    package test;
     
     provided port UI implements UI is
 

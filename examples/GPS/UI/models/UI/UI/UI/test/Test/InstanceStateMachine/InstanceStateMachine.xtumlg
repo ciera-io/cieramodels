@@ -1,0 +1,65 @@
+render : "UI::UI::UI::test::Test::Instance State Machine"
+
+shapes :
+  shape : Init
+    render : state "UI::UI::UI::test::Test::Instance State Machine::Init"
+    bounds : x : 4164.0 y : 3216.0 width : 121.0 height : 85.0
+  shape : StartingWatch
+    render : state "UI::UI::UI::test::Test::Instance State Machine::Starting Watch"
+    bounds : x : 4380.0 y : 3216.0 width : 121.0 height : 85.0
+  shape : StoppingWatch
+    render : state "UI::UI::UI::test::Test::Instance State Machine::Stopping Watch"
+    bounds : x : 4584.0 y : 3216.0 width : 121.0 height : 85.0
+  shape : Resetting
+    render : state "UI::UI::UI::test::Test::Instance State Machine::Resetting"
+    bounds : x : 4788.0 y : 3216.0 width : 109.0 height : 85.0
+
+connectors :
+  connector : Init____Test1__next
+    render : transition "UI::UI::UI::test::Test::Instance State Machine::Init::Test1: next"
+    polyline :
+      segment :
+        start : x : 4285.0 y : 3264.0
+        end :   x : 4380.0 y : 3264.0
+    anchors :
+      start :
+        point : x : 4285.0 y : 3264.0
+        shape : Init
+      end :
+        point : x : 4380.0 y : 3264.0
+        shape : StartingWatch
+    texts :
+      text :
+        bounds : x : 4293.0 y : 3231.0 width : 0.0 height : 0.0 where : middle
+  connector : StartingWatch____Test1__next
+    render : transition "UI::UI::UI::test::Test::Instance State Machine::Starting Watch::Test1: next"
+    polyline :
+      segment :
+        start : x : 4501.0 y : 3264.0
+        end :   x : 4584.0 y : 3264.0
+    anchors :
+      start :
+        point : x : 4501.0 y : 3264.0
+        shape : StartingWatch
+      end :
+        point : x : 4584.0 y : 3264.0
+        shape : StoppingWatch
+    texts :
+      text :
+        bounds : x : 4504.0 y : 3229.0 width : 0.0 height : 0.0 where : middle
+  connector : StoppingWatch____Test1__next
+    render : transition "UI::UI::UI::test::Test::Instance State Machine::Stopping Watch::Test1: next"
+    polyline :
+      segment :
+        start : x : 4705.0 y : 3264.0
+        end :   x : 4788.0 y : 3264.0
+    anchors :
+      start :
+        point : x : 4705.0 y : 3264.0
+        shape : StoppingWatch
+      end :
+        point : x : 4788.0 y : 3264.0
+        shape : Resetting
+    texts :
+      text :
+        bounds : x : 4709.0 y : 3230.0 width : 0.0 height : 0.0 where : middle

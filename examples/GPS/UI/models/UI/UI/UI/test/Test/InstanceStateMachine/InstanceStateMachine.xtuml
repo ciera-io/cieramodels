@@ -1,0 +1,57 @@
+// BP 7.1.6 content: InstanceStateMachine syschar: 3 persistence-version: 7.1.6
+
+within UI::UI::UI::test::Test is
+
+  @state_num(1);
+  @dialect("oal");
+  state Init;
+
+  @state_num(2);
+  @dialect("oal");
+  state 'Starting Watch';
+
+  @state_num(3);
+  @dialect("oal");
+  state 'Stopping Watch';
+
+  @state_num(4);
+  @dialect("oal");
+  state Resetting;
+
+  @event_num(1);
+  event next;
+
+  state machine is
+
+    |                  | next             |
+    | ---------------- | ---------------- |
+    | Init             | 'Starting Watch' |
+    | 'Starting Watch' | 'Stopping Watch' |
+    | 'Stopping Watch' | Resetting        |
+    | Resetting        | cannot_happen    |
+
+  end state machine;
+
+  state 'Starting Watch' is
+    @noparse
+    UI::startStopPressed();
+    create event instance e of Test1:next to self;
+    t = TIM::timer_start(event_inst:e, microseconds:5000000);
+    @endnoparse
+  end state;
+
+  state 'Stopping Watch' is
+    @noparse
+    UI::startStopPressed();
+    create event instance e of Test1:next to self;
+    t = TIM::timer_start(event_inst:e, microseconds:2000000);
+    @endnoparse
+  end state;
+
+  state Resetting is
+    @noparse
+    UI::lapResetPressed();
+    @endnoparse
+  end state;
+
+end;

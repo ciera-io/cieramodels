@@ -1,0 +1,19 @@
+// BP 7.1.6 content: Package syschar: 3 persistence-version: 7.1.6
+
+within UI::UI::UI is
+
+  package test is
+    class Test;
+    @dialect("oal");
+    @function_num(1);
+    function runTest() is
+      @noparse
+      create object instance test of Test;
+      create event instance e of Test1:next to test;
+      t = TIM::timer_start(event_inst:e, microseconds:2000000);
+      @endnoparse
+    end function;
+
+  end package;
+
+end;

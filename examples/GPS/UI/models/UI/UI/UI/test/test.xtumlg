@@ -1,0 +1,8 @@
+render : "UI::UI::UI::test"
+
+shapes :
+  shape : Test
+    render : class "UI::UI::UI::test::Test"
+    bounds : x : 4380.0 y : 3192.0 width : 204.0 height : 144.0
+
+connectors :

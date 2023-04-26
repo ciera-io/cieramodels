@@ -1,0 +1,24 @@
+render : "UI::UI"
+
+shapes :
+  shape : UI
+    render : component "UI::UI::UI"
+    bounds : x : 0.0 y : 0.0 width : 200.0 height : 150.0
+  shape : Shared
+    render : package "UI::UI::Shared"
+    bounds : x : 220.0 y : 0.0 width : 200.0 height : 150.0
+
+connectors :
+  connector : UI____UI____UI
+    render : provided_interface "UI::UI::UI::UI::UI"
+    polyline :
+      segment :
+        start : x : 200.0 y : 0.0
+        end :   x : 300.0 y : 0.0
+    anchors :
+      start :
+        point : x : 200.0 y : 0.0
+        shape : UI
+      end :
+        point : x : 300.0 y : 0.0
+    texts :

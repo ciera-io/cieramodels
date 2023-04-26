@@ -1,0 +1,11 @@
+// BP 7.1.6 content: ModelClass syschar: 3 persistence-version: 7.1.6
+
+within UI::UI::UI::test is
+
+  @key_letters("Test");
+  @class_num(1);
+  class Test is
+
+  end class;
+
+end;
