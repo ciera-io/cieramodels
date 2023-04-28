@@ -7,6 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ServiceLoader;
 import java.util.concurrent.Executor;
 
 import org.slf4j.Logger;
@@ -63,9 +64,9 @@ public class GPS_Watch {
 
     // create domains
     logger.debug("MAIN: creating domains");
-    final HeartRateMonitor heartratemonitor = new HeartRateMonitor();
-    final Location location = new Location();
-    final Tracking tracking = new Tracking();
+    final HeartRateMonitor heartratemonitor = ServiceLoader.load(HeartRateMonitor.class).findFirst().orElseThrow();
+    final Location location = ServiceLoader.load(Location.class).findFirst().orElseThrow();
+    final Tracking tracking = ServiceLoader.load(Tracking.class).findFirst().orElseThrow();
 
     // create scheduler
     final SimpleScheduler scheduler = new SimpleScheduler(heartratemonitor, location, tracking);
