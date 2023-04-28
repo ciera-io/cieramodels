@@ -7,7 +7,7 @@ module UI {
 
     requires io.ciera.runtime.util;
     requires transitive io.ciera.runtime;
-    requires static com.googlecode.lanterna;
+    requires com.googlecode.lanterna;
     requires static java.desktop;
     requires jsonrpc4j;
 
