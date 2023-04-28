@@ -9,8 +9,8 @@ shapes :
     bounds : x : 220.0 y : 0.0 width : 200.0 height : 150.0
 
 connectors :
-  connector : UI____UI____UI
-    render : provided_interface "UI::UI::UI::UI::UI"
+  connector : UI____UIConnection____UI
+    render : provided_interface "UI::UI::UI::UIConnection::UI"
     polyline :
       segment :
         start : x : 200.0 y : 0.0

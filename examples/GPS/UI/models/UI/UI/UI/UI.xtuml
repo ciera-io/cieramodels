@@ -8,7 +8,7 @@ within UI::UI is
     package functions;
     package test;
     
-    provided port UI implements UI is
+    provided port UIConnection implements UI is
 
       @dialect("oal");
       message lapResetPressed() from provider;

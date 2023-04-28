@@ -9,7 +9,7 @@ within GPS_Watch is
     component UI is UI::UI::UI;
     satisfaction is Tracking::HR -(o- HeartRateMonitor::HR;
     satisfaction is Tracking::LOC -(o- Location::LOC;
-    satisfaction is Tracking::UI -(o- UI::UI;
+    satisfaction is Tracking::UI -(o- UI::UIConnection;
   end package;
 
 end;

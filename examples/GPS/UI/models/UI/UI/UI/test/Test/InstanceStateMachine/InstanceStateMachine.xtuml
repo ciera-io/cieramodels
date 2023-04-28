@@ -34,7 +34,7 @@ within UI::UI::UI::test::Test is
 
   state 'Starting Watch' is
     @noparse
-    UI::startStopPressed();
+    UIConnection::startStopPressed();
     create event instance e of Test1:next to self;
     t = TIM::timer_start(event_inst:e, microseconds:5000000);
     @endnoparse
@@ -42,7 +42,7 @@ within UI::UI::UI::test::Test is
 
   state 'Stopping Watch' is
     @noparse
-    UI::startStopPressed();
+    UIConnection::startStopPressed();
     create event instance e of Test1:next to self;
     t = TIM::timer_start(event_inst:e, microseconds:2000000);
     @endnoparse
@@ -50,7 +50,7 @@ within UI::UI::UI::test::Test is
 
   state Resetting is
     @noparse
-    UI::lapResetPressed();
+    UIConnection::lapResetPressed();
     @endnoparse
   end state;
 

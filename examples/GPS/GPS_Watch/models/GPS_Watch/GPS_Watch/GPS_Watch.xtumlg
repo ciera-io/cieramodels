@@ -35,7 +35,7 @@ connectors :
       text :
         bounds : x : 4225.0 y : 3780.0 width : 0.0 height : 0.0 where : middle
   connector : HeartRateMonitor____HeartRateMonitor____HeartRateMonitor____HR____HeartRateProvider
-    render : imported_provided_interface "GPS_Watch::GPS_Watch::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HR::HeartRateProvider"
+    render : provided_interface "GPS_Watch::GPS_Watch::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HR::HeartRateProvider"
     polyline :
       segment :
         start : x : 4776.0 y : 3755.0
@@ -81,8 +81,8 @@ connectors :
     texts :
       text :
         bounds : x : 4262.0 y : 3691.0 width : 0.0 height : 0.0 where : middle
-  connector : UI____UI____UI____UI____UI
-    render : imported_provided_interface "GPS_Watch::GPS_Watch::UI::UI::UI::UI::UI"
+  connector : UI____UI____UI____UIConnection____UI
+    render : imported_provided_interface "GPS_Watch::GPS_Watch::UI::UI::UI::UIConnection::UI"
     polyline :
       segment :
         start : x : 4475.0 y : 3492.0
@@ -95,7 +95,7 @@ connectors :
         point : x : 4475.0 y : 3563.0
     texts :
       text :
-        bounds : x : 4501.0 y : 3549.0 width : 0.0 height : 0.0 where : middle
+        bounds : x : 4499.0 y : 3554.0 width : 0.0 height : 0.0 where : middle
   connector : Tracking____Tracking____Tracking____UI____UI
     render : required_interface "GPS_Watch::GPS_Watch::Tracking::Tracking::Tracking::UI::UI"
     polyline :
@@ -108,7 +108,7 @@ connectors :
         shape : Tracking____Tracking____Tracking
       end :
         point : x : 4475.0 y : 3563.0
-        connector : UI____UI____UI____UI____UI
+        connector : UI____UI____UI____UIConnection____UI
     texts :
       text :
-        bounds : x : 4488.0 y : 3592.0 width : 0.0 height : 0.0 where : middle
+        bounds : x : 4604.0 y : 3484.0 width : 0.0 height : 0.0 where : middle
