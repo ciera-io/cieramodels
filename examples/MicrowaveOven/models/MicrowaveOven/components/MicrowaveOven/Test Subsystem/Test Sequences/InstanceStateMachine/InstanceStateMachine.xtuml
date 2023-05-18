@@ -30,7 +30,7 @@ within MicrowaveOven::components::MicrowaveOven::'Test Subsystem'::'Test Sequenc
   @event_num(4);
   event test_seq_complete;
 
-  state machine is
+  state model is
 
     |                                     | initialize                          | perform_test_seq_1                  | perform_test_seq_2                  | test_seq_complete                   |
     | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
@@ -39,7 +39,7 @@ within MicrowaveOven::components::MicrowaveOven::'Test Subsystem'::'Test Sequenc
     | 'Performing Test Sequence 2'        | ignore                              | ignore                              | ignore                              | 'Cooking Complete'                  |
     | 'Cooking Complete'                  | ignore                              | ignore                              | ignore                              | ignore                              |
 
-  end state machine;
+  end state model;
 
   state 'Awaiting Test Sequence Initiation' is
     @noparse

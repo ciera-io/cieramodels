@@ -21,7 +21,7 @@ within UI::UI::UI::test::Test is
   @event_num(1);
   event next;
 
-  state machine is
+  state model is
 
     |                  | next             |
     | ---------------- | ---------------- |
@@ -30,7 +30,7 @@ within UI::UI::UI::test::Test is
     | 'Stopping Watch' | Resetting        |
     | Resetting        | cannot_happen    |
 
-  end state machine;
+  end state model;
 
   state 'Starting Watch' is
     @noparse

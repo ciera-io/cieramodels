@@ -33,7 +33,7 @@ within Location::Location::Location::Location::GPS is
   @event_num(12);
   event unregisterComplete;
 
-  state machine is
+  state model is
 
     |                     | tick                | registeringComplete | registerListener    | unregisterListener  | unregisterComplete  |
     | ------------------- | ------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
@@ -42,7 +42,7 @@ within Location::Location::Location::Location::GPS is
     | registeringListener | ignore              | locating            | cannot_happen       | cannot_happen       | cannot_happen       |
     | unregistering       | ignore              | cannot_happen       | cannot_happen       | cannot_happen       | idle                |
 
-  end state machine;
+  end state model;
 
   state idle is
     @noparse

@@ -30,7 +30,7 @@ within MicrowaveOven::components::MicrowaveOven::'Microwave Oven'::'Magnetron Tu
   @event_num(4);
   event power_off;
 
-  state machine is
+  state model is
 
     |                               | increase_power                | decrease_power                | power_on                      | power_off                     |
     | ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- | ----------------------------- |
@@ -39,7 +39,7 @@ within MicrowaveOven::components::MicrowaveOven::'Microwave Oven'::'Magnetron Tu
     | 'Raising Output Power'        | 'Raising Output Power'        | 'Reducing Output Power'       | 'Output Power Stable and ON'  | 'Output Power Stable and OFF' |
     | 'Output Power Stable and ON'  | 'Raising Output Power'        | 'Reducing Output Power'       | ignore                        | 'Output Power Stable and OFF' |
 
-  end state machine;
+  end state model;
 
   state 'Reducing Output Power' is
     @noparse

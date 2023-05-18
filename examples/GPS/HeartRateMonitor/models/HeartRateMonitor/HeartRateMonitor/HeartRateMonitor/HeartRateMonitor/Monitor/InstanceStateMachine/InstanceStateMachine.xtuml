@@ -33,7 +33,7 @@ within HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::M
   @event_num(9);
   event unregisterListener;
 
-  state machine is
+  state model is
 
     |                    | timeout            | registerComplete   | unregisterComplete | registerListener   | unregisterListener |
     | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
@@ -42,7 +42,7 @@ within HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::HeartRateMonitor::M
     | Registering        | cannot_happen      | monitoring         | cannot_happen      | cannot_happen      | cannot_happen      |
     | Unregistering      | cannot_happen      | cannot_happen      | idle               | cannot_happen      | cannot_happen      |
 
-  end state machine;
+  end state model;
 
   state monitoring is
     @noparse

@@ -16,14 +16,14 @@ within MicrowaveOven::components::MicrowaveOven::'Microwave Oven'::Door is
   @event_num(2);
   event close;
 
-  state machine is
+  state model is
 
     |         | release | close   |
     | ------- | ------- | ------- |
     | Open    | ignore  | Closed  |
     | Closed  | Open    | ignore  |
 
-  end state machine;
+  end state model;
 
   state Open is
     @noparse

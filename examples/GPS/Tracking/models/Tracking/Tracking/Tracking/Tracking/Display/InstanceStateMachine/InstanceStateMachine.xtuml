@@ -28,7 +28,7 @@ within Tracking::Tracking::Tracking::Tracking::Display is
   @event_num(2);
   event refresh;
 
-  state machine is
+  state model is
 
     |                  | modeChange       | refresh          |
     | ---------------- | ---------------- | ---------------- |
@@ -38,7 +38,7 @@ within Tracking::Tracking::Tracking::Tracking::Display is
     | displayHeartRate | displayLapCount  | displayHeartRate |
     | displayLapCount  | displayDistance  | displayLapCount  |
 
-  end state machine;
+  end state model;
 
   state displayDistance is
     @noparse

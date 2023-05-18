@@ -16,14 +16,14 @@ within MicrowaveOven::components::MicrowaveOven::'Microwave Oven'::Turntable is
   @event_num(2);
   event stop;
 
-  state machine is
+  state model is
 
     |            | spin       | stop       |
     | ---------- | ---------- | ---------- |
     | Stationary | Rotating   | ignore     |
     | Rotating   | ignore     | Stationary |
 
-  end state machine;
+  end state model;
 
   state Stationary is
     @noparse

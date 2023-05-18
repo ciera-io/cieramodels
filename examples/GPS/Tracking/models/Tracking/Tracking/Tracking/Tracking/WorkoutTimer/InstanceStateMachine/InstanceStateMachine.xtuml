@@ -43,7 +43,7 @@ within Tracking::Tracking::Tracking::Tracking::WorkoutTimer is
   @event_num(8);
   event lapResetComplete;
 
-  state machine is
+  state model is
 
     |                  | startStopPressed | lapResetPressed  | tick             | pause            | resume           | startTimer       | lapResetComplete |
     | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- | ---------------- |
@@ -53,7 +53,7 @@ within Tracking::Tracking::Tracking::Tracking::WorkoutTimer is
     | processingStart  | cannot_happen    | cannot_happen    | cannot_happen    | cannot_happen    | cannot_happen    | running          | cannot_happen    |
     | resetLap         | cannot_happen    | cannot_happen    | cannot_happen    | cannot_happen    | cannot_happen    | cannot_happen    | running          |
 
-  end state machine;
+  end state model;
 
   state stopped is
     @noparse

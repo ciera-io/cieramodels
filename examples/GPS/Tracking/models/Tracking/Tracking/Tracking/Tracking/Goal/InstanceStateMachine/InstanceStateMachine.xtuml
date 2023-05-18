@@ -32,7 +32,7 @@ within Tracking::Tracking::Tracking::Tracking::Goal is
   @event_num(4);
   event evaluationComplete;
 
-  state machine is
+  state model is
 
     |                    | Completed          | Evaluate           | Pause              | evaluationComplete |
     | ------------------ | ------------------ | ------------------ | ------------------ | ------------------ |
@@ -41,7 +41,7 @@ within Tracking::Tracking::Tracking::Tracking::Goal is
     | Paused             | Completed          | Evaluating         | cannot_happen      | cannot_happen      |
     | Evaluating         | cannot_happen      | cannot_happen      | cannot_happen      | Executing          |
 
-  end state machine;
+  end state model;
 
   state Executing is
     @noparse

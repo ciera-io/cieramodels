@@ -22,14 +22,14 @@ within MicrowaveOven::components::MicrowaveOven::'Microwave Oven'::Beeper is
   @event_num(4);
   event stop_beeping;
 
-  state machine is
+  state model is
 
     |                           | start_beeping             | beep_delay_over           | beeping_stopped           | stop_beeping              |
     | ------------------------- | ------------------------- | ------------------------- | ------------------------- | ------------------------- |
     | 'Awaiting Beeper Request' | Beeping                   | ignore                    | ignore                    | ignore                    |
     | Beeping                   | ignore                    | Beeping                   | 'Awaiting Beeper Request' | 'Awaiting Beeper Request' |
 
-  end state machine;
+  end state model;
 
   state 'Awaiting Beeper Request' is
     @noparse

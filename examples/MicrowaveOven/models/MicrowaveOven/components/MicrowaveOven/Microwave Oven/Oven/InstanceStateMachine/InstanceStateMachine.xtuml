@@ -50,7 +50,7 @@ within MicrowaveOven::components::MicrowaveOven::'Microwave Oven'::Oven is
   @event_num(8);
   event cooking_period(period: in integer);
 
-  state machine is
+  state model is
 
     |                                  | initialise                       | oven_initialised                 | start_cooking                    | cancel_cooking                   | cooking_period_over              | beeping_over                     | oven_safe                        | cooking_period                   |
     | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
@@ -61,7 +61,7 @@ within MicrowaveOven::components::MicrowaveOven::'Microwave Oven'::Oven is
     | 'Signalling Cooking Period Over' | ignore                           | ignore                           | ignore                           | 'Awaiting Cooking Request'       | ignore                           | 'Awaiting Cooking Request'       | ignore                           | ignore                           |
     | 'Assigning Cooking Period'       | ignore                           | ignore                           | 'Ensuring Safe to Cook'          | ignore                           | ignore                           | ignore                           | ignore                           | ignore                           |
 
-  end state machine;
+  end state model;
 
   state 'Awaiting Cooking Request' is
     @noparse
