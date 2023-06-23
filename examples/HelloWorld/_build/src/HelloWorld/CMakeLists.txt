@@ -35,8 +35,8 @@ simple_add_shared_library (
            __HelloWorld_types.cc
            __HelloWorld_interface.cc
   LINKS    
-           MaslCore::swa
            MaslCore::asn1
+           MaslCore::swa
   INSTALL  
   EXPORT   ${MaslExportTarget}
   INCLUDES 
@@ -50,11 +50,15 @@ simple_add_shared_library (
   SOURCES  
            __HelloWorld.cc
            __HelloWorld_private_types.cc
-           __HelloWorld__hello.cc
+           __HelloWorld__RESULT.cc
+           __HelloWorld__RESULT__result.cc
+           __HelloWorld__multiply_by_two.cc
+           __HelloWorld__add_five.cc
+           __HelloWorld__testcase1.cc
   LINKS    
+           HelloWorld_interface
            Boost::boost
            MaslCore::swa
-           HelloWorld_interface
   INSTALL  
   EXPORT   ${MaslExportTarget}
   INCLUDES 
@@ -67,9 +71,10 @@ simple_add_shared_library (
   NAME    HelloWorld_metadata
   SOURCES MetaData__HelloWorld.cc
   LINKS   
-          MaslCore::MetaData
-          MaslCore::swa
           HelloWorld_interface
+          MaslCore::MetaData
+          HelloWorld
+          MaslCore::swa
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
@@ -78,37 +83,25 @@ simple_add_shared_library (
   NAME    HelloWorld_if_metadata
   SOURCES MetaData__if__HelloWorld.cc
   LINKS   
+          HelloWorld_interface
           MaslCore::MetaData
           MaslCore::swa
-          HelloWorld_interface
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
-
-simple_add_shared_library (
-  NAME    HelloWorld_kafka
-  SOURCES 
-          Kafka__HelloWorld.cc
-  LINKS   
-          MaslCore::swa
-          HelloWorld_interface
-          cppkafka
-          rdkafka
-  INSTALL 
-  EXPORT  ${MaslExportTarget}
-  )
-
 
 simple_add_shared_library (
   NAME    HelloWorld_inspector
   SOURCES 
           Inspector__HelloWorld.cc
           Inspector_private_types__HelloWorld.cc
+          Inspector__HelloWorld__RESULT.cc
   LINKS   
-          Boost::boost
-          MaslCore::swa
           HelloWorld_interface
+          Boost::boost
+          HelloWorld
           MaslCore::Inspector
+          MaslCore::swa
           HelloWorld_if_inspector
   INSTALL 
   EXPORT  ${MaslExportTarget}

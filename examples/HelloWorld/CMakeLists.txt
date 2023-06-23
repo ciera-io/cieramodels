@@ -33,4 +33,4 @@ set_property(TARGET cppkafka PROPERTY IMPORTED_LOCATION "/opt/cppkafka/lib/libcp
 include_directories("/opt/cppkafka/include")
 
 add_subdirectory(src/HelloWorld)
-add_subdirectory(src/HelloWorld_proc)
+# add_subdirectory(src/HelloWorld_proc)

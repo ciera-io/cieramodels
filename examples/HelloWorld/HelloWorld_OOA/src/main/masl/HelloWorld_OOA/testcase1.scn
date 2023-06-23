@@ -1,0 +1,9 @@
+public service HelloWorld::testcase1() is
+begin
+  multiply_by_two(3);
+  multiply_by_two(4);
+  multiply_by_two(5);
+  add_five(3);
+  add_five(4);
+  add_five(5);
+end service;

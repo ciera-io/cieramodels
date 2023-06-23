@@ -1,5 +1,6 @@
 domain HelloWorld is
 
-  public service hello();
+  public service multiply_by_two(x: in integer); pragma kafka_topic();
+  public service add_five(x: in integer); pragma kafka_topic();
 
 end domain;

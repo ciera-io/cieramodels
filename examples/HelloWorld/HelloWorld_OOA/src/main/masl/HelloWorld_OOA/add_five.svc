@@ -1,0 +1,6 @@
+public service HelloWorld::add_five(x: in integer) is
+r: integer;
+begin
+  r := x + 5;
+  RESULT~>result(x'image & " + 5 = " & r'image);
+end service;

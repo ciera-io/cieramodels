@@ -22,7 +22,6 @@ include(SimpleAdd)
 find_package(Poco REQUIRED COMPONENTS XML Foundation)
 find_package(Sqlite3 REQUIRED)
 find_package(Boost REQUIRED QUIET COMPONENTS system)
-
 link_libraries(Boost::boost)
 
 # I'm not sure if there is a better way to do this -LPS
@@ -34,4 +33,4 @@ set_property(TARGET cppkafka PROPERTY IMPORTED_LOCATION "/opt/cppkafka/lib/libcp
 include_directories("/opt/cppkafka/include")
 
 add_subdirectory(src/HelloWorld)
-add_subdirectory(src/HelloWorld_proc)
+# add_subdirectory(src/HelloWorld_proc)
