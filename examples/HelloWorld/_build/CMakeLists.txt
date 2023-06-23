@@ -22,6 +22,7 @@ include(SimpleAdd)
 find_package(Poco REQUIRED COMPONENTS XML Foundation)
 find_package(Sqlite3 REQUIRED)
 find_package(Boost REQUIRED QUIET COMPONENTS system)
+
 link_libraries(Boost::boost)
 
 # I'm not sure if there is a better way to do this -LPS

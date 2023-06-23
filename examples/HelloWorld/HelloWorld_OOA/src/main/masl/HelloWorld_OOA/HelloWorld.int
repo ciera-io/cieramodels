@@ -1,5 +1,5 @@
 domain HelloWorld is
 
-  public service hello(); pragma startup(true);
+  public service hello();
 
 end domain;
