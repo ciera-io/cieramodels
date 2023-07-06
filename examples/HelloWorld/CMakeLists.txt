@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 project(HelloWorld VERSION 1.0)
 
@@ -25,12 +25,12 @@ find_package(Boost REQUIRED QUIET COMPONENTS system)
 link_libraries(Boost::boost)
 
 # I'm not sure if there is a better way to do this -LPS
-add_library(rdkafka SHARED IMPORTED)
-set_property(TARGET rdkafka PROPERTY IMPORTED_LOCATION "/opt/rdkafka/lib/librdkafka.so")
-include_directories("/opt/rdkafka/include")
-add_library(cppkafka SHARED IMPORTED)
-set_property(TARGET cppkafka PROPERTY IMPORTED_LOCATION "/opt/cppkafka/lib/libcppkafka.so")
-include_directories("/opt/cppkafka/include")
+# add_library(rdkafka SHARED IMPORTED)
+# set_property(TARGET rdkafka PROPERTY IMPORTED_LOCATION "/opt/rdkafka/lib/librdkafka.so")
+# include_directories("/opt/rdkafka/include")
+# add_library(cppkafka SHARED IMPORTED)
+# set_property(TARGET cppkafka PROPERTY IMPORTED_LOCATION "/opt/cppkafka/lib/libcppkafka.so")
+# include_directories("/opt/cppkafka/include")
 
 add_subdirectory(src/HelloWorld)
 # add_subdirectory(src/HelloWorld_proc)
