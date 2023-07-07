@@ -115,13 +115,15 @@ simple_add_shared_library (
   )
 
 simple_add_shared_library (
-  NAME    HelloWorld_if_kafka
+  NAME    HelloWorld_kafka
   SOURCES 
           Kafka__HelloWorld.cc
   LINKS   
           MaslCore::Kafka
           MaslCore::swa
           HelloWorld_interface
+          cppkafka
+          rdkafka
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
