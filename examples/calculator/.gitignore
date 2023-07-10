@@ -1,10 +1,2 @@
-CMakeCache.txt
-CMakeFiles/
-Makefile
-bin/
-cmake_install.cmake
-include/
-install_manifest.txt
-lib/
-src/
-target/
+.java/
+_build/

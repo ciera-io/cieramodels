@@ -1,6 +1,5 @@
 #!/bin/bash
-WINPTY=`which winpty || echo ""`
-MASLMC="$WINPTY docker run --rm -v /$PWD:/workspace levistarrett/masl-compiler -skiptranslator Sqlite"
-$MASLMC -domainpath //root/masl/utils -mod ALU_OOA/ALU.mod -test -output src/ALU_OOA && \
-$MASLMC -domainpath //root/masl/utils:ALU_OOA -prj calculator_proc/calculator.prj -output src/calculator_proc && \
-$WINPTY docker run --rm -it -v /$PWD:/workspace levistarrett/masl-build
+docker run -it -v $PWD/_build:/root levistarrett/masl-build
+mkdir -p _build/bin
+cp _build/src/ALU/ALU_transient_standalone _build/bin
+cp _build/src/Display/Display_transient_standalone _build/bin
