@@ -24,13 +24,6 @@ find_package(Sqlite3 REQUIRED)
 find_package(Boost REQUIRED QUIET COMPONENTS system)
 link_libraries(Boost::boost)
 
-# I'm not sure if there is a better way to do this -LPS
-# add_library(rdkafka SHARED IMPORTED)
-# set_property(TARGET rdkafka PROPERTY IMPORTED_LOCATION "/opt/rdkafka/lib/librdkafka.so")
-# include_directories("/opt/rdkafka/include")
-# add_library(cppkafka SHARED IMPORTED)
-# set_property(TARGET cppkafka PROPERTY IMPORTED_LOCATION "/opt/cppkafka/lib/libcppkafka.so")
-# include_directories("/opt/cppkafka/include")
-
 add_subdirectory(src/HelloWorld)
-# add_subdirectory(src/HelloWorld_proc)
+add_subdirectory(src/Result)
+add_subdirectory(src/HelloWorld_proc)

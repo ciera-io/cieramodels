@@ -1,6 +1,11 @@
 project HelloWorld_proc is
 
   domain HelloWorld is
+
+    terminator Result is
+      public service result(r: in string);
+    end terminator;
+
   end domain;
 
 end project;

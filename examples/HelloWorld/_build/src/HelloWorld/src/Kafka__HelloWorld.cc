@@ -10,12 +10,10 @@ namespace masld_HelloWorld {
 
 bool registerServices() {
   const int x = 7;
-  Kafka::KafkaHandler::getInstance().addSubscription(
-      "HelloWorld_add_five", [=]() {
-        ::masld_HelloWorld::interceptor_masls_add_five::instance()
-            .callService()(x);
-      });
-  Kafka::KafkaHandler::getInstance().addSubscription(
+  Kafka::KafkaHandler::getInstance().subscribe("HelloWorld_add_five", [=]() {
+    ::masld_HelloWorld::interceptor_masls_add_five::instance().callService()(x);
+  });
+  Kafka::KafkaHandler::getInstance().subscribe(
       "HelloWorld_multiply_by_two", [=]() {
         ::masld_HelloWorld::interceptor_masls_multiply_by_two::instance()
             .callService()(x);

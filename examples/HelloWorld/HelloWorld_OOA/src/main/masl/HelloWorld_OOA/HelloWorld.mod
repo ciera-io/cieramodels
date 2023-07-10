@@ -5,7 +5,7 @@ domain HelloWorld is
 
   private service testcase1(); pragma scenario(1); pragma test_only();
 
-  terminator RESULT is
+  terminator Result is
     public service result(r: in string);
   end terminator;
 

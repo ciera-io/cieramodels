@@ -1,0 +1,5 @@
+domain Result is
+
+  public service result(r: in string); pragma kafka_topic();
+
+end domain;

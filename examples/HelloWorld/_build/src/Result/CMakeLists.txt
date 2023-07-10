@@ -37,136 +37,143 @@ find_package (
 # ------------------------------------------------------------------------
 
 simple_add_shared_library (
-  NAME     HelloWorld_interface
+  NAME     Result_interface
   SOURCES  
-           __HelloWorld_types.cc
-           __HelloWorld_interface.cc
+           __Result_types.cc
+           __Result_interface.cc
   LINKS    
-           MaslCore::swa
            MaslCore::asn1
-  INSTALL  
-  EXPORT   ${MaslExportTarget}
-  INCLUDES 
-           HelloWorld_OOA/__HelloWorld_types.hh
-           HelloWorld_OOA/__HelloWorld_services.hh
-           HelloWorld_OOA/__HelloWorld_interface.hh
-  )
-
-simple_add_shared_library (
-  NAME     HelloWorld
-  SOURCES  
-           __HelloWorld.cc
-           __HelloWorld_private_types.cc
-           __HelloWorld__Result.cc
-           __HelloWorld__Result__result.cc
-           __HelloWorld__multiply_by_two.cc
-           __HelloWorld__add_five.cc
-           __HelloWorld__testcase1.cc
-  LINKS    
-           Boost::boost
            MaslCore::swa
-           HelloWorld_interface
   INSTALL  
   EXPORT   ${MaslExportTarget}
   INCLUDES 
-           HelloWorld_OOA/__HelloWorld.hh
-           HelloWorld_OOA/__HelloWorld_terminators.hh
-           HelloWorld_OOA/__HelloWorld_private_types.hh
+           Result_OOA/__Result_types.hh
+           Result_OOA/__Result_services.hh
+           Result_OOA/__Result_interface.hh
   )
 
 simple_add_shared_library (
-  NAME    HelloWorld_metadata
-  SOURCES MetaData__HelloWorld.cc
+  NAME     Result_if_kafka
+  SOURCES  
+           Kafka__Result__result.cc
+  LINKS    
+           MaslCore::swa
+           MaslCore::Kafka
+           Result_interface
+           cppkafka
+           rdkafka
+  INSTALL  
+  EXPORT   ${MaslExportTarget}
+  )
+
+simple_add_shared_library (
+  NAME     Result_kafka
+  SOURCES  
+           Kafka__Result.cc
+  LINKS    
+           MaslCore::swa
+           MaslCore::Kafka
+           Result_interface
+           cppkafka
+           rdkafka
+  INSTALL  
+  EXPORT   ${MaslExportTarget}
+  )
+
+
+
+simple_add_shared_library (
+  NAME     Result
+  SOURCES  
+           __Result.cc
+           __Result_private_types.cc
+  LINKS    
+           MaslCore::swa
+           Result_interface
+  INSTALL  
+  EXPORT   ${MaslExportTarget}
+  INCLUDES 
+           Result_OOA/__Result.hh
+           Result_OOA/__Result_terminators.hh
+           Result_OOA/__Result_private_types.hh
+  )
+
+simple_add_shared_library (
+  NAME    Result_metadata
+  SOURCES MetaData__Result.cc
   LINKS   
-          MaslCore::swa
           MaslCore::MetaData
-          HelloWorld
-          HelloWorld_interface
+          MaslCore::swa
+          Result_interface
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
 
 simple_add_shared_library (
-  NAME    HelloWorld_if_metadata
-  SOURCES MetaData__if__HelloWorld.cc
+  NAME    Result_if_metadata
+  SOURCES MetaData__if__Result.cc
   LINKS   
-          MaslCore::swa
           MaslCore::MetaData
-          HelloWorld_interface
+          MaslCore::swa
+          Result_interface
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
 
 simple_add_shared_library (
-  NAME    HelloWorld_inspector
+  NAME    Result_inspector
   SOURCES 
-          Inspector__HelloWorld.cc
-          Inspector_private_types__HelloWorld.cc
-          Inspector__HelloWorld__Result.cc
+          Inspector__Result.cc
+          Inspector_private_types__Result.cc
   LINKS   
-          MaslCore::Inspector
           Boost::boost
+          MaslCore::Inspector
+          Result_if_inspector
           MaslCore::swa
-          HelloWorld
-          HelloWorld_interface
-          HelloWorld_if_inspector
+          Result_interface
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
 
 simple_add_shared_library (
-  NAME    HelloWorld_kafka
-  SOURCES 
-          Kafka__HelloWorld.cc
-  LINKS   
-          MaslCore::Kafka
-          MaslCore::swa
-          HelloWorld_interface
-          cppkafka
-          rdkafka
-  INSTALL 
-  EXPORT  ${MaslExportTarget}
-  )
-
-simple_add_shared_library (
-  NAME    HelloWorld_if_inspector
-  SOURCES Inspector_types__HelloWorld.cc
+  NAME    Result_if_inspector
+  SOURCES Inspector_types__Result.cc
   LINKS   MaslCore::Inspector
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
 
 simple_add_shared_library (
-  NAME    HelloWorld_transient
+  NAME    Result_transient
   SOURCES transient_dummy.cc
   LINKS   
-          HelloWorld
           MaslCore::transient
+          Result
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
 
 simple_add_interface_library (
-  NAME    HelloWorld_standalone_deps
+  NAME    Result_standalone_deps
   SOURCES 
-  LINKS   HelloWorld
+  LINKS   Result
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
 
 simple_add_interface_library (
-  NAME     HelloWorld_common_metadata
+  NAME     Result_common_metadata
   SOURCES  
   LINKS    
   INSTALL  
   EXPORT   ${MaslExportTarget}
-  INCLUDES HelloWorld_OOA/MetaData__HelloWorld.hh
+  INCLUDES Result_OOA/MetaData__Result.hh
   )
 
 simple_add_interface_library (
-  NAME    HelloWorld_transient_standalone_deps
+  NAME    Result_transient_standalone_deps
   SOURCES 
-  LINKS   HelloWorld_transient
+  LINKS   Result_transient
   INSTALL 
   EXPORT  ${MaslExportTarget}
   )
@@ -177,17 +184,17 @@ simple_add_interface_library (
 # ------------------------------------------------------------------------
 
 simple_add_executable (
-  NAME    HelloWorld_transient_standalone
+  NAME    Result_transient_standalone
   SOURCES initStandalone.cc
   LINKS   
-          HelloWorld_transient_standalone_deps
-          HelloWorld_standalone_deps
+          Result_transient_standalone_deps
+          Result_standalone_deps
           MaslCore::swa
   )
 
 
 include (
-  /root/HelloWorld_OOA/src/main/masl/HelloWorld_OOA/custom/custom.cmake
+  /root/HelloWorld_proc/src/main/masl/custom/custom.cmake
   OPTIONAL
   )
 

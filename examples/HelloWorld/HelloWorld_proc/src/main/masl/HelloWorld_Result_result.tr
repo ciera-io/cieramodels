@@ -1,4 +1,4 @@
 public service HelloWorld::Result~>result(r: in string) is
 begin
-  console << "Result: " << r << endl;
+  Result::result(r);
 end service;

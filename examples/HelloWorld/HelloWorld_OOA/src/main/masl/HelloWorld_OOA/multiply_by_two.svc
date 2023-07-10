@@ -2,5 +2,5 @@ public service HelloWorld::multiply_by_two(x: in integer) is
 r: integer;
 begin
   r := x * 2;
-  RESULT~>result(x'image & " x 2 = " & r'image);
+  Result~>result(x'image & " x 2 = " & r'image);
 end service;
