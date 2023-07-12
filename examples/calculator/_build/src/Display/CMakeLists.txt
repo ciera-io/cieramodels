@@ -157,6 +157,21 @@ simple_add_shared_library (
   EXPORT  ${MaslExportTarget}
   )
 
+simple_add_shared_library (
+  NAME    Display_if_kafka
+  SOURCES 
+          Kafka__Display__error.cc
+          Kafka__Display__result.cc
+  LINKS   
+          MaslCore::Kafka
+          Display_interface
+          MaslCore::swa
+          cppkafka
+          rdkafka
+  INSTALL 
+  EXPORT  ${MaslExportTarget}
+  )
+
 # ------------------------------------------------------------------------
 #  Executables
 # ------------------------------------------------------------------------

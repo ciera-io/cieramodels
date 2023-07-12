@@ -61,9 +61,10 @@ masls_errorHandler::getInvoker(MessageQueue &queue) const {
 }
 
 bool registerServiceHandlers() {
-  // KafkaHandler::getInstance().subscribe("Display_result", std::make_shared<masls_resultHandler>());
-  auto ptr = std::shared_ptr<masls_errorHandler>(new masls_errorHandler());
-  KafkaHandler::getInstance().subscribe("Display_error", ptr);
+  auto resultHandler = std::make_shared<masls_resultHandler>();
+  KafkaHandler::getInstance().subscribe("Display_result", resultHandler);
+  auto errorHandler = std::make_shared<masls_errorHandler>();
+  KafkaHandler::getInstance().subscribe("Display_error", errorHandler);
   return true;
 }
 
