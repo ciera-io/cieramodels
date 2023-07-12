@@ -11,6 +11,7 @@ namespace Kafka {
 namespace masld_Display {
 
 class masls_resultHandler : public ActionHandler {
+public:
   std::function<void()> getInvoker(MessageQueue &queue) const;
 };
 
@@ -30,6 +31,7 @@ private:
 };
 
 class masls_errorHandler : public ActionHandler {
+public:
   std::function<void()> getInvoker(MessageQueue &queue) const;
 };
 
@@ -59,8 +61,9 @@ masls_errorHandler::getInvoker(MessageQueue &queue) const {
 }
 
 bool registerServiceHandlers() {
-  // KafkaHandler::getInstance().subscribe("Display_result", masls_resultHandler());
-  // KafkaHandler::getInstance().subscribe("Display_error", masls_errorHandler());
+  // KafkaHandler::getInstance().subscribe("Display_result", std::make_shared<masls_resultHandler>());
+  auto ptr = std::shared_ptr<masls_errorHandler>(new masls_errorHandler());
+  KafkaHandler::getInstance().subscribe("Display_error", ptr);
   return true;
 }
 

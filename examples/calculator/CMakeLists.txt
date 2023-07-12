@@ -8,7 +8,7 @@ set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/masl)
 set(CMAKE_PREFIX_PATH ${CMAKE_PREFIX_PATH} /opt/poco)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /opt/masl/lib/cmake/MaslCore)
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /opt/masl/lib/cmake/UtilityDomains)
+# set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /opt/masl/lib/cmake/UtilityDomains)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} /opt/poco/lib/cmake/Poco)
 
 set(INSTALL_LIB_DIR lib CACHE PATH "Installation directory for libraries")
@@ -16,7 +16,7 @@ set(INSTALL_BIN_DIR bin CACHE PATH "Installation directory for executables")
 set(INSTALL_INCLUDE_DIR include CACHE PATH "Installation directory for header files")
 
 include(MaslCoreConfig)
-include(UtilityDomainsConfig)
+# include(UtilityDomainsConfig)
 include(SimpleAdd)
 
 find_package(Poco REQUIRED COMPONENTS XML Foundation)
