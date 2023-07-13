@@ -4,10 +4,8 @@
 #include "ALU_OOA/__ALU_interface.hh"
 #include "ALU_OOA/__ALU_services.hh"
 
-#include "kafka/ActionHandler.hh"
-#include "kafka/Kafka.hh"
-
 namespace Kafka {
+
 namespace masld_ALU {
 
 

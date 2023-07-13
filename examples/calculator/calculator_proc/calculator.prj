@@ -7,7 +7,7 @@ project calculator is
     end terminator;
   end domain;
 
-  domain Display is
-  end domain;
+  //domain Display is
+  //end domain;
 
 end project;
